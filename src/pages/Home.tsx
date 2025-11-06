@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
+import VideoSection from '../components/VideoSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Showcase from '../components/Showcase';
 import Contact from '../components/Contact';
@@ -18,6 +19,9 @@ export default function Home() {
       </section>
       <section id="services">
         <Services />
+      </section>
+      <section id="video">
+        <VideoSection />
       </section>
       <WhyChooseUs />
       <section id="showcase">

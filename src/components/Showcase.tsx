@@ -88,42 +88,42 @@ export default function Showcase() {
               <div className="relative bg-gradient-to-br from-raizing-cream-100 to-white rounded-xl sm:rounded-2xl border border-raizing-teal-200 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500">
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${study.color}`}></div>
 
-                <div className="p-6 sm:p-8 md:p-10">
-                  <div className="flex flex-col md:flex-row gap-6 sm:gap-8">
+                <div className="p-4 sm:p-6 md:p-8 lg:p-10">
+                  <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 md:gap-8">
                     <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4">
-                        <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900">{study.company}</h3>
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-raizing-teal-900">{study.company}</h3>
                         <span className="px-2 sm:px-3 py-1 bg-raizing-teal-100 text-raizing-teal-700 text-xs sm:text-sm rounded-full w-fit">
                           {study.industry}
                         </span>
                       </div>
 
-                      <div className="space-y-4">
+                      <div className="space-y-3 sm:space-y-4">
                         <div>
-                          <h4 className="text-sm font-semibold text-raizing-teal-600 uppercase mb-2">Challenge</h4>
-                          <p className="text-raizing-teal-800">{study.challenge}</p>
+                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-600 uppercase mb-1.5 sm:mb-2">Challenge</h4>
+                          <p className="text-sm sm:text-base text-raizing-teal-800 leading-relaxed">{study.challenge}</p>
                         </div>
                         <div>
-                          <h4 className="text-sm font-semibold text-raizing-teal-600 uppercase mb-2">Solution</h4>
-                          <p className="text-raizing-teal-800">{study.solution}</p>
+                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-600 uppercase mb-1.5 sm:mb-2">Solution</h4>
+                          <p className="text-sm sm:text-base text-raizing-teal-800 leading-relaxed">{study.solution}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="flex-shrink-0">
-                      <h4 className="text-sm font-semibold text-raizing-teal-600 uppercase mb-4">Key Results</h4>
-                      <div className="grid gap-4">
+                    <div className="flex-shrink-0 w-full lg:w-auto">
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-600 uppercase mb-3 sm:mb-4">Key Results</h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3 sm:gap-4">
                         {study.results.map((result, idx) => (
                           <div
                             key={idx}
-                            className="flex items-center gap-4 bg-white p-4 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 group-hover:shadow-lg"
+                            className="flex items-center gap-3 sm:gap-4 bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 group-hover:shadow-lg"
                           >
-                            <div className={`p-3 bg-gradient-to-r ${study.color} rounded-lg text-raizing-cream-200`}>
+                            <div className={`p-2 sm:p-3 bg-gradient-to-r ${study.color} rounded-lg text-raizing-cream-200 flex-shrink-0`}>
                               {result.icon}
                             </div>
-                            <div>
-                              <div className="text-2xl font-bold text-raizing-teal-900">{result.metric}</div>
-                              <div className="text-sm text-raizing-teal-700">{result.label}</div>
+                            <div className="min-w-0 flex-1">
+                              <div className="text-xl sm:text-2xl font-bold text-raizing-teal-900">{result.metric}</div>
+                              <div className="text-xs sm:text-sm text-raizing-teal-700">{result.label}</div>
                             </div>
                           </div>
                         ))}
@@ -136,10 +136,10 @@ export default function Showcase() {
           ))}
         </div>
 
-        <div className="mt-12 text-center animate-on-scroll opacity-0" style={{ animationDelay: '800ms' }}>
+        <div className="mt-8 sm:mt-12 text-center animate-on-scroll opacity-0" style={{ animationDelay: '800ms' }}>
           <button
             onClick={() => navigate('/case-studies')}
-            className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-sm sm:text-base md:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105"
           >
             View All Case Studies
           </button>

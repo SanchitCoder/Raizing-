@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
-import { Zap, Shield, Award, Rocket } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Zap, Shield, Award, Rocket, ArrowRight } from 'lucide-react';
 
 export default function WhyChooseUs() {
+  const navigate = useNavigate();
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -102,13 +104,20 @@ export default function WhyChooseUs() {
             <p className="text-raizing-cream-300 text-lg mb-4">
               Join <span className="text-raizing-maroon-400 font-bold text-2xl">500+</span> companies already transforming their business with AI
             </p>
-            <div className="flex justify-center gap-8 mt-6">
+            <div className="flex justify-center gap-8 mt-6 mb-6">
               {['Microsoft', 'Google', 'Amazon', 'IBM'].map((company, idx) => (
                 <div key={idx} className="text-raizing-cream-400 font-semibold opacity-50 hover:opacity-100 hover:text-raizing-maroon-400 transition-all cursor-pointer">
                   {company}
                 </div>
               ))}
             </div>
+            <button
+              onClick={() => navigate('/features')}
+              className="group inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105"
+            >
+              Learn More
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
         </div>
       </div>
