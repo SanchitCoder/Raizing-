@@ -5,16 +5,16 @@ export default {
     extend: {
       colors: {
         'raizing-teal': {
-          50: '#e6f4f5',
-          100: '#b3d9dc',
-          200: '#80bec3',
-          300: '#4da3aa',
-          400: '#1a8891',
-          500: '#005f6b', // Base dark teal
-          600: '#004a52',
-          700: '#003539',
-          800: '#002026',
-          900: '#001a1d', // Darkest teal (from logo background)
+          50: '#e8f0ef',
+          100: '#c5d9d6',
+          200: '#a2c2bd',
+          300: '#7faba4',
+          400: '#5c948b',
+          500: '#397d72',
+          600: '#2d6659',
+          700: '#214f40',
+          800: '#1a4a44',
+          900: '#1e554e', // Base color from logo (main background color)
         },
         'raizing-cream': {
           50: '#fefcf9',

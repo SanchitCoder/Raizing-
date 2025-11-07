@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-3 sm:mb-4">
               <div className="relative overflow-hidden rounded-lg p-0.5 sm:p-1 bg-raizing-teal-900/85 backdrop-blur-sm">
                 <img 
-                  src="/Raizing Logo.jpg" 
+                  src="/RAIZING.AI LOGO.png" 
                   alt="Raizing AI Logo" 
                   className="h-12 sm:h-14 w-auto object-contain rounded"
                 />
