@@ -75,8 +75,8 @@ export default function Navbar() {
     <nav
       className={`fixed z-40 will-change-transform ${
         isScrolled
-          ? 'top-4 left-4 right-4 bg-raizing-teal-900 dark:bg-gray-900 backdrop-blur-lg shadow-2xl rounded-3xl border border-raizing-teal-900/50 dark:border-gray-700/50'
-          : 'top-0 left-0 right-0 bg-raizing-teal-900 dark:bg-gray-900 backdrop-blur-sm'
+          ? 'top-4 left-4 right-4 bg-raizing-teal-900 backdrop-blur-lg shadow-2xl rounded-3xl border border-raizing-teal-900/50'
+          : 'top-0 left-0 right-0 bg-raizing-teal-900 backdrop-blur-sm'
       }`}
       style={{
         transition: 'top 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1), right 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-radius 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
@@ -105,7 +105,7 @@ export default function Navbar() {
           >
             <div className="relative">
               <img 
-                src="/IMG_20251122_195044.jpg" 
+src="/IMG_20251122_195044.jpg" 
                 alt="Raizing AI Logo" 
                 className="relative w-auto object-contain flex-shrink-0"
                 style={{
@@ -242,7 +242,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-teal-900">
               <div className="flex items-center gap-3 sm:gap-4">
                 <img 
-                  src="/IMG_20251122_195044.jpg" 
+  src="/IMG_20251122_195044.jpg" 
                   alt="Raizing AI Logo" 
                   className="h-10 sm:h-12 w-auto object-contain"
                 />
