@@ -23,16 +23,16 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
             <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">About Raizing AI</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 mb-3 sm:mb-4 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 px-4">
             Your Partner in AI Transformation
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto px-4">
             We specialize in three core areas that drive business innovation and efficiency in the AI era
           </p>
         </div>
@@ -102,8 +102,8 @@ export default function About() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-raizing-maroon-500/5 rounded-full blur-2xl group-hover:bg-raizing-maroon-500/20 group-hover:scale-150 transition-all duration-700"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-raizing-teal-900/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className="relative z-10">
-                  <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3 sm:mb-4 group-hover:text-raizing-maroon-600 transition-colors duration-300">{service.title}</h3>
-                  <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed group-hover:text-raizing-teal-800 transition-colors duration-300">{service.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 group-hover:text-raizing-maroon-600 transition-colors duration-300">{service.title}</h3>
+                  <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed group-hover:text-raizing-teal-800 transition-colors duration-300">{service.description}</p>
                 </div>
               </div>
             </div>

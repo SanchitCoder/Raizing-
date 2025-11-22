@@ -100,7 +100,7 @@ export default function Chatbot() {
       </button>
 
       <div
-        className={`fixed bottom-20 right-4 left-4 sm:bottom-24 sm:right-6 sm:left-auto z-50 w-auto sm:w-96 h-[calc(100vh-7rem)] sm:h-[600px] max-h-[600px] bg-white rounded-xl sm:rounded-2xl shadow-2xl border border-raizing-teal-900 flex flex-col overflow-hidden transition-all duration-300 ${
+        className={`fixed bottom-20 right-4 left-4 sm:bottom-24 sm:right-6 sm:left-auto z-50 w-auto sm:w-96 h-[calc(100vh-7rem)] sm:h-[600px] max-h-[600px] bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-2xl border border-raizing-teal-900 flex flex-col overflow-hidden transition-all duration-300 ${
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
         }`}
       >
@@ -113,10 +113,17 @@ export default function Chatbot() {
               <h3 className="font-bold text-base sm:text-lg truncate">Raizing AI Assistant</h3>
               <p className="text-xs sm:text-sm text-raizing-cream-300 truncate">Always here to help</p>
             </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="w-8 h-8 sm:w-10 sm:h-10 bg-raizing-cream-200/20 hover:bg-raizing-cream-200/30 backdrop-blur-sm rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 hover:scale-110"
+              aria-label="Close chat"
+            >
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
+            </button>
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-3 sm:space-y-4 bg-raizing-cream-50">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-3 sm:space-y-4 bg-raizing-cream-50 dark:bg-gray-900">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -126,7 +133,7 @@ export default function Chatbot() {
                 className={`max-w-[80%] px-4 py-3 rounded-2xl ${
                   message.sender === 'user'
                     ? 'bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200'
-                    : 'bg-white text-raizing-teal-900 border border-raizing-teal-900'
+                    : 'bg-white dark:bg-gray-800 text-raizing-teal-900 border border-raizing-teal-900'
                 }`}
               >
                 <p className="text-sm leading-relaxed">{message.text}</p>
@@ -142,7 +149,7 @@ export default function Chatbot() {
           ))}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-white border border-raizing-teal-900 px-4 py-3 rounded-2xl">
+              <div className="bg-white dark:bg-gray-800 border border-raizing-teal-900 px-4 py-3 rounded-2xl">
                 <div className="flex gap-2">
                   <div className="w-2 h-2 bg-raizing-maroon-500 rounded-full animate-bounce"></div>
                   <div className="w-2 h-2 bg-raizing-maroon-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
@@ -154,7 +161,7 @@ export default function Chatbot() {
           <div ref={messagesEndRef} />
         </div>
 
-        <div className="p-3 sm:p-4 bg-white border-t border-raizing-teal-900 flex-shrink-0">
+        <div className="p-3 sm:p-4 bg-white dark:bg-gray-800 border-t border-raizing-teal-900 flex-shrink-0">
           <div className="flex gap-2">
             <input
               type="text"

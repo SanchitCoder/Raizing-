@@ -106,11 +106,11 @@ export default function Training() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
@@ -126,11 +126,11 @@ export default function Training() {
               <GraduationCap className="w-8 h-8 text-raizing-maroon-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              <span className="text-raizing-teal-900">AI Training</span>
+              <span className="text-raizing-teal-900 dark:text-white">AI Training</span>
               <br className="hidden sm:block" />
               <span className="text-raizing-maroon-600">& Workshops</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Hands-on training programs that empower teams with practical AI skills and knowledge
             </p>
           </div>
@@ -140,8 +140,8 @@ export default function Training() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-raizing-cream-50 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
+          <div className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
               Empower Your Team with AI Skills
             </h2>
             <div className="space-y-4">
@@ -156,17 +156,17 @@ export default function Training() {
                 we have programs that will transform how your team works with AI.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 mt-6">
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">500+</div>
-                  <div className="text-sm text-raizing-teal-900">Professionals Trained</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">Professionals Trained</div>
                 </div>
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">98%</div>
-                  <div className="text-sm text-raizing-teal-900">Satisfaction Rate</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">Satisfaction Rate</div>
                 </div>
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">100+</div>
-                  <div className="text-sm text-raizing-teal-900">Hours of Content</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">Hours of Content</div>
                 </div>
               </div>
             </div>
@@ -175,13 +175,13 @@ export default function Training() {
       </section>
 
       {/* Training Types Grid */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Training Formats
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Flexible training options to suit your team's needs
             </p>
           </div>
@@ -196,10 +196,10 @@ export default function Training() {
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-600 to-raizing-maroon-800 rounded-lg text-white mb-4">
                   {type.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {type.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {type.description}
                 </p>
               </div>
@@ -212,10 +212,10 @@ export default function Training() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Training Topics
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Comprehensive coverage of AI concepts and applications
             </p>
           </div>
@@ -224,12 +224,12 @@ export default function Training() {
             {topics.map((topic, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
-                  <span className="text-base sm:text-lg font-semibold text-raizing-teal-900">{topic}</span>
+                  <span className="text-base sm:text-lg font-semibold text-raizing-teal-900 dark:text-white">{topic}</span>
                 </div>
               </div>
             ))}
@@ -238,13 +238,13 @@ export default function Training() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Training Impact
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Measurable results from our training programs
             </p>
           </div>
@@ -259,10 +259,10 @@ export default function Training() {
                 <div className="text-4xl sm:text-5xl font-bold text-raizing-maroon-500 mb-2">
                   {benefit.metric}
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 mb-2">
+                <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 dark:text-white mb-2">
                   {benefit.label}
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-900">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white">
                   {benefit.description}
                 </p>
               </div>
@@ -272,13 +272,13 @@ export default function Training() {
       </section>
 
       {/* Course Curriculum Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Comprehensive Course Curriculum
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Structured learning paths designed for different roles and skill levels
             </p>
           </div>
@@ -315,8 +315,8 @@ export default function Training() {
                 <div className={`inline-block px-3 py-1 bg-gradient-to-r ${course.color} text-white text-xs font-semibold rounded-full mb-4`}>
                   {course.level}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-2">{course.title}</h3>
-                <div className="flex items-center gap-2 text-sm text-raizing-teal-900 mb-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">{course.title}</h3>
+                <div className="flex items-center gap-2 text-sm text-raizing-teal-900 dark:text-white mb-4">
                   <Clock className="w-4 h-4" />
                   <span>{course.duration}</span>
                 </div>
@@ -338,10 +338,10 @@ export default function Training() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               What You'll Learn
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Practical skills and knowledge you'll gain from our training programs
             </p>
           </div>
@@ -371,16 +371,16 @@ export default function Training() {
             ].map((outcome, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-600 to-raizing-maroon-800 rounded-lg text-white mb-4">
                   {outcome.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {outcome.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {outcome.description}
                 </p>
               </div>
@@ -390,13 +390,13 @@ export default function Training() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Participant Testimonials
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Hear from professionals who transformed their work with our training
             </p>
           </div>
@@ -443,8 +443,8 @@ export default function Training() {
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-semibold text-raizing-teal-900">{testimonial.author}</div>
-                    <div className="text-sm text-raizing-teal-900">{testimonial.role}, {testimonial.company}</div>
+                    <div className="font-semibold text-raizing-teal-900 dark:text-white">{testimonial.author}</div>
+                    <div className="text-sm text-raizing-teal-900 dark:text-white">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -457,10 +457,10 @@ export default function Training() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white">
               Common questions about our training programs
             </p>
           </div>
@@ -494,13 +494,13 @@ export default function Training() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -510,14 +510,14 @@ export default function Training() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            <span className="text-raizing-teal-900">Ready to Upskill</span>
+            <span className="text-raizing-teal-900 dark:text-white">Ready to Upskill</span>
             <br className="hidden sm:block" />
             <span className="text-raizing-maroon-600">Your Team?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss how our training programs can empower your team with AI skills. Get in touch for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -67,16 +67,16 @@ export default function Showcase() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
             <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Success Stories</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 mb-3 sm:mb-4 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 px-4">
             Real Results from Real Companies
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto px-4">
             See how we've helped businesses achieve transformative results with AI automation
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function Showcase() {
                   />
                   <div className={`absolute inset-0 bg-gradient-to-br ${study.color} opacity-25 group-hover/card:opacity-15 transition-opacity duration-500`}></div>
                   <div className="absolute top-4 left-4 px-3 py-1.5 bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-raizing-teal-900/10">
-                    <span className="text-xs sm:text-sm font-semibold text-raizing-teal-900">{study.industry}</span>
+                    <span className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white">{study.industry}</span>
                   </div>
                 </div>
 
@@ -131,7 +131,7 @@ export default function Showcase() {
                   <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 md:gap-8">
                     <div className="flex-1">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-raizing-teal-900 group-hover/card:text-raizing-maroon-600 transition-colors duration-300">{study.company}</h3>
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-raizing-teal-900 dark:text-white group-hover/card:text-raizing-maroon-600 transition-colors duration-300">{study.company}</h3>
                         <span className="px-2 sm:px-3 py-1 bg-raizing-teal-900 text-white text-xs sm:text-sm rounded-full w-fit group-hover/card:bg-raizing-maroon-500 group-hover/card:scale-110 transition-all duration-300">
                           {study.industry}
                         </span>
@@ -139,18 +139,18 @@ export default function Showcase() {
 
                       <div className="space-y-3 sm:space-y-4">
                         <div>
-                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-1.5 sm:mb-2">Challenge</h4>
+                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5 sm:mb-2">Challenge</h4>
                           <p className="text-sm sm:text-base text-raizing-teal-800 leading-relaxed">{study.challenge}</p>
                         </div>
                         <div>
-                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-1.5 sm:mb-2">Solution</h4>
+                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5 sm:mb-2">Solution</h4>
                           <p className="text-sm sm:text-base text-raizing-teal-800 leading-relaxed">{study.solution}</p>
                         </div>
                       </div>
                     </div>
 
                     <div className="flex-shrink-0 w-full lg:w-auto">
-                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-3 sm:mb-4">Key Results</h4>
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-3 sm:mb-4">Key Results</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3 sm:gap-4">
                         {study.results.map((result, idx) => (
                           <div
@@ -162,8 +162,8 @@ export default function Showcase() {
                               <div className="relative z-10">{result.icon}</div>
                             </div>
                             <div className="min-w-0 flex-1">
-                              <div className="text-xl sm:text-2xl font-bold text-raizing-teal-900 group-hover/result:text-raizing-maroon-600 transition-colors duration-300">{result.metric}</div>
-                              <div className="text-xs sm:text-sm text-raizing-teal-900 group-hover/result:text-raizing-teal-800 transition-colors duration-300">{result.label}</div>
+                              <div className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white group-hover/result:text-raizing-maroon-600 transition-colors duration-300">{result.metric}</div>
+                              <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white group-hover/result:text-raizing-teal-800 transition-colors duration-300">{result.label}</div>
                             </div>
                           </div>
                         ))}

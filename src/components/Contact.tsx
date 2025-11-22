@@ -49,16 +49,16 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 via-white to-raizing-teal-900/30">
+    <section id="contact" ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 dark:from-gray-900 via-white dark:via-gray-800 to-raizing-teal-900/30 dark:to-gray-800/30 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-500/10 border border-raizing-maroon-500/30 rounded-full">
             <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Get In Touch</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
             Let's Start Your AI Journey
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto px-4">
             Ready to transform your business? Contact us for a free consultation and discover how AI can drive your success.
           </p>
         </div>
@@ -133,10 +133,10 @@ export default function Contact() {
           </div>
 
           <div className="animate-on-scroll opacity-0" style={{ animationDelay: '200ms' }}>
-            <form onSubmit={handleSubmit} className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border border-raizing-teal-900 shadow-lg">
+            <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border border-raizing-teal-900 dark:border-gray-700 shadow-lg transition-colors duration-300">
               <div className="space-y-4 sm:space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-raizing-teal-900 mb-2">
+                  <label className="block text-sm font-semibold text-raizing-teal-900 dark:text-white mb-2">
                     Full Name *
                   </label>
                   <input
@@ -145,13 +145,13 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 dark:border-gray-600 bg-white dark:bg-gray-700 text-raizing-teal-900 dark:text-white focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                     placeholder="John Doe"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-raizing-teal-900 mb-2">
+                  <label className="block text-sm font-semibold text-raizing-teal-900 dark:text-white mb-2">
                     Email Address *
                   </label>
                   <input
@@ -160,13 +160,13 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 dark:border-gray-600 bg-white dark:bg-gray-700 text-raizing-teal-900 dark:text-white focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                     placeholder="john@company.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-raizing-teal-900 mb-2">
+                  <label className="block text-sm font-semibold text-raizing-teal-900 dark:text-white mb-2">
                     Company Name
                   </label>
                   <input
@@ -174,13 +174,13 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 dark:border-gray-600 bg-white dark:bg-gray-700 text-raizing-teal-900 dark:text-white focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                     placeholder="Your Company"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-raizing-teal-900 mb-2">
+                  <label className="block text-sm font-semibold text-raizing-teal-900 dark:text-white mb-2">
                     Message *
                   </label>
                   <textarea
@@ -189,7 +189,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 dark:border-gray-600 bg-white dark:bg-gray-700 text-raizing-teal-900 dark:text-white focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all resize-none"
                     placeholder="Tell us about your project..."
                   />
                 </div>

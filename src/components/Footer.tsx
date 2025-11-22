@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-raizing-teal-900 via-raizing-teal-800 to-raizing-teal-900 text-raizing-cream-200 pt-12 sm:pt-16 pb-24 sm:pb-28 md:pb-32">
+    <footer className="bg-gradient-to-br from-raizing-teal-900 dark:from-gray-900 via-raizing-teal-800 dark:via-gray-800 to-raizing-teal-900 dark:to-gray-900 transition-colors duration-300 text-raizing-cream-200 pt-12 sm:pt-16 pb-24 sm:pb-28 md:pb-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-12">
           <div>

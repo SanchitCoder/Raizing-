@@ -140,11 +140,11 @@ export default function CaseStudies() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
@@ -160,11 +160,11 @@ export default function CaseStudies() {
               <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Case Studies</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              <span className="text-raizing-teal-900">Our Success</span>
+              <span className="text-raizing-teal-900 dark:text-white">Our Success</span>
               <br className="hidden sm:block" />
               <span className="text-raizing-maroon-600">Stories</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Real projects, real results. Discover how we've transformed businesses across industries with AI automation.
             </p>
           </div>
@@ -178,7 +178,7 @@ export default function CaseStudies() {
             {caseStudies.map((study, index) => (
               <div
                 key={study.id}
-                className="animate-on-scroll opacity-0 group relative bg-raizing-cream-50 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 group relative bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${study.color}`}></div>
@@ -216,16 +216,16 @@ export default function CaseStudies() {
                     }}
                   />
                   <div className={`absolute inset-0 bg-gradient-to-br ${study.color} opacity-25 group-hover:opacity-15 transition-opacity duration-500`}></div>
-                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-raizing-cream-50/95 backdrop-blur-sm rounded-lg shadow-md border border-raizing-teal-900/10">
-                    <span className="text-xs font-semibold text-raizing-teal-900">{study.industry}</span>
+                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300/95 backdrop-blur-sm rounded-lg shadow-md border border-raizing-teal-900/10">
+                    <span className="text-xs font-semibold text-raizing-teal-900 dark:text-white">{study.industry}</span>
                   </div>
                 </div>
 
                 <div className="p-6 sm:p-8">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-2">{study.company}</h3>
-                      <span className={`inline-block px-2 sm:px-3 py-1 bg-raizing-teal-900 text-raizing-teal-900 text-xs sm:text-sm rounded-full`}>
+                      <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">{study.company}</h3>
+                      <span className={`inline-block px-2 sm:px-3 py-1 bg-raizing-teal-900 text-raizing-teal-900 dark:text-white text-xs sm:text-sm rounded-full`}>
                         {study.industry}
                       </span>
                     </div>
@@ -233,28 +233,28 @@ export default function CaseStudies() {
 
                   <div className="space-y-3 sm:space-y-4 mb-6">
                     <div>
-                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-1.5">Challenge</h4>
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5">Challenge</h4>
                       <p className="text-sm sm:text-base text-raizing-teal-800">{study.challenge}</p>
                     </div>
                     <div>
-                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-1.5">Solution</h4>
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5">Solution</h4>
                       <p className="text-sm sm:text-base text-raizing-teal-800">{study.solution}</p>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-3">Key Results</h4>
+                    <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-3">Key Results</h4>
                     <div className="grid grid-cols-3 gap-2 sm:gap-3">
                       {study.results.map((result, idx) => (
                         <div
                           key={idx}
-                          className="bg-raizing-cream-50 p-2 sm:p-3 rounded-lg border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 text-center"
+                          className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-2 sm:p-3 rounded-lg border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 text-center"
                         >
                           <div className={`inline-flex p-1.5 sm:p-2 bg-gradient-to-r ${study.color} rounded-lg text-raizing-cream-200 mb-1.5 sm:mb-2`}>
                             {result.icon}
                           </div>
-                          <div className="text-lg sm:text-xl font-bold text-raizing-teal-900">{result.metric}</div>
-                          <div className="text-xs sm:text-sm text-raizing-teal-900">{result.label}</div>
+                          <div className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white">{result.metric}</div>
+                          <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">{result.label}</div>
                         </div>
                       ))}
                     </div>
@@ -262,17 +262,17 @@ export default function CaseStudies() {
 
                   <div className="pt-4 border-t border-raizing-teal-900 space-y-2">
                     <div className="flex items-center justify-between text-xs sm:text-sm">
-                      <span className="text-raizing-teal-900 font-medium">Timeline:</span>
+                      <span className="text-raizing-teal-900 dark:text-white font-medium">Timeline:</span>
                       <span className="text-raizing-teal-800">{study.timeline}</span>
                     </div>
                     <div className="flex items-center justify-between text-xs sm:text-sm">
-                      <span className="text-raizing-teal-900 font-medium">Team Size:</span>
+                      <span className="text-raizing-teal-900 dark:text-white font-medium">Team Size:</span>
                       <span className="text-raizing-teal-800">{study.teamSize}</span>
                     </div>
                   </div>
 
                   <div className="mt-4 pt-4 border-t border-raizing-teal-900">
-                    <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-2">Technologies</h4>
+                    <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-2">Technologies</h4>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {study.technologies.map((tech, idx) => (
                         <span
@@ -294,14 +294,14 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            <span className="text-raizing-teal-900">Ready to Write Your</span>
+            <span className="text-raizing-teal-900 dark:text-white">Ready to Write Your</span>
             <br className="hidden sm:block" />
             <span className="text-raizing-maroon-600">Success Story?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss how we can transform your business with AI automation. Get in touch for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

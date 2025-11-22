@@ -139,15 +139,6 @@ export default function AIAssessment() {
         <div className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
             <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
-              {/* AI Tool Logos - Smaller and sleeker */}
-              <div className="hidden md:flex items-center gap-1.5 flex-shrink-0">
-                {['ChatGPT', 'Zapier', 'Make', 'Airtable'].map((tool, idx) => (
-                  <div key={idx} className="w-6 h-6 bg-raizing-cream-200/15 backdrop-blur-sm rounded-full flex items-center justify-center text-[10px] font-semibold border border-raizing-cream-200/20">
-                    {tool[0]}
-                  </div>
-                ))}
-              </div>
-              
               <div className="min-w-0 flex-1">
                 <h3 className="text-xs sm:text-sm md:text-base font-bold truncate text-raizing-cream-200 leading-tight">
                   Discover Your Business's AI Readiness Today
@@ -173,7 +164,7 @@ export default function AIAssessment() {
       {/* Assessment Modal */}
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-sm">
-          <div className="bg-white rounded-lg sm:rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col">
+          <div className="bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col">
             {/* Header */}
             <div className="bg-gradient-to-r from-raizing-teal-900 via-raizing-teal-800 to-raizing-teal-900 p-3 sm:p-4 md:p-5 text-raizing-cream-200 flex items-center justify-between flex-shrink-0">
               <div className="flex items-center gap-2 sm:gap-3 min-w-0">
@@ -285,7 +276,7 @@ export default function AIAssessment() {
                       name="companySize"
                       value={userInfo.companySize}
                       onChange={handleUserInfoChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm bg-white"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm bg-white dark:bg-gray-800"
                     >
                       <option value="">Select company size</option>
                       <option value="1-10">1-10 employees</option>

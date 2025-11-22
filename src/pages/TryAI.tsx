@@ -96,11 +96,11 @@ export default function TryAI() {
   ];
 
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
@@ -116,10 +116,10 @@ export default function TryAI() {
               <Sparkles className="w-8 h-8 text-raizing-maroon-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              <span className="text-raizing-teal-900">Try</span>{' '}
+              <span className="text-raizing-teal-900 dark:text-white">Try</span>{' '}
               <span className="text-raizing-maroon-600">AI Tools</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Experience the power of AI with our curated selection of cutting-edge tools
             </p>
           </div>
@@ -129,8 +129,8 @@ export default function TryAI() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
               Discover AI Tools That Transform Your Work
             </h2>
             <div className="space-y-4">
@@ -143,17 +143,17 @@ export default function TryAI() {
                 and unlock new possibilities for your projects and workflows.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 mt-6">
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">50+</div>
-                  <div className="text-sm text-raizing-teal-900">AI Tools Available</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">AI Tools Available</div>
                 </div>
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">10x</div>
-                  <div className="text-sm text-raizing-teal-900">Productivity Boost</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">Productivity Boost</div>
                 </div>
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">24/7</div>
-                  <div className="text-sm text-raizing-teal-900">Available Support</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">Available Support</div>
                 </div>
               </div>
             </div>
@@ -162,13 +162,13 @@ export default function TryAI() {
       </section>
 
       {/* AI Tools Grid */}
-      <section className="py-12 sm:py-16 md:py-24 bg-white">
+      <section className="py-12 sm:py-16 md:py-24 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Popular AI Tools
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Explore these powerful AI tools and see what they can do for you
             </p>
           </div>
@@ -186,10 +186,10 @@ export default function TryAI() {
                 <div className="px-2 py-1 bg-raizing-maroon-100 text-raizing-maroon-700 text-xs font-semibold rounded-full w-fit mb-2 sm:mb-3">
                   {tool.category}
                 </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2 sm:mb-3">
                   {tool.name}
                 </h3>
-                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {tool.description}
                 </p>
               </div>
@@ -202,10 +202,10 @@ export default function TryAI() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               What You Can Do with AI
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Discover practical applications of AI tools in your daily work
             </p>
           </div>
@@ -214,16 +214,16 @@ export default function TryAI() {
             {useCases.map((useCase, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
                   {useCase.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2 sm:mb-3">
                   {useCase.title}
                 </h3>
-                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {useCase.description}
                 </p>
               </div>
@@ -233,13 +233,13 @@ export default function TryAI() {
       </section>
 
       {/* Getting Started Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-white">
+      <section className="py-12 sm:py-16 md:py-24 bg-white dark:bg-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Getting Started with AI
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white">
               Simple steps to begin your AI journey
             </p>
           </div>
@@ -277,10 +277,10 @@ export default function TryAI() {
                     {step.step}
                   </div>
                   <div className="flex-1 sm:flex-none">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 mb-2">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 leading-relaxed">
+                    <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -292,14 +292,14 @@ export default function TryAI() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            <span className="text-raizing-teal-900">Ready to Experience</span>
+            <span className="text-raizing-teal-900 dark:text-white">Ready to Experience</span>
             <br className="hidden sm:block" />
             <span className="text-raizing-maroon-600">AI?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             Start using AI tools today and transform how you work. Get personalized recommendations and training to maximize your results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

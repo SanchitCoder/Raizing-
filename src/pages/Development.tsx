@@ -106,11 +106,11 @@ export default function Development() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
@@ -126,11 +126,11 @@ export default function Development() {
               <Terminal className="w-8 h-8 text-raizing-maroon-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              <span className="text-raizing-teal-900">AI Development</span>
+              <span className="text-raizing-teal-900 dark:text-white">AI Development</span>
               <br className="hidden sm:block" />
               <span className="text-raizing-maroon-600">Services</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Build custom AI solutions and applications that drive innovation and transform your business
             </p>
           </div>
@@ -140,8 +140,8 @@ export default function Development() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-raizing-cream-50 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
+          <div className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
               Custom AI Development for Your Business
             </h2>
             <div className="space-y-4">
@@ -155,19 +155,19 @@ export default function Development() {
                 scalable, and maintainable. From concept to deployment, we're with you every step of the way.
               </p>
               <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                <div className="p-5 bg-raizing-cream-50 rounded-lg border border-raizing-teal-900">
-                  <h3 className="font-bold text-raizing-teal-900 mb-2 flex items-center gap-2">
+                <div className="p-5 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg border border-raizing-teal-900">
+                  <h3 className="font-bold text-raizing-teal-900 dark:text-white mb-2 flex items-center gap-2">
                     <Code className="w-5 h-5 text-raizing-maroon-500" />
                     Clean, Maintainable Code
                   </h3>
-                  <p className="text-sm text-raizing-teal-900">Well-documented, tested code following industry standards</p>
+                  <p className="text-sm text-raizing-teal-900 dark:text-white">Well-documented, tested code following industry standards</p>
                 </div>
-                <div className="p-5 bg-raizing-cream-50 rounded-lg border border-raizing-teal-900">
-                  <h3 className="font-bold text-raizing-teal-900 mb-2 flex items-center gap-2">
+                <div className="p-5 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg border border-raizing-teal-900">
+                  <h3 className="font-bold text-raizing-teal-900 dark:text-white mb-2 flex items-center gap-2">
                     <Shield className="w-5 h-5 text-raizing-maroon-500" />
                     Security First
                   </h3>
-                  <p className="text-sm text-raizing-teal-900">Built with security and compliance from the ground up</p>
+                  <p className="text-sm text-raizing-teal-900 dark:text-white">Built with security and compliance from the ground up</p>
                 </div>
               </div>
             </div>
@@ -176,13 +176,13 @@ export default function Development() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Development Services
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Comprehensive development solutions for your AI needs
             </p>
           </div>
@@ -197,10 +197,10 @@ export default function Development() {
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -213,10 +213,10 @@ export default function Development() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Technologies We Use
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Modern tech stack for building robust AI solutions
             </p>
           </div>
@@ -225,11 +225,11 @@ export default function Development() {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg text-center"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <Zap className="w-6 h-6 text-raizing-maroon-500 mx-auto mb-3" />
-                <span className="text-base sm:text-lg font-semibold text-raizing-teal-900">{tech}</span>
+                <span className="text-base sm:text-lg font-semibold text-raizing-teal-900 dark:text-white">{tech}</span>
               </div>
             ))}
           </div>
@@ -237,13 +237,13 @@ export default function Development() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Why Choose Our Development Services
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               What sets our development approach apart
             </p>
           </div>
@@ -258,10 +258,10 @@ export default function Development() {
                 <div className="text-3xl sm:text-4xl font-bold text-raizing-maroon-500 mb-2">
                   {benefit.metric}
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 mb-2">
+                <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 dark:text-white mb-2">
                   {benefit.label}
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-900">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white">
                   {benefit.description}
                 </p>
               </div>
@@ -274,10 +274,10 @@ export default function Development() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Development Process
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Agile methodology ensuring quality and timely delivery
             </p>
           </div>
@@ -317,16 +317,16 @@ export default function Development() {
             ].map((step, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-4xl sm:text-5xl font-bold text-raizing-maroon-500 mb-3">
                   {step.step}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -336,13 +336,13 @@ export default function Development() {
       </section>
 
       {/* Project Types Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Types of Projects We Build
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Comprehensive development services for various AI applications
             </p>
           </div>
@@ -388,10 +388,10 @@ export default function Development() {
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
                   {project.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {project.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {project.description}
                 </p>
               </div>
@@ -404,10 +404,10 @@ export default function Development() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Client Success Stories
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Real projects, real results from our development work
             </p>
           </div>
@@ -438,7 +438,7 @@ export default function Development() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex gap-1 mb-4">
@@ -454,8 +454,8 @@ export default function Development() {
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-semibold text-raizing-teal-900">{testimonial.author}</div>
-                    <div className="text-sm text-raizing-teal-900">{testimonial.role}, {testimonial.company}</div>
+                    <div className="font-semibold text-raizing-teal-900 dark:text-white">{testimonial.author}</div>
+                    <div className="text-sm text-raizing-teal-900 dark:text-white">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -465,13 +465,13 @@ export default function Development() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white">
               Common questions about AI development services
             </p>
           </div>
@@ -508,10 +508,10 @@ export default function Development() {
                 className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -521,14 +521,14 @@ export default function Development() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            <span className="text-raizing-teal-900">Ready to Build Your</span>
+            <span className="text-raizing-teal-900 dark:text-white">Ready to Build Your</span>
             <br className="hidden sm:block" />
             <span className="text-raizing-maroon-600">AI Solution?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss your development needs and create a custom AI solution that drives results. Get in touch for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

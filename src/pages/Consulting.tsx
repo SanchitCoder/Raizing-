@@ -106,11 +106,11 @@ export default function Consulting() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
@@ -126,10 +126,10 @@ export default function Consulting() {
               <Lightbulb className="w-8 h-8 text-raizing-maroon-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              <span className="text-raizing-teal-900">AI</span>{' '}
+              <span className="text-raizing-teal-900 dark:text-white">AI</span>{' '}
               <span className="text-raizing-maroon-600">Consulting</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Expert guidance to navigate the AI landscape and implement the right solutions for your business
             </p>
           </div>
@@ -139,8 +139,8 @@ export default function Consulting() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-raizing-cream-50 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
+          <div className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
               Navigate Your AI Journey with Confidence
             </h2>
             <div className="space-y-4">
@@ -154,7 +154,7 @@ export default function Consulting() {
                 closely with your team to create a roadmap that aligns with your business objectives, budget, and timeline.
               </p>
               <div className="mt-6 p-6 bg-gradient-to-br from-raizing-maroon-50 to-raizing-cream-50 rounded-lg border border-raizing-maroon-200">
-                <h3 className="text-lg font-bold text-raizing-teal-900 mb-3">Why Choose Our Consulting?</h3>
+                <h3 className="text-lg font-bold text-raizing-teal-900 dark:text-white mb-3">Why Choose Our Consulting?</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-sm text-raizing-teal-800">
                     <CheckCircle2 className="w-5 h-5 text-raizing-maroon-500 flex-shrink-0 mt-0.5" />
@@ -180,13 +180,13 @@ export default function Consulting() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Consulting Services
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Comprehensive consulting services to guide your AI transformation
             </p>
           </div>
@@ -201,10 +201,10 @@ export default function Consulting() {
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -217,10 +217,10 @@ export default function Consulting() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               What You'll Receive
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Comprehensive deliverables to guide your AI implementation
             </p>
           </div>
@@ -229,12 +229,12 @@ export default function Consulting() {
             {deliverables.map((deliverable, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
-                  <span className="text-base sm:text-lg font-semibold text-raizing-teal-900">{deliverable}</span>
+                  <span className="text-base sm:text-lg font-semibold text-raizing-teal-900 dark:text-white">{deliverable}</span>
                 </div>
               </div>
             ))}
@@ -243,13 +243,13 @@ export default function Consulting() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Why Choose Our Consulting
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               The benefits of working with our AI consultants
             </p>
           </div>
@@ -264,10 +264,10 @@ export default function Consulting() {
                 <div className="text-3xl sm:text-4xl font-bold text-raizing-maroon-500 mb-2">
                   {benefit.metric}
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 mb-2">
+                <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 dark:text-white mb-2">
                   {benefit.label}
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-900">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white">
                   {benefit.description}
                 </p>
               </div>
@@ -277,13 +277,13 @@ export default function Consulting() {
       </section>
 
       {/* Consulting Process Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Consulting Approach
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               A structured methodology that ensures successful AI transformation
             </p>
           </div>
@@ -319,10 +319,10 @@ export default function Consulting() {
                 <div className="text-4xl sm:text-5xl font-bold text-raizing-maroon-500 mb-3">
                   {step.step}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -335,10 +335,10 @@ export default function Consulting() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Industries We Serve
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Deep expertise across multiple industries
             </p>
           </div>
@@ -347,11 +347,11 @@ export default function Consulting() {
             {['Healthcare', 'Finance', 'Retail', 'Manufacturing', 'Education', 'Real Estate', 'Legal', 'Technology'].map((industry, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg text-center"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg text-center"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <Zap className="w-6 h-6 text-raizing-maroon-500 mx-auto mb-3" />
-                <span className="text-base sm:text-lg font-semibold text-raizing-teal-900">{industry}</span>
+                <span className="text-base sm:text-lg font-semibold text-raizing-teal-900 dark:text-white">{industry}</span>
               </div>
             ))}
           </div>
@@ -359,13 +359,13 @@ export default function Consulting() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Client Success Stories
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               How our consulting has transformed businesses
             </p>
           </div>
@@ -412,8 +412,8 @@ export default function Consulting() {
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-semibold text-raizing-teal-900">{testimonial.author}</div>
-                    <div className="text-sm text-raizing-teal-900">{testimonial.role}, {testimonial.company}</div>
+                    <div className="font-semibold text-raizing-teal-900 dark:text-white">{testimonial.author}</div>
+                    <div className="text-sm text-raizing-teal-900 dark:text-white">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -426,10 +426,10 @@ export default function Consulting() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white">
               Common questions about AI consulting
             </p>
           </div>
@@ -463,13 +463,13 @@ export default function Consulting() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -479,14 +479,14 @@ export default function Consulting() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            <span className="text-raizing-teal-900">Ready to Start Your</span>
+            <span className="text-raizing-teal-900 dark:text-white">Ready to Start Your</span>
             <br className="hidden sm:block" />
             <span className="text-raizing-maroon-600">AI Journey?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss how our AI consulting services can help you make the right decisions. Get in touch for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

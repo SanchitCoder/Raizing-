@@ -122,11 +122,11 @@ export default function OurTeam() {
   ];
 
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
@@ -142,10 +142,10 @@ export default function OurTeam() {
               <Users className="w-8 h-8 text-raizing-maroon-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              <span className="text-raizing-teal-900">Our</span>{' '}
+              <span className="text-raizing-teal-900 dark:text-white">Our</span>{' '}
               <span className="text-raizing-maroon-600">Team</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Meet the experts driving AI transformation for businesses worldwide
             </p>
           </div>
@@ -155,8 +155,8 @@ export default function OurTeam() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-raizing-cream-50 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
+          <div className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
               World-Class Expertise
             </h2>
             <div className="space-y-4">
@@ -171,9 +171,9 @@ export default function OurTeam() {
               </p>
               <div className="grid sm:grid-cols-4 gap-4 mt-6">
                 {stats.map((stat, index) => (
-                  <div key={index} className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                  <div key={index} className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                     <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">{stat.value}</div>
-                    <div className="text-sm text-raizing-teal-900">{stat.label}</div>
+                    <div className="text-sm text-raizing-teal-900 dark:text-white">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -183,13 +183,13 @@ export default function OurTeam() {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Leadership Team
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Visionary leaders driving our mission forward
             </p>
           </div>
@@ -209,16 +209,16 @@ export default function OurTeam() {
                     className="relative w-full h-full rounded-full object-cover border-4 border-white shadow-lg group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 text-center mb-1">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white text-center mb-1">
                   {leader.name}
                 </h3>
                 <p className="text-sm sm:text-base lg:text-lg text-raizing-maroon-500 text-center font-semibold mb-2 sm:mb-3">
                   {leader.role}
                 </p>
-                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 text-center mb-2 sm:mb-3 leading-relaxed px-2">
+                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white text-center mb-2 sm:mb-3 leading-relaxed px-2">
                   {leader.bio}
                 </p>
-                <p className="text-xs sm:text-sm text-raizing-teal-900 text-center px-2">
+                <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white text-center px-2">
                   {leader.expertise}
                 </p>
                 <div className="flex justify-center gap-3 mt-4">
@@ -239,10 +239,10 @@ export default function OurTeam() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Experts
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Talented professionals across all departments
             </p>
           </div>
@@ -251,7 +251,7 @@ export default function OurTeam() {
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 p-4 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-4 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
@@ -264,18 +264,18 @@ export default function OurTeam() {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 mb-1 truncate">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white mb-1 truncate">
                       {member.name}
                     </h3>
                     <p className="text-xs sm:text-sm lg:text-base text-raizing-maroon-500 font-semibold mb-1">
                       {member.role}
                     </p>
-                    <p className="text-xs sm:text-sm text-raizing-teal-900">
+                    <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">
                       {member.department}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-raizing-teal-900">
+                <div className="flex items-center gap-2 text-xs sm:text-sm text-raizing-teal-900 dark:text-white">
                   {member.icon}
                   <span className="truncate">{member.expertise}</span>
                 </div>
@@ -286,13 +286,13 @@ export default function OurTeam() {
       </section>
 
       {/* Culture Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Culture
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               What makes us unique
             </p>
           </div>
@@ -328,10 +328,10 @@ export default function OurTeam() {
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2 sm:mb-3">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -341,13 +341,13 @@ export default function OurTeam() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            <span className="text-raizing-teal-900">Join</span>{' '}
+            <span className="text-raizing-teal-900 dark:text-white">Join</span>{' '}
             <span className="text-raizing-maroon-600">Our Team</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             We're always looking for talented individuals passionate about AI. Check out our open positions or reach out to learn more.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

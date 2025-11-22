@@ -157,16 +157,16 @@ export default function Services() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 dark:from-gray-900 to-raizing-teal-900/30 dark:to-gray-800/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-500/10 border border-raizing-maroon-500/30 rounded-full">
             <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Our Services</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 mb-3 sm:mb-4 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 px-4">
             Comprehensive AI Solutions
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto px-4">
             End-to-end services designed to accelerate your AI journey from strategy to execution
           </p>
         </div>
@@ -217,8 +217,8 @@ export default function Services() {
 
               <div className="p-8 relative z-10">
 
-                <h3 className="text-2xl font-bold text-raizing-teal-900 mb-3 group-hover:text-raizing-maroon-600 transition-colors duration-300">{service.title}</h3>
-                <p className="text-raizing-teal-900 mb-6 leading-relaxed group-hover:text-raizing-teal-800 transition-colors duration-300">{service.description}</p>
+                <h3 className="text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3 group-hover:text-raizing-maroon-600 transition-colors duration-300">{service.title}</h3>
+                <p className="text-raizing-teal-900 dark:text-white mb-6 leading-relaxed group-hover:text-raizing-teal-800 transition-colors duration-300">{service.description}</p>
 
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, idx) => (
@@ -297,7 +297,7 @@ export default function Services() {
             <div className="space-y-4">
               {/* Name */}
               <div>
-                <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 mb-1.5">
+                <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 dark:text-white mb-1.5">
                   <User className="w-3.5 h-3.5 text-raizing-maroon-500" />
                   Full Name *
                 </label>
@@ -315,7 +315,7 @@ export default function Services() {
               {/* Email and Phone Row */}
               <div className="grid md:grid-cols-2 gap-3">
                 <div>
-                  <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 mb-1.5">
+                  <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 dark:text-white mb-1.5">
                     <Mail className="w-3.5 h-3.5 text-raizing-maroon-500" />
                     Email *
                   </label>
@@ -331,7 +331,7 @@ export default function Services() {
                 </div>
 
                 <div>
-                  <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 mb-1.5">
+                  <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 dark:text-white mb-1.5">
                     <Phone className="w-3.5 h-3.5 text-raizing-maroon-500" />
                     Phone *
                   </label>
@@ -349,7 +349,7 @@ export default function Services() {
 
               {/* Company */}
               <div>
-                <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 mb-1.5">
+                <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 dark:text-white mb-1.5">
                   <Building className="w-3.5 h-3.5 text-raizing-maroon-500" />
                   Company Name
                 </label>
@@ -365,7 +365,7 @@ export default function Services() {
 
               {/* Service Selection */}
               <div>
-                <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 mb-1.5">
+                <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 dark:text-white mb-1.5">
                   <Workflow className="w-3.5 h-3.5 text-raizing-maroon-500" />
                   Service Interest *
                 </label>
@@ -385,7 +385,7 @@ export default function Services() {
 
               {/* Message */}
               <div>
-                <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 mb-1.5">
+                <label className="flex items-center gap-1.5 text-xs font-semibold text-raizing-teal-900 dark:text-white mb-1.5">
                   <MessageSquare className="w-3.5 h-3.5 text-raizing-maroon-500" />
                   Project Details *
                 </label>

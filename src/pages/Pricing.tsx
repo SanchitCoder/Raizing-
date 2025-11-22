@@ -130,11 +130,11 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
@@ -150,10 +150,10 @@ export default function Pricing() {
               <TrendingUp className="w-8 h-8 text-raizing-maroon-600" />
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              <span className="text-raizing-teal-900">Pricing</span>{' '}
+              <span className="text-raizing-teal-900 dark:text-white">Pricing</span>{' '}
               <span className="text-raizing-maroon-600">Plans</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include our core AI services with flexible options to scale.
             </p>
           </div>
@@ -163,8 +163,8 @@ export default function Pricing() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
               Transparent, Flexible Pricing
             </h2>
             <div className="space-y-4">
@@ -177,17 +177,17 @@ export default function Pricing() {
                 at any time as your needs evolve.
               </p>
               <div className="grid sm:grid-cols-3 gap-4 mt-6">
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">No Setup Fees</div>
-                  <div className="text-sm text-raizing-teal-900">Get started immediately</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">Get started immediately</div>
                 </div>
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">Cancel Anytime</div>
-                  <div className="text-sm text-raizing-teal-900">Flexible commitments</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">Flexible commitments</div>
                 </div>
-                <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
+                <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">30-Day Trial</div>
-                  <div className="text-sm text-raizing-teal-900">Risk-free start</div>
+                  <div className="text-sm text-raizing-teal-900 dark:text-white">Risk-free start</div>
                 </div>
               </div>
             </div>
@@ -196,13 +196,13 @@ export default function Pricing() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Choose Your Plan
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Select the plan that best fits your business size and AI needs
             </p>
           </div>
@@ -225,14 +225,14 @@ export default function Pricing() {
                 )}
                 
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-raizing-teal-900 mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-raizing-teal-900 dark:text-white mb-2">{plan.name}</h3>
                   <div className="mb-2">
                     <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-raizing-maroon-500">{plan.price}</span>
                     {plan.period !== 'pricing' && (
-                      <span className="text-sm sm:text-base text-raizing-teal-900 ml-2">/{plan.period}</span>
+                      <span className="text-sm sm:text-base text-raizing-teal-900 dark:text-white ml-2">/{plan.period}</span>
                     )}
                   </div>
-                  <p className="text-xs sm:text-sm text-raizing-teal-900 px-2">{plan.description}</p>
+                  <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white px-2">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -270,10 +270,10 @@ export default function Pricing() {
       <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Additional Services
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Enhance your plan with these optional add-ons
             </p>
           </div>
@@ -282,19 +282,19 @@ export default function Pricing() {
             {addOns.map((addOn, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
                   {addOn.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 mb-2">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">
                   {addOn.name}
                 </h3>
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-raizing-maroon-500 mb-2">
                   {addOn.price}
                 </div>
-                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900">
+                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white">
                   {addOn.description}
                 </p>
               </div>
@@ -304,13 +304,13 @@ export default function Pricing() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900">
+            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white">
               Common questions about our pricing
             </p>
           </div>
@@ -347,10 +347,10 @@ export default function Pricing() {
                 className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -360,13 +360,13 @@ export default function Pricing() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            <span className="text-raizing-teal-900">Need a Custom</span>{' '}
+            <span className="text-raizing-teal-900 dark:text-white">Need a Custom</span>{' '}
             <span className="text-raizing-maroon-600">Solution?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             Contact us for enterprise pricing, custom plans, or to discuss your specific requirements. We'll create a solution tailored to your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

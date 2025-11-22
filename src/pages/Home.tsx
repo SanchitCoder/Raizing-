@@ -14,7 +14,7 @@ import AIAssessment from '../components/AIAssessment';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       <Hero />
       <section id="about">

@@ -172,11 +172,11 @@ export default function FeaturesDetail() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-raizing-cream-50">
+    <div className="min-h-screen bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
@@ -192,11 +192,11 @@ export default function FeaturesDetail() {
               <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Features</span>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              <span className="text-raizing-teal-900">The Raizing AI</span>
+              <span className="text-raizing-teal-900 dark:text-white">The Raizing AI</span>
               <br className="hidden sm:block" />
               <span className="text-raizing-maroon-600">Advantage</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Discover what sets us apart in the competitive AI automation landscape
             </p>
           </div>
@@ -213,11 +213,11 @@ export default function FeaturesDetail() {
                 className="animate-on-scroll opacity-0"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="bg-raizing-cream-50 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                   {/* Feature Header */}
                   <div className={`bg-gradient-to-r ${feature.gradient} p-6 sm:p-8 md:p-10`}>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-                      <div className="inline-flex p-4 bg-raizing-cream-50/20 backdrop-blur-sm rounded-xl text-white">
+                      <div className="inline-flex p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300/20 backdrop-blur-sm rounded-xl text-white">
                         {feature.icon}
                       </div>
                       <div className="flex-1">
@@ -242,7 +242,7 @@ export default function FeaturesDetail() {
 
                     {/* Key Points Grid */}
                     <div className="mb-8 sm:mb-10">
-                      <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-6 sm:mb-8">
+                      <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-6 sm:mb-8">
                         Key Highlights
                       </h3>
                       <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
@@ -254,10 +254,10 @@ export default function FeaturesDetail() {
                             <div className={`inline-flex p-2.5 bg-gradient-to-r ${feature.gradient} rounded-lg text-white mb-3 sm:mb-4`}>
                               {point.icon}
                             </div>
-                            <h4 className="text-lg sm:text-xl font-bold text-raizing-teal-900 mb-2 sm:mb-3">
+                            <h4 className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white mb-2 sm:mb-3">
                               {point.title}
                             </h4>
-                            <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
+                            <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                               {point.description}
                             </p>
                           </div>
@@ -266,8 +266,8 @@ export default function FeaturesDetail() {
                     </div>
 
                     {/* Benefits List */}
-                    <div className="bg-raizing-cream-50 p-6 sm:p-8 rounded-xl border border-raizing-teal-900">
-                      <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
+                    <div className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-6 sm:p-8 rounded-xl border border-raizing-teal-900">
+                      <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
                         Business Benefits
                       </h3>
                       <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
@@ -288,14 +288,14 @@ export default function FeaturesDetail() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-            <span className="text-raizing-teal-900">Ready to Experience</span>
+            <span className="text-raizing-teal-900 dark:text-white">Ready to Experience</span>
             <br className="hidden sm:block" />
             <span className="text-raizing-maroon-600">These Advantages?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss how we can bring these benefits to your business. Get in touch for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
