@@ -144,25 +144,27 @@ export default function CaseStudies() {
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-gradient-to-br from-raizing-teal-900 via-raizing-teal-800 to-raizing-teal-900 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-raizing-cream-200 hover:text-raizing-maroon-400 transition-colors mb-6 sm:mb-8 group"
+            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-6 sm:mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             <span className="text-sm sm:text-base font-medium">Back to Home</span>
           </button>
           
           <div className="text-center">
-            <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 bg-raizing-maroon-500/10 backdrop-blur-sm border border-raizing-maroon-500/30 rounded-full">
-              <span className="text-raizing-maroon-400 text-xs sm:text-sm font-semibold">Case Studies</span>
+            <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
+              <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Case Studies</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-raizing-cream-200 mb-4 sm:mb-6">
-              Our Success Stories
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+              <span className="text-raizing-teal-900">Our Success</span>
+              <br className="hidden sm:block" />
+              <span className="text-raizing-maroon-600">Stories</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-cream-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto">
               Real projects, real results. Discover how we've transformed businesses across industries with AI automation.
             </p>
           </div>
@@ -176,7 +178,7 @@ export default function CaseStudies() {
             {caseStudies.map((study, index) => (
               <div
                 key={study.id}
-                className="animate-on-scroll opacity-0 group relative bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 group relative bg-raizing-cream-50 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${study.color}`}></div>
@@ -214,7 +216,7 @@ export default function CaseStudies() {
                     }}
                   />
                   <div className={`absolute inset-0 bg-gradient-to-br ${study.color} opacity-25 group-hover:opacity-15 transition-opacity duration-500`}></div>
-                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-raizing-teal-900/10">
+                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-raizing-cream-50/95 backdrop-blur-sm rounded-lg shadow-md border border-raizing-teal-900/10">
                     <span className="text-xs font-semibold text-raizing-teal-900">{study.industry}</span>
                   </div>
                 </div>
@@ -292,12 +294,14 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-teal-900 via-raizing-teal-800 to-raizing-teal-900">
+      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-cream-200 mb-4 sm:mb-6">
-            Ready to Write Your Success Story?
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+            <span className="text-raizing-teal-900">Ready to Write Your</span>
+            <br className="hidden sm:block" />
+            <span className="text-raizing-maroon-600">Success Story?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-cream-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss how we can transform your business with AI automation. Get in touch for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

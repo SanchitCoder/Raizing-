@@ -7,6 +7,7 @@ interface UserInfo {
   phone: string;
   company: string;
   role: string;
+  companySize: string;
 }
 
 interface Answer {
@@ -22,7 +23,8 @@ export default function AIAssessment() {
     email: '',
     phone: '',
     company: '',
-    role: ''
+    role: '',
+    companySize: ''
   });
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [selectedAnswer, setSelectedAnswer] = useState('');
@@ -80,7 +82,7 @@ export default function AIAssessment() {
     }
   ];
 
-  const handleUserInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleUserInfoChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setUserInfo(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -117,7 +119,7 @@ export default function AIAssessment() {
     setIsOpen(false);
     setTimeout(() => {
       setCurrentStep(0);
-      setUserInfo({ name: '', email: '', phone: '', company: '', role: '' });
+      setUserInfo({ name: '', email: '', phone: '', company: '', role: '', companySize: '' });
       setAnswers([]);
       setSelectedAnswer('');
     }, 300);
@@ -273,6 +275,26 @@ export default function AIAssessment() {
                       className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm"
                       placeholder="Your Company"
                     />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs sm:text-sm font-semibold text-raizing-teal-900 mb-1.5">
+                      Company Size
+                    </label>
+                    <select
+                      name="companySize"
+                      value={userInfo.companySize}
+                      onChange={handleUserInfoChange}
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm bg-white"
+                    >
+                      <option value="">Select company size</option>
+                      <option value="1-10">1-10 employees</option>
+                      <option value="11-50">11-50 employees</option>
+                      <option value="51-200">51-200 employees</option>
+                      <option value="201-500">201-500 employees</option>
+                      <option value="501-1000">501-1000 employees</option>
+                      <option value="1000+">1000+ employees</option>
+                    </select>
                   </div>
 
                   <div>

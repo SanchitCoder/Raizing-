@@ -94,13 +94,13 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col min-w-0 gap-0.5 sm:gap-1 flex-1">
-              <span className={`text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold leading-tight group-hover:text-raizing-maroon-400 transition-colors duration-300 ${
-                isScrolled ? 'text-raizing-cream-200' : 'text-raizing-cream-200'
+              <span className={`text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-bold leading-tight group-hover:text-raizing-teal-800 transition-colors duration-300 ${
+                isScrolled ? 'text-raizing-cream-200' : 'text-raizing-teal-900'
               }`}>
                 Raizing AI
               </span>
               <span className={`text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs xl:text-sm font-medium leading-tight group-hover:translate-x-1 transition-transform duration-300 ${
-                isScrolled ? 'text-raizing-maroon-400' : 'text-raizing-maroon-400'
+                isScrolled ? 'text-raizing-maroon-400' : 'text-raizing-maroon-800'
               }`}>
                 Transform. Streamline. Succeed.
               </span>
@@ -110,56 +110,56 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <button
               onClick={() => handleNavigation('/automation')}
-              className={`font-medium transition-all duration-300 hover:text-raizing-maroon-400 hover:scale-110 relative group/nav ${
-                isScrolled ? 'text-raizing-cream-500' : 'text-raizing-cream-200'
+              className={`font-medium transition-all duration-300 hover:text-raizing-maroon-700 hover:scale-110 relative group/nav ${
+                isScrolled ? 'text-raizing-maroon-900' : 'text-raizing-maroon-900'
               }`}
             >
               <span className="relative z-10">Automation</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-raizing-maroon-400 group-hover/nav:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-raizing-maroon-600 group-hover/nav:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => handleNavigation('/training')}
-              className={`font-medium transition-all duration-300 hover:text-raizing-maroon-400 hover:scale-110 relative group/nav ${
-                isScrolled ? 'text-raizing-cream-500' : 'text-raizing-cream-200'
+              className={`font-medium transition-all duration-300 hover:text-raizing-maroon-700 hover:scale-110 relative group/nav ${
+                isScrolled ? 'text-raizing-maroon-900' : 'text-raizing-maroon-900'
               }`}
             >
               <span className="relative z-10">Training</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-raizing-maroon-400 group-hover/nav:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-raizing-maroon-600 group-hover/nav:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => handleNavigation('/consulting')}
-              className={`font-medium transition-all duration-300 hover:text-raizing-maroon-400 hover:scale-110 relative group/nav ${
-                isScrolled ? 'text-raizing-cream-500' : 'text-raizing-cream-200'
+              className={`font-medium transition-all duration-300 hover:text-raizing-maroon-700 hover:scale-110 relative group/nav ${
+                isScrolled ? 'text-raizing-maroon-900' : 'text-raizing-maroon-900'
               }`}
             >
               <span className="relative z-10">Consulting</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-raizing-maroon-400 group-hover/nav:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-raizing-maroon-600 group-hover/nav:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => handleNavigation('/development')}
-              className={`font-medium transition-all duration-300 hover:text-raizing-maroon-400 hover:scale-110 relative group/nav ${
-                isScrolled ? 'text-raizing-cream-500' : 'text-raizing-cream-200'
+              className={`font-medium transition-all duration-300 hover:text-raizing-maroon-700 hover:scale-110 relative group/nav ${
+                isScrolled ? 'text-raizing-maroon-900' : 'text-raizing-maroon-900'
               }`}
             >
               <span className="relative z-10">Development</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0 h-0.5 bg-raizing-maroon-400 group-hover/nav:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0 h-0.5 bg-raizing-maroon-600 group-hover/nav:w-full transition-all duration-300"></span>
             </button>
             
             <button
               onClick={() => handleNavigation('/ai-services')}
-              className={`font-bold transition-all duration-300 hover:text-raizing-maroon-400 hover:scale-110 relative group/nav ${
-                isScrolled ? 'text-raizing-cream-500' : 'text-raizing-cream-200'
+              className={`font-bold transition-all duration-300 hover:text-raizing-maroon-700 hover:scale-110 relative group/nav ${
+                isScrolled ? 'text-raizing-maroon-900' : 'text-raizing-maroon-900'
               }`}
             >
               <span className="relative z-10">AI Services</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-raizing-maroon-400 group-hover/nav:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-raizing-maroon-600 group-hover/nav:w-full transition-all duration-300"></span>
             </button>
 
             <div className="relative about-dropdown">
               <button
                 onClick={handleAboutClick}
-                className={`flex items-center gap-1 font-medium transition-colors duration-300 hover:text-raizing-maroon-400 ${
-                  isScrolled ? 'text-raizing-cream-500' : 'text-raizing-cream-200'
+                className={`flex items-center gap-1 font-medium transition-colors duration-300 hover:text-raizing-maroon-700 ${
+                  isScrolled ? 'text-raizing-maroon-900' : 'text-raizing-maroon-900'
                 }`}
               >
                 About
@@ -172,7 +172,7 @@ export default function Navbar() {
                     <button
                       key={item.label}
                       onClick={() => handleNavigation(item.path)}
-                      className="block w-full text-left px-4 py-2 text-sm text-raizing-cream-300 hover:text-raizing-maroon-400 hover:bg-raizing-teal-800 transition-colors"
+                      className="block w-full text-left px-4 py-2 text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800 transition-colors font-medium"
                     >
                       {item.label}
                     </button>
@@ -192,7 +192,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className={`md:hidden flex-shrink-0 ml-2 p-2 ${isScrolled ? 'text-raizing-cream-500' : 'text-raizing-cream-200'} hover:text-raizing-maroon-400 transition-colors`}
+            className={`md:hidden flex-shrink-0 ml-2 p-2 ${isScrolled ? 'text-raizing-maroon-900' : 'text-raizing-maroon-900'} hover:text-raizing-maroon-700 transition-colors`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -212,17 +212,17 @@ export default function Navbar() {
                   className="h-10 sm:h-12 w-auto object-contain"
                 />
                 <div className="flex flex-col gap-1">
-                  <span className="text-base sm:text-lg font-bold text-raizing-cream-200 leading-tight">
+                  <span className="text-base sm:text-lg font-bold text-raizing-teal-900 leading-tight">
                     Raizing AI
                   </span>
-                  <span className="text-xs sm:text-sm font-medium text-raizing-maroon-400 leading-tight">
+                  <span className="text-xs sm:text-sm font-medium text-raizing-maroon-800 leading-tight">
                     Transform. Streamline. Succeed.
                   </span>
                 </div>
               </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-raizing-cream-300 hover:text-raizing-cream-200 transition-colors p-1"
+                className="text-raizing-maroon-900 hover:text-raizing-maroon-700 transition-colors p-1"
                 aria-label="Close menu"
               >
                 <X className="w-6 h-6" />
@@ -231,32 +231,32 @@ export default function Navbar() {
             <div className="space-y-2">
               <button
                 onClick={() => handleNavigation('/automation')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-300 font-medium hover:text-raizing-cream-200 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-maroon-900 font-medium hover:text-raizing-maroon-700 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 Automation
               </button>
               <button
                 onClick={() => handleNavigation('/training')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-300 font-medium hover:text-raizing-cream-200 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-maroon-900 font-medium hover:text-raizing-maroon-700 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 Training
               </button>
               <button
                 onClick={() => handleNavigation('/consulting')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-300 font-medium hover:text-raizing-cream-200 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-maroon-900 font-medium hover:text-raizing-maroon-700 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 Consulting
               </button>
               <button
                 onClick={() => handleNavigation('/development')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-300 font-medium hover:text-raizing-cream-200 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-maroon-900 font-medium hover:text-raizing-maroon-700 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 Development
               </button>
               
               <button
                 onClick={() => handleNavigation('/ai-services')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-maroon-900 font-bold hover:text-raizing-maroon-700 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 AI Services
               </button>
@@ -264,7 +264,7 @@ export default function Navbar() {
               <div className="pt-2">
                 <button
                   onClick={handleAboutClick}
-                  className="flex items-center justify-between w-full text-left py-3 px-4 rounded-md text-raizing-cream-300 font-medium hover:text-raizing-cream-200 hover:bg-raizing-teal-800/50 transition-colors"
+                  className="flex items-center justify-between w-full text-left py-3 px-4 rounded-md text-raizing-maroon-900 font-medium hover:text-raizing-maroon-700 hover:bg-raizing-teal-800/50 transition-colors"
                 >
                   <span>About</span>
                   <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} />
@@ -276,7 +276,7 @@ export default function Navbar() {
                       <button
                         key={item.label}
                         onClick={() => handleNavigation(item.path)}
-                        className="block w-full text-left py-2.5 px-4 rounded-md text-sm text-raizing-cream-400 hover:text-raizing-cream-200 hover:bg-raizing-teal-800/50 transition-colors"
+                        className="block w-full text-left py-2.5 px-4 rounded-md text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors font-medium"
                       >
                         {item.label}
                       </button>
