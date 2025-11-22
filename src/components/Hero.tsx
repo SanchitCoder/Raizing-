@@ -44,7 +44,7 @@ export default function Hero() {
           <span className="text-raizing-maroon-400 text-xs sm:text-sm font-medium">AI-Powered Business Transformation</span>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-raizing-cream-200 via-raizing-cream-300 to-raizing-cream-400 leading-tight px-2">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-raizing-cream-200 via-raizing-cream-300 to-raizing-cream-400 animate-gradient leading-tight px-2 hover:scale-105 transition-transform duration-500">
           Empowering the Future<br className="hidden sm:block" /> with AI Automation
         </h1>
 
@@ -56,16 +56,19 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
           <button
             onClick={scrollToContact}
-            className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
+            className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-110 hover:shadow-2xl flex items-center justify-center gap-2 overflow-hidden"
           >
-            Let's Connect
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+            <span className="relative z-10">Let's Connect</span>
+            <ArrowRight className="relative z-10 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-2 transition-transform duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-raizing-maroon-600 to-raizing-maroon-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100"></div>
           </button>
           <button
             onClick={scrollToVideo}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
+            className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 glass-enhanced text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 hover:border-raizing-cream-200/40 hover:scale-110 transition-all duration-300 hover:shadow-xl"
           >
-            Watch Demo
+            <span className="relative z-10">Watch Demo</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </button>
         </div>
 
@@ -75,9 +78,10 @@ export default function Hero() {
             { value: '98%', label: 'Client Satisfaction' },
             { value: '50+', label: 'Enterprise Clients' }
           ].map((stat, index) => (
-            <div key={index} className="glass-card p-4 sm:p-6 rounded-xl border border-raizing-maroon-500/20 hover:border-raizing-maroon-500/40 transition-all duration-300">
-              <div className="text-3xl sm:text-4xl font-bold text-raizing-maroon-400 mb-1 sm:mb-2">{stat.value}</div>
-              <div className="text-sm sm:text-base text-raizing-cream-300">{stat.label}</div>
+            <div key={index} className="group glass-enhanced p-4 sm:p-6 rounded-xl border border-raizing-maroon-500/20 hover:border-raizing-maroon-500/60 hover:scale-110 transition-all duration-500 hover:shadow-2xl hover:shadow-raizing-maroon-500/30 animate-scale-in" style={{ animationDelay: `${index * 200}ms` }}>
+              <div className="text-3xl sm:text-4xl font-bold text-raizing-maroon-400 mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">{stat.value}</div>
+              <div className="text-sm sm:text-base text-raizing-cream-300 group-hover:text-raizing-cream-200 transition-colors duration-300">{stat.label}</div>
+              <div className="absolute inset-0 bg-gradient-to-br from-raizing-maroon-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
             </div>
           ))}
         </div>

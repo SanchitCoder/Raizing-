@@ -39,12 +39,12 @@ export default function VideoSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 mb-3 sm:mb-4 px-4">
             Experience the Future of AI
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-700 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto px-4">
             Discover how AI is transforming businesses and creating new possibilities
           </p>
         </div>
 
-        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-raizing-teal-200 animate-on-scroll opacity-0">
+        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-raizing-teal-900 animate-on-scroll opacity-0">
           <div className="absolute inset-0 bg-gradient-to-br from-raizing-teal-900/10 to-raizing-maroon-500/10 z-10 pointer-events-none"></div>
           <video
             ref={videoRef}

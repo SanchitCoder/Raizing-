@@ -104,9 +104,24 @@ export default function WhyChooseUs() {
             <p className="text-raizing-cream-300 text-lg mb-4">
               Join <span className="text-raizing-maroon-400 font-bold text-2xl">500+</span> companies already transforming their business with AI
             </p>
-            <div className="flex justify-center gap-8 mt-6 mb-6">
+            
+            {/* Trust Badges */}
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6">
+              {[
+                { name: 'ISO Certified', icon: '✓' },
+                { name: 'GDPR Compliant', icon: '✓' },
+                { name: 'SOC 2 Type II', icon: '✓' }
+              ].map((badge, idx) => (
+                <div key={idx} className="flex items-center gap-2 px-4 py-2 bg-raizing-cream-200/10 backdrop-blur-sm rounded-lg border border-raizing-cream-200/20">
+                  <span className="text-raizing-maroon-400 font-bold">{badge.icon}</span>
+                  <span className="text-sm text-raizing-cream-300">{badge.name}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mt-6 mb-6">
               {['Microsoft', 'Google', 'Amazon', 'IBM'].map((company, idx) => (
-                <div key={idx} className="text-raizing-cream-400 font-semibold opacity-50 hover:opacity-100 hover:text-raizing-maroon-400 transition-all cursor-pointer">
+                <div key={idx} className="text-raizing-cream-400 font-semibold text-sm sm:text-base opacity-50 hover:opacity-100 hover:text-raizing-maroon-400 transition-all cursor-pointer">
                   {company}
                 </div>
               ))}

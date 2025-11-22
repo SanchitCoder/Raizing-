@@ -129,7 +129,23 @@ export default function AboutUs() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-200 p-6 sm:p-8 md:p-10 shadow-lg">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-12">
+            <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80" 
+                alt="Raizing AI Team" 
+                className="w-full h-64 sm:h-80 object-cover"
+              />
+            </div>
+            <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&q=80" 
+                alt="Modern Office Space" 
+                className="w-full h-64 sm:h-80 object-cover"
+              />
+            </div>
+          </div>
+          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
               Our Story
             </h2>
@@ -151,15 +167,15 @@ export default function AboutUs() {
               <div className="grid sm:grid-cols-3 gap-4 mt-6">
                 <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">500+</div>
-                  <div className="text-sm text-raizing-teal-700">Projects Completed</div>
+                  <div className="text-sm text-raizing-teal-900">Projects Completed</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">50+</div>
-                  <div className="text-sm text-raizing-teal-700">Team Members</div>
+                  <div className="text-sm text-raizing-teal-900">Team Members</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">15+</div>
-                  <div className="text-sm text-raizing-teal-700">Industries Served</div>
+                  <div className="text-sm text-raizing-teal-900">Industries Served</div>
                 </div>
               </div>
             </div>
@@ -174,7 +190,7 @@ export default function AboutUs() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Our Core Values
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -183,7 +199,7 @@ export default function AboutUs() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
@@ -192,7 +208,7 @@ export default function AboutUs() {
                 <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
                   {value.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -202,10 +218,10 @@ export default function AboutUs() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-50/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            <div className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-200 shadow-lg">
+            <div className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 shadow-lg">
               <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-3 sm:mb-4">
                 <Target className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
@@ -217,8 +233,8 @@ export default function AboutUs() {
                 intelligent automation, strategic guidance, and transformative solutions.
               </p>
             </div>
-            <div className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-200 shadow-lg" style={{ animationDelay: '100ms' }}>
-              <div className="inline-flex p-3 bg-gradient-to-r from-raizing-teal-700 to-raizing-teal-800 rounded-lg text-white mb-3 sm:mb-4">
+            <div className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 shadow-lg" style={{ animationDelay: '100ms' }}>
+              <div className="inline-flex p-3 bg-gradient-to-r from-raizing-teal-900 to-raizing-teal-800 rounded-lg text-white mb-3 sm:mb-4">
                 <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
@@ -240,7 +256,7 @@ export default function AboutUs() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Our Journey
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Key milestones in our growth and evolution
             </p>
           </div>
@@ -249,7 +265,7 @@ export default function AboutUs() {
             {milestones.map((milestone, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 items-start bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-200"
+                className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 items-start bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex-shrink-0">
@@ -261,7 +277,7 @@ export default function AboutUs() {
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 mb-2">
                     {milestone.title}
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-700 leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 leading-relaxed">
                     {milestone.description}
                   </p>
                 </div>

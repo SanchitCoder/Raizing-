@@ -49,7 +49,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 via-white to-raizing-teal-50/30">
+    <section id="contact" ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 via-white to-raizing-teal-900/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-500/10 border border-raizing-maroon-500/30 rounded-full">
@@ -58,18 +58,26 @@ export default function Contact() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
             Let's Start Your AI Journey
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-700 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto px-4">
             Ready to transform your business? Contact us for a free consultation and discover how AI can drive your success.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           <div className="animate-on-scroll opacity-0">
-            <div className="bg-gradient-to-br from-raizing-maroon-500 to-raizing-maroon-700 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 text-raizing-cream-200 h-full relative overflow-hidden">
+            <div className="bg-gradient-to-br from-raizing-maroon-500 to-raizing-maroon-700 rounded-xl sm:rounded-2xl text-raizing-cream-200 h-full relative overflow-hidden">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80" 
+                  alt="Professional team collaboration" 
+                  className="w-full h-full object-cover opacity-20"
+                />
+              </div>
               <div className="absolute top-0 right-0 w-64 h-64 bg-raizing-cream-200/10 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-raizing-teal-900/10 rounded-full blur-3xl"></div>
 
-              <div className="relative z-10">
+              <div className="relative z-10 p-6 sm:p-8 md:p-10">
                 <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Contact Information</h3>
                 <p className="text-raizing-cream-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
                   Reach out to our team of AI experts. We're here to answer your questions and help you get started.
@@ -125,7 +133,7 @@ export default function Contact() {
           </div>
 
           <div className="animate-on-scroll opacity-0" style={{ animationDelay: '200ms' }}>
-            <form onSubmit={handleSubmit} className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border border-raizing-teal-200 shadow-lg">
+            <form onSubmit={handleSubmit} className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border border-raizing-teal-900 shadow-lg">
               <div className="space-y-4 sm:space-y-6">
                 <div>
                   <label className="block text-sm font-semibold text-raizing-teal-900 mb-2">
@@ -137,7 +145,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                     placeholder="John Doe"
                   />
                 </div>
@@ -152,7 +160,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                     placeholder="john@company.com"
                   />
                 </div>
@@ -166,7 +174,7 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                     placeholder="Your Company"
                   />
                 </div>
@@ -181,7 +189,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all resize-none"
                     placeholder="Tell us about your project..."
                   />
                 </div>

@@ -11,6 +11,7 @@ const caseStudies = [
     industry: 'Retail',
     challenge: 'Manual order processing causing delays and errors',
     solution: 'Implemented AI-powered order automation system',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80',
     results: [
       { icon: <Clock className="w-5 h-5" />, metric: '85%', label: 'Time Saved' },
       { icon: <DollarSign className="w-5 h-5" />, metric: '$2M', label: 'Annual Savings' },
@@ -28,6 +29,7 @@ const caseStudies = [
     industry: 'Finance',
     challenge: 'Complex data analysis taking weeks to complete',
     solution: 'Deployed ML-driven analytics and reporting system',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop&q=80',
     results: [
       { icon: <Clock className="w-5 h-5" />, metric: '10x', label: 'Faster Analysis' },
       { icon: <BarChart3 className="w-5 h-5" />, metric: '95%', label: 'Accuracy Boost' },
@@ -45,6 +47,7 @@ const caseStudies = [
     industry: 'Healthcare',
     challenge: 'Patient scheduling inefficiencies and no-shows',
     solution: 'AI scheduling system with predictive reminders',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999e8?w=1200&h=600&fit=crop&q=80',
     results: [
       { icon: <TrendingUp className="w-5 h-5" />, metric: '60%', label: 'Fewer No-Shows' },
       { icon: <Clock className="w-5 h-5" />, metric: '40%', label: 'Time Saved' },
@@ -62,6 +65,7 @@ const caseStudies = [
     industry: 'Manufacturing',
     challenge: 'Supply chain disruptions and inventory management issues',
     solution: 'AI-powered supply chain optimization platform',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=600&fit=crop&q=80',
     results: [
       { icon: <TrendingUp className="w-5 h-5" />, metric: '75%', label: 'Efficiency Gain' },
       { icon: <DollarSign className="w-5 h-5" />, metric: '$3.2M', label: 'Cost Reduction' },
@@ -79,6 +83,7 @@ const caseStudies = [
     industry: 'Real Estate',
     challenge: 'Property valuation inconsistencies and slow processing',
     solution: 'ML-based property valuation and recommendation engine',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop&q=80',
     results: [
       { icon: <Clock className="w-5 h-5" />, metric: '80%', label: 'Faster Processing' },
       { icon: <TrendingUp className="w-5 h-5" />, metric: '92%', label: 'Accuracy Rate' },
@@ -96,6 +101,7 @@ const caseStudies = [
     industry: 'Education',
     challenge: 'Student engagement and personalized learning paths',
     solution: 'AI-driven personalized learning platform',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=600&fit=crop&q=80',
     results: [
       { icon: <TrendingUp className="w-5 h-5" />, metric: '45%', label: 'Engagement Increase' },
       { icon: <CheckCircle2 className="w-5 h-5" />, metric: '88%', label: 'Completion Rate' },
@@ -170,16 +176,54 @@ export default function CaseStudies() {
             {caseStudies.map((study, index) => (
               <div
                 key={study.id}
-                className="animate-on-scroll opacity-0 group relative bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-200 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 group relative bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${study.color}`}></div>
+
+                {/* Case Study Image */}
+                <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-raizing-cream-100">
+                  <img 
+                    src={study.image}
+                    alt={`${study.company} - ${study.industry}`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="eager"
+                    onError={(e) => {
+                      // Fallback to alternative image sources if the first one fails
+                      const target = e.target as HTMLImageElement;
+                      if (!target.dataset.retried) {
+                        target.dataset.retried = 'true';
+                        // Try alternative image URLs based on industry
+                        const altImages: { [key: string]: string } = {
+                          'Healthcare': 'https://images.unsplash.com/photo-1573164574230-7d8e1c4c71d2?w=1200&h=600&fit=crop&q=80',
+                          'Retail': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80',
+                          'Finance': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop&q=80',
+                          'Manufacturing': 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=600&fit=crop&q=80',
+                          'Real Estate': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop&q=80',
+                          'Education': 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=600&fit=crop&q=80'
+                        };
+                        target.src = altImages[study.industry] || study.image;
+                      } else {
+                        // If all images fail, hide the image and show a gradient background instead
+                        target.style.display = 'none';
+                        const container = target.parentElement;
+                        if (container) {
+                          container.style.background = `linear-gradient(135deg, #8b2d3f, #6b1f2f)`;
+                        }
+                      }
+                    }}
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${study.color} opacity-25 group-hover:opacity-15 transition-opacity duration-500`}></div>
+                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-raizing-teal-900/10">
+                    <span className="text-xs font-semibold text-raizing-teal-900">{study.industry}</span>
+                  </div>
+                </div>
 
                 <div className="p-6 sm:p-8">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-2">{study.company}</h3>
-                      <span className={`inline-block px-2 sm:px-3 py-1 bg-raizing-teal-100 text-raizing-teal-700 text-xs sm:text-sm rounded-full`}>
+                      <span className={`inline-block px-2 sm:px-3 py-1 bg-raizing-teal-900 text-raizing-teal-900 text-xs sm:text-sm rounded-full`}>
                         {study.industry}
                       </span>
                     </div>
@@ -187,46 +231,46 @@ export default function CaseStudies() {
 
                   <div className="space-y-3 sm:space-y-4 mb-6">
                     <div>
-                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-600 uppercase mb-1.5">Challenge</h4>
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-1.5">Challenge</h4>
                       <p className="text-sm sm:text-base text-raizing-teal-800">{study.challenge}</p>
                     </div>
                     <div>
-                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-600 uppercase mb-1.5">Solution</h4>
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-1.5">Solution</h4>
                       <p className="text-sm sm:text-base text-raizing-teal-800">{study.solution}</p>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-600 uppercase mb-3">Key Results</h4>
+                    <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-3">Key Results</h4>
                     <div className="grid grid-cols-3 gap-2 sm:gap-3">
                       {study.results.map((result, idx) => (
                         <div
                           key={idx}
-                          className="bg-raizing-cream-50 p-2 sm:p-3 rounded-lg border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 text-center"
+                          className="bg-raizing-cream-50 p-2 sm:p-3 rounded-lg border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 text-center"
                         >
                           <div className={`inline-flex p-1.5 sm:p-2 bg-gradient-to-r ${study.color} rounded-lg text-raizing-cream-200 mb-1.5 sm:mb-2`}>
                             {result.icon}
                           </div>
                           <div className="text-lg sm:text-xl font-bold text-raizing-teal-900">{result.metric}</div>
-                          <div className="text-xs sm:text-sm text-raizing-teal-700">{result.label}</div>
+                          <div className="text-xs sm:text-sm text-raizing-teal-900">{result.label}</div>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-raizing-teal-200 space-y-2">
+                  <div className="pt-4 border-t border-raizing-teal-900 space-y-2">
                     <div className="flex items-center justify-between text-xs sm:text-sm">
-                      <span className="text-raizing-teal-600 font-medium">Timeline:</span>
+                      <span className="text-raizing-teal-900 font-medium">Timeline:</span>
                       <span className="text-raizing-teal-800">{study.timeline}</span>
                     </div>
                     <div className="flex items-center justify-between text-xs sm:text-sm">
-                      <span className="text-raizing-teal-600 font-medium">Team Size:</span>
+                      <span className="text-raizing-teal-900 font-medium">Team Size:</span>
                       <span className="text-raizing-teal-800">{study.teamSize}</span>
                     </div>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-raizing-teal-200">
-                    <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-600 uppercase mb-2">Technologies</h4>
+                  <div className="mt-4 pt-4 border-t border-raizing-teal-900">
+                    <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 uppercase mb-2">Technologies</h4>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {study.technologies.map((tech, idx) => (
                         <span

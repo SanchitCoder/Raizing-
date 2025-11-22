@@ -119,6 +119,7 @@ export default function Services() {
       icon: <Workflow className="w-8 h-8" />,
       title: 'AI Workflow Automation',
       description: 'Transform manual processes into intelligent, automated workflows that run 24/7.',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop&q=80',
       features: [
         'Custom automation development',
         'Integration with existing systems',
@@ -131,6 +132,7 @@ export default function Services() {
       icon: <Lightbulb className="w-8 h-8" />,
       title: 'AI Consulting',
       description: 'Expert guidance to navigate the AI landscape and implement the right solutions.',
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop&q=80',
       features: [
         'AI strategy development',
         'Technology stack selection',
@@ -143,6 +145,7 @@ export default function Services() {
       icon: <GraduationCap className="w-8 h-8" />,
       title: 'AI Training & Workshops',
       description: 'Hands-on training programs that empower teams with practical AI skills.',
+      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop&q=80',
       features: [
         'Customized training programs',
         'Hands-on workshops',
@@ -154,7 +157,7 @@ export default function Services() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-50/30">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-500/10 border border-raizing-maroon-500/30 rounded-full">
@@ -163,7 +166,7 @@ export default function Services() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 mb-3 sm:mb-4 px-4">
             Comprehensive AI Solutions
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-700 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 max-w-3xl mx-auto px-4">
             End-to-end services designed to accelerate your AI journey from strategy to execution
           </p>
         </div>
@@ -172,18 +175,50 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="animate-on-scroll opacity-0 group relative bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3"
+              className="animate-on-scroll opacity-0 group relative bg-white rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:scale-[1.02] border border-transparent hover:border-raizing-teal-900/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color}`}></div>
+              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} group-hover:h-1.5 transition-all duration-300`}></div>
 
-              <div className="p-8">
-                <div className={`inline-flex p-4 bg-gradient-to-r ${service.color} rounded-xl text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              {/* Service Image */}
+              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-gradient-to-br from-raizing-cream-100 to-raizing-cream-50">
+                <img 
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="eager"
+                  onError={(e) => {
+                    // Fallback to a different image source if the first one fails
+                    const target = e.target as HTMLImageElement;
+                    if (!target.dataset.retried) {
+                      target.dataset.retried = 'true';
+                      // Try alternative image URLs based on service
+                      const altImages: { [key: string]: string } = {
+                        'AI Consulting': 'https://images.unsplash.com/photo-1551434678-e076c223a0d7?w=800&h=500&fit=crop&q=80',
+                        'AI Workflow Automation': 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop&q=80',
+                        'AI Training & Workshops': 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop&q=80'
+                      };
+                      target.src = altImages[service.title] || service.image;
+                    } else {
+                      // If all images fail, hide the image and show a gradient background instead
+                      target.style.display = 'none';
+                      const container = target.parentElement;
+                      if (container) {
+                        container.style.background = `linear-gradient(135deg, var(--raizing-maroon-500), var(--raizing-maroon-700))`;
+                      }
+                    }
+                  }}
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-25 group-hover:opacity-15 transition-opacity duration-500`}></div>
+                <div className={`absolute top-4 right-4 relative inline-flex p-3 bg-gradient-to-r ${service.color} rounded-xl text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10`}>
                   {service.icon}
                 </div>
+              </div>
 
-                <h3 className="text-2xl font-bold text-raizing-teal-900 mb-3">{service.title}</h3>
-                <p className="text-raizing-teal-700 mb-6 leading-relaxed">{service.description}</p>
+              <div className="p-8 relative z-10">
+
+                <h3 className="text-2xl font-bold text-raizing-teal-900 mb-3 group-hover:text-raizing-maroon-600 transition-colors duration-300">{service.title}</h3>
+                <p className="text-raizing-teal-900 mb-6 leading-relaxed group-hover:text-raizing-teal-800 transition-colors duration-300">{service.description}</p>
 
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, idx) => (
@@ -198,14 +233,17 @@ export default function Services() {
 
                 <button 
                   onClick={() => handleLearnMore(service.title)}
-                  className="group/btn w-full px-6 py-3 bg-gradient-to-r from-raizing-teal-900 to-raizing-teal-800 text-raizing-cream-200 rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="group/btn relative w-full px-6 py-3 bg-gradient-to-r from-raizing-teal-900 to-raizing-teal-800 text-raizing-cream-200 rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden hover:scale-105 hover:shadow-xl"
                 >
-                  Learn More
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                  <span className="relative z-10">Learn More</span>
+                  <ArrowRight className="relative z-10 w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-raizing-maroon-600 to-raizing-maroon-700 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 animate-shimmer opacity-0 group-hover/btn:opacity-100"></div>
                 </button>
               </div>
 
-              <div className={`absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 blur-3xl transition-opacity duration-500`}></div>
+              <div className={`absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-700 group-hover:scale-150`}></div>
+              <div className="absolute top-0 left-0 w-32 h-32 bg-raizing-teal-900/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700"></div>
             </div>
           ))}
         </div>
@@ -269,7 +307,7 @@ export default function Services() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                  className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                   placeholder="John Doe"
                 />
               </div>
@@ -287,7 +325,7 @@ export default function Services() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                    className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                     placeholder="john@company.com"
                   />
                 </div>
@@ -303,7 +341,7 @@ export default function Services() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                    className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
@@ -320,7 +358,7 @@ export default function Services() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
+                  className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
                   placeholder="Your Company"
                 />
               </div>
@@ -336,7 +374,7 @@ export default function Services() {
                   required
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all bg-white"
+                  className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all bg-white"
                 >
                   <option value="">Select a service</option>
                   <option value="AI Workflow Automation">AI Workflow Automation</option>
@@ -357,7 +395,7 @@ export default function Services() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-300 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all resize-none"
+                  className="w-full px-3 py-2 text-sm rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all resize-none"
                   placeholder="Describe your project requirements..."
                 />
               </div>

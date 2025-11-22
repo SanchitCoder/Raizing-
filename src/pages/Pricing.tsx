@@ -60,7 +60,7 @@ export default function Pricing() {
         'Basic analytics & reporting'
       ],
       popular: false,
-      color: 'from-raizing-teal-500 to-raizing-teal-600'
+      color: 'from-raizing-teal-9000 to-raizing-teal-900'
     },
     {
       name: 'Professional',
@@ -98,7 +98,7 @@ export default function Pricing() {
         'White-glove implementation'
       ],
       popular: false,
-      color: 'from-raizing-teal-700 to-raizing-teal-800'
+      color: 'from-raizing-teal-900 to-raizing-teal-800'
     }
   ];
 
@@ -162,7 +162,7 @@ export default function Pricing() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-200 p-6 sm:p-8 md:p-10 shadow-lg">
+          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
               Transparent, Flexible Pricing
             </h2>
@@ -178,15 +178,15 @@ export default function Pricing() {
               <div className="grid sm:grid-cols-3 gap-4 mt-6">
                 <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">No Setup Fees</div>
-                  <div className="text-sm text-raizing-teal-700">Get started immediately</div>
+                  <div className="text-sm text-raizing-teal-900">Get started immediately</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">Cancel Anytime</div>
-                  <div className="text-sm text-raizing-teal-700">Flexible commitments</div>
+                  <div className="text-sm text-raizing-teal-900">Flexible commitments</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 rounded-lg text-center">
                   <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">30-Day Trial</div>
-                  <div className="text-sm text-raizing-teal-700">Risk-free start</div>
+                  <div className="text-sm text-raizing-teal-900">Risk-free start</div>
                 </div>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function Pricing() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Choose Your Plan
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Select the plan that best fits your business size and AI needs
             </p>
           </div>
@@ -213,7 +213,7 @@ export default function Pricing() {
                 className={`animate-on-scroll opacity-0 relative bg-gradient-to-br from-raizing-cream-50 to-white rounded-xl sm:rounded-2xl border-2 p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
                   plan.popular 
                     ? 'border-raizing-maroon-500 shadow-xl lg:scale-105' 
-                    : 'border-raizing-teal-200 hover:border-raizing-maroon-500/50'
+                    : 'border-raizing-teal-900 hover:border-raizing-maroon-500/50'
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -228,10 +228,10 @@ export default function Pricing() {
                   <div className="mb-2">
                     <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-raizing-maroon-500">{plan.price}</span>
                     {plan.period !== 'pricing' && (
-                      <span className="text-sm sm:text-base text-raizing-teal-700 ml-2">/{plan.period}</span>
+                      <span className="text-sm sm:text-base text-raizing-teal-900 ml-2">/{plan.period}</span>
                     )}
                   </div>
-                  <p className="text-xs sm:text-sm text-raizing-teal-700 px-2">{plan.description}</p>
+                  <p className="text-xs sm:text-sm text-raizing-teal-900 px-2">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -254,7 +254,7 @@ export default function Pricing() {
                   className={`w-full py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-white hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 shadow-lg shadow-raizing-maroon-500/50 hover:scale-105'
-                      : 'bg-gradient-to-r from-raizing-teal-900 to-raizing-teal-800 text-white hover:from-raizing-teal-800 hover:to-raizing-teal-700'
+                      : 'bg-gradient-to-r from-raizing-teal-900 to-raizing-teal-800 text-white hover:from-raizing-teal-800 hover:to-raizing-teal-900'
                   }`}
                 >
                   Get Started
@@ -266,13 +266,13 @@ export default function Pricing() {
       </section>
 
       {/* Add-ons Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-50/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Additional Services
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Enhance your plan with these optional add-ons
             </p>
           </div>
@@ -281,7 +281,7 @@ export default function Pricing() {
             {addOns.map((addOn, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
@@ -293,7 +293,7 @@ export default function Pricing() {
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-raizing-maroon-500 mb-2">
                   {addOn.price}
                 </div>
-                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-700">
+                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900">
                   {addOn.description}
                 </p>
               </div>
@@ -309,7 +309,7 @@ export default function Pricing() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700">
+            <p className="text-base sm:text-lg text-raizing-teal-900">
               Common questions about our pricing
             </p>
           </div>
@@ -343,13 +343,13 @@ export default function Pricing() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-200"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>

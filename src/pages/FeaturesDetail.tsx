@@ -211,7 +211,7 @@ export default function FeaturesDetail() {
                 className="animate-on-scroll opacity-0"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-200 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
                   {/* Feature Header */}
                   <div className={`bg-gradient-to-r ${feature.gradient} p-6 sm:p-8 md:p-10`}>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
@@ -247,7 +247,7 @@ export default function FeaturesDetail() {
                         {feature.keyPoints.map((point, idx) => (
                           <div
                             key={idx}
-                            className="bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                            className="bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                           >
                             <div className={`inline-flex p-2.5 bg-gradient-to-r ${feature.gradient} rounded-lg text-white mb-3 sm:mb-4`}>
                               {point.icon}
@@ -255,7 +255,7 @@ export default function FeaturesDetail() {
                             <h4 className="text-lg sm:text-xl font-bold text-raizing-teal-900 mb-2 sm:mb-3">
                               {point.title}
                             </h4>
-                            <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                            <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                               {point.description}
                             </p>
                           </div>
@@ -264,7 +264,7 @@ export default function FeaturesDetail() {
                     </div>
 
                     {/* Benefits List */}
-                    <div className="bg-gradient-to-br from-raizing-teal-50 to-raizing-cream-50 p-6 sm:p-8 rounded-xl border border-raizing-teal-200">
+                    <div className="bg-gradient-to-br from-raizing-teal-900 to-raizing-cream-50 p-6 sm:p-8 rounded-xl border border-raizing-teal-900">
                       <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
                         Business Benefits
                       </h3>

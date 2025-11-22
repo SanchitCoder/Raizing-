@@ -138,7 +138,7 @@ export default function Development() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-200 p-6 sm:p-8 md:p-10 shadow-lg">
+          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
               Custom AI Development for Your Business
             </h2>
@@ -153,19 +153,19 @@ export default function Development() {
                 scalable, and maintainable. From concept to deployment, we're with you every step of the way.
               </p>
               <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                <div className="p-5 bg-raizing-cream-50 rounded-lg border border-raizing-teal-200">
+                <div className="p-5 bg-raizing-cream-50 rounded-lg border border-raizing-teal-900">
                   <h3 className="font-bold text-raizing-teal-900 mb-2 flex items-center gap-2">
                     <Code className="w-5 h-5 text-raizing-maroon-500" />
                     Clean, Maintainable Code
                   </h3>
-                  <p className="text-sm text-raizing-teal-700">Well-documented, tested code following industry standards</p>
+                  <p className="text-sm text-raizing-teal-900">Well-documented, tested code following industry standards</p>
                 </div>
-                <div className="p-5 bg-raizing-cream-50 rounded-lg border border-raizing-teal-200">
+                <div className="p-5 bg-raizing-cream-50 rounded-lg border border-raizing-teal-900">
                   <h3 className="font-bold text-raizing-teal-900 mb-2 flex items-center gap-2">
                     <Shield className="w-5 h-5 text-raizing-maroon-500" />
                     Security First
                   </h3>
-                  <p className="text-sm text-raizing-teal-700">Built with security and compliance from the ground up</p>
+                  <p className="text-sm text-raizing-teal-900">Built with security and compliance from the ground up</p>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function Development() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Development Services
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Comprehensive development solutions for your AI needs
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function Development() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
@@ -198,7 +198,7 @@ export default function Development() {
                 <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
                   {service.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -208,13 +208,13 @@ export default function Development() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-50/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Technologies We Use
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Modern tech stack for building robust AI solutions
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function Development() {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg text-center"
+                className="animate-on-scroll opacity-0 bg-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <Zap className="w-6 h-6 text-raizing-maroon-500 mx-auto mb-3" />
@@ -241,7 +241,7 @@ export default function Development() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Why Choose Our Development Services
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               What sets our development approach apart
             </p>
           </div>
@@ -250,7 +250,7 @@ export default function Development() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 text-center hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 text-center hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-3xl sm:text-4xl font-bold text-raizing-maroon-500 mb-2">
@@ -259,7 +259,7 @@ export default function Development() {
                 <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 mb-2">
                   {benefit.label}
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-700">
+                <p className="text-sm sm:text-base text-raizing-teal-900">
                   {benefit.description}
                 </p>
               </div>
@@ -269,13 +269,13 @@ export default function Development() {
       </section>
 
       {/* Development Process Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-50/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Our Development Process
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Agile methodology ensuring quality and timely delivery
             </p>
           </div>
@@ -315,7 +315,7 @@ export default function Development() {
             ].map((step, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-4xl sm:text-5xl font-bold text-raizing-maroon-500 mb-3">
@@ -324,7 +324,7 @@ export default function Development() {
                 <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
                   {step.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -340,7 +340,7 @@ export default function Development() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Types of Projects We Build
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Comprehensive development services for various AI applications
             </p>
           </div>
@@ -380,7 +380,7 @@ export default function Development() {
             ].map((project, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
@@ -389,7 +389,7 @@ export default function Development() {
                 <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
                   {project.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {project.description}
                 </p>
               </div>
@@ -399,13 +399,13 @@ export default function Development() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-50/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Client Success Stories
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Real projects, real results from our development work
             </p>
           </div>
@@ -436,7 +436,7 @@ export default function Development() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex gap-1 mb-4">
@@ -453,7 +453,7 @@ export default function Development() {
                   </div>
                   <div>
                     <div className="font-semibold text-raizing-teal-900">{testimonial.author}</div>
-                    <div className="text-sm text-raizing-teal-700">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-raizing-teal-900">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -469,7 +469,7 @@ export default function Development() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700">
+            <p className="text-base sm:text-lg text-raizing-teal-900">
               Common questions about AI development services
             </p>
           </div>
@@ -503,13 +503,13 @@ export default function Development() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-200"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>

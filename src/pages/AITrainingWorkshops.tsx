@@ -166,7 +166,7 @@ export default function AITrainingWorkshops() {
       {/* Overview Section */}
       <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-200 p-6 sm:p-8 md:p-10 shadow-lg animate-on-scroll opacity-0">
+          <div className="bg-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg animate-on-scroll opacity-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-4 sm:mb-6">
               Empower Your Team with AI Skills
             </h2>
@@ -191,7 +191,7 @@ export default function AITrainingWorkshops() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Training Formats
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Flexible training options to suit your team's needs
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function AITrainingWorkshops() {
             {trainingTypes.map((type, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-600 to-raizing-maroon-800 rounded-lg text-white mb-4">
@@ -209,7 +209,7 @@ export default function AITrainingWorkshops() {
                 <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
                   {type.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {type.description}
                 </p>
               </div>
@@ -219,13 +219,13 @@ export default function AITrainingWorkshops() {
       </section>
 
       {/* Topics Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-50/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Training Topics
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Comprehensive coverage of AI concepts and applications
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function AITrainingWorkshops() {
             {topics.map((topic, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-start gap-3 mb-3">
@@ -243,7 +243,7 @@ export default function AITrainingWorkshops() {
                     {topic.title}
                   </h3>
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {topic.description}
                 </p>
               </div>
@@ -259,7 +259,7 @@ export default function AITrainingWorkshops() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Delivery Formats
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Choose the format that works best for your team
             </p>
           </div>
@@ -268,13 +268,13 @@ export default function AITrainingWorkshops() {
             {formats.map((format, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3">
                   {format.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-raizing-teal-900 leading-relaxed">
                   {format.description}
                 </p>
               </div>
@@ -284,13 +284,13 @@ export default function AITrainingWorkshops() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-50/30">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
               Training Impact
             </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-raizing-teal-900 max-w-3xl mx-auto">
               Measurable results from our training programs
             </p>
           </div>
@@ -299,7 +299,7 @@ export default function AITrainingWorkshops() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white p-6 sm:p-8 rounded-xl border border-raizing-teal-200 text-center hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 text-center hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-4xl sm:text-5xl font-bold text-raizing-maroon-500 mb-2">
@@ -308,7 +308,7 @@ export default function AITrainingWorkshops() {
                 <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 mb-2">
                   {benefit.label}
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-700">
+                <p className="text-sm sm:text-base text-raizing-teal-900">
                   {benefit.description}
                 </p>
               </div>
