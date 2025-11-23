@@ -48,25 +48,28 @@ export default function OurTeam() {
 
   const leadership = [
     {
-      name: 'Sarah Chen',
-      role: 'CEO & Founder',
-      bio: '15+ years in AI and technology. Former VP at leading tech companies.',
-      expertise: 'AI Strategy, Business Development',
-      image: 'SC'
+      name: 'Mr. Bharat S Rai',
+      role: 'Founder',
+      bio: '20+ years of experience in immigration and global mobility. Expert in international residency, citizenship, and relocation services. Pioneered innovative programs across multiple countries.',
+      expertise: 'Immigration Services, Global Mobility, International Residency',
+      image: 'BSR',
+      imagePath: '/founder.jpg'
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'CTO',
-      bio: 'Expert in machine learning and enterprise AI systems. PhD in Computer Science.',
-      expertise: 'ML Engineering, System Architecture',
-      image: 'MR'
+      name: 'Mr. Pratham Bhayana',
+      role: 'Tech Expert',
+      bio: 'Tech Manager with strong expertise in web application development and project management. Specializes in enhancing technology systems with focus on security and seamless user experiences. Dedicated to building innovative technology solutions in the immigration sector.',
+      expertise: 'Web Development, Project Management, System Security, User Experience',
+      image: 'PB',
+      imagePath: '/pratham.png'
     },
     {
-      name: 'Emily Johnson',
-      role: 'Head of Consulting',
+      name: 'Mr. Paras Arora',
+      role: 'AI Specialist',
       bio: 'Transformed 200+ businesses with AI solutions. MBA from Stanford.',
       expertise: 'AI Consulting, Strategy',
-      image: 'EJ'
+      image: 'PA',
+      imagePath: `https://i.pravatar.cc/150?img=${3}`
     }
   ];
 
@@ -184,7 +187,7 @@ export default function OurTeam() {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
@@ -202,12 +205,16 @@ export default function OurTeam() {
                 className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4">
-                  <div className="absolute inset-0 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-4 sm:mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
                   <img 
-                    src={`https://i.pravatar.cc/150?img=${index + 1}`}
+                    src={leader.imagePath}
                     alt={leader.name}
-                    className="relative w-full h-full rounded-full object-cover border-4 border-white shadow-lg group-hover:scale-110 transition-transform duration-300"
+                    className="relative w-full h-full rounded-lg object-cover border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = `https://i.pravatar.cc/150?img=${index + 1}`;
+                    }}
                   />
                 </div>
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white text-center mb-1">
@@ -229,56 +236,6 @@ export default function OurTeam() {
                   <button className="p-2 bg-raizing-cream-100 hover:bg-raizing-maroon-500 hover:text-white rounded-lg transition-colors">
                     <Mail className="w-4 h-4" />
                   </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Members Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
-              Our Experts
-            </h2>
-            <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
-              Talented professionals across all departments
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="animate-on-scroll opacity-0 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-4 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
-                  <div className="relative w-12 h-12 sm:w-16 sm:h-16 flex-shrink-0 group/avatar">
-                    <div className="absolute inset-0 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-full blur-sm opacity-50 group-hover/avatar:opacity-75 transition-opacity"></div>
-                    <img 
-                      src={`https://i.pravatar.cc/150?img=${index + 10}`}
-                      alt={member.name}
-                      className="relative w-full h-full rounded-full object-cover border-2 border-white shadow-md group-hover/avatar:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white mb-1 truncate">
-                      {member.name}
-                    </h3>
-                    <p className="text-xs sm:text-sm lg:text-base text-raizing-maroon-500 font-semibold mb-1">
-                      {member.role}
-                    </p>
-                    <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">
-                      {member.department}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-raizing-teal-900 dark:text-white">
-                  {member.icon}
-                  <span className="truncate">{member.expertise}</span>
                 </div>
               </div>
             ))}
@@ -351,7 +308,7 @@ export default function OurTeam() {
           <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
             We're always looking for talented individuals passionate about AI. Check out our open positions or reach out to learn more.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <button
               onClick={() => {
                 navigate('/');
@@ -362,14 +319,8 @@ export default function OurTeam() {
               }}
               className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
             >
-              View Open Positions
+              Join Us
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button
-              onClick={() => navigate('/about-us')}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
-            >
-              Learn About Us
             </button>
           </div>
         </div>
