@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Zap, Shield, Award, Rocket, CheckCircle2, Clock, Users, TrendingUp, Lock, Code, BarChart3 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 const detailedFeatures = [
   {
@@ -321,6 +322,7 @@ export default function FeaturesDetail() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

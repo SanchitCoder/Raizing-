@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Clock, DollarSign, TrendingUp, BarChart3, CheckCircle2 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 const caseStudies = [
   {
@@ -327,6 +328,7 @@ export default function CaseStudies() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

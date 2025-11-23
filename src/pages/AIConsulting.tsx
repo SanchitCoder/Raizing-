@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Lightbulb, Target, BarChart3, CheckCircle2, Clock, TrendingUp, Users, FileText, Rocket, Search } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 const services = [
   {
@@ -301,6 +302,7 @@ export default function AIConsulting() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

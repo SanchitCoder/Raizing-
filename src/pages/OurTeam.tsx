@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Linkedin, Mail, ArrowRight, Award, Code, Lightbulb, Users } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 export default function OurTeam() {
   const navigate = useNavigate();
@@ -374,6 +375,7 @@ export default function OurTeam() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

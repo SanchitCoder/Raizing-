@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Code, Terminal, Layers, GitBranch, Database, Cloud, Shield, Zap, ArrowRight, Star, CheckCircle2, FileText, Rocket } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 const services = [
   {
@@ -555,6 +556,7 @@ export default function Development() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

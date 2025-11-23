@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Target, Award, Users, TrendingUp, ArrowRight, CheckCircle2, Globe, Heart, Lightbulb } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 export default function AboutUs() {
   const navigate = useNavigate();
@@ -322,6 +323,7 @@ export default function AboutUs() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

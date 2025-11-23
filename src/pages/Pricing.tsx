@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, ArrowRight, Zap, Shield, TrendingUp, Users } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 export default function Pricing() {
   const navigate = useNavigate();
@@ -393,6 +394,7 @@ export default function Pricing() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

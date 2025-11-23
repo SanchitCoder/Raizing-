@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Workflow, Zap, CheckCircle2, Clock, TrendingUp, BarChart3, Settings, Code, Database, Shield } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 const features = [
   {
@@ -302,6 +303,7 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

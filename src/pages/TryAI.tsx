@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Sparkles, Zap, CheckCircle2, ArrowRight, Play, Code, Brain, Rocket } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 export default function TryAI() {
   const navigate = useNavigate();
@@ -326,6 +327,7 @@ export default function TryAI() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );

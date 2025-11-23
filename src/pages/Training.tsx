@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, GraduationCap, BookOpen, CheckCircle2, Users, Award, Video, FileText, Target, TrendingUp, ArrowRight, Star, Clock, Calendar, Globe } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AIAssessment from '../components/AIAssessment';
 
 const trainingTypes = [
   {
@@ -544,6 +545,7 @@ export default function Training() {
         </div>
       </section>
 
+      <AIAssessment />
       <Footer />
     </div>
   );
