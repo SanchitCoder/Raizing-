@@ -73,9 +73,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed z-50 will-change-transform ${
+      className={`fixed z-40 will-change-transform ${
         isScrolled
-          ? 'top-2 sm:top-4 left-2 sm:left-4 right-2 sm:right-4 bg-raizing-teal-900 backdrop-blur-lg shadow-2xl rounded-2xl sm:rounded-3xl border border-raizing-teal-900/50'
+          ? 'top-4 left-4 right-4 bg-raizing-teal-900 backdrop-blur-lg shadow-2xl rounded-3xl border border-raizing-teal-900/50'
           : 'top-0 left-0 right-0 bg-raizing-teal-900 backdrop-blur-sm'
       }`}
       style={{
@@ -100,7 +100,7 @@ export default function Navbar() {
           }}
         >
           <div 
-            className={`${isMobileMenuOpen ? 'hidden md:flex' : 'flex'} items-center gap-2 sm:gap-3 md:gap-4 cursor-pointer flex-shrink-0 min-w-0 flex-1`}
+            className="flex items-center gap-2 sm:gap-3 md:gap-4 cursor-pointer flex-shrink-0 min-w-0 flex-1" 
             onClick={() => navigate('/')}
           >
             <div className="relative">
@@ -227,18 +227,9 @@ src="/IMG_20251122_195044.jpg"
           </div>
 
           <button
-            className="md:hidden flex-shrink-0 ml-2 p-2.5 min-w-[44px] min-h-[44px] text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors flex items-center justify-center relative z-[100] cursor-pointer touch-manipulation"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              setIsMobileMenuOpen(prev => !prev);
-            }}
-            onTouchStart={(e) => {
-              e.stopPropagation();
-            }}
+            className="md:hidden flex-shrink-0 ml-2 p-2 text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
-            type="button"
-            style={{ pointerEvents: 'auto', WebkitTapHighlightColor: 'transparent' }}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -246,98 +237,90 @@ src="/IMG_20251122_195044.jpg"
       </div>
 
       {isMobileMenuOpen && (
-        <>
-          {/* Backdrop */}
-          <div 
-            className={`md:hidden fixed left-0 right-0 bottom-0 ${isScrolled ? 'top-[3.5rem]' : 'top-[4rem]'} bg-black/20 backdrop-blur-sm z-[55]`}
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-          {/* Mobile Menu */}
-          <div className={`md:hidden fixed left-0 right-0 bottom-0 ${isScrolled ? 'top-[3.5rem]' : 'top-[4rem]'} bg-raizing-teal-900 shadow-lg z-[60] overflow-y-auto`} style={{ backgroundColor: '#1e554e' }}>
-            <div className="px-4 sm:px-6 py-5 sm:py-6 relative">
-              <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-cream-200/20">
-                <div className="flex items-center gap-3 sm:gap-4">
-                  <img 
-                    src="/IMG_20251122_195044.jpg" 
-                    alt="Raizing AI Logo" 
-                    className="h-10 sm:h-12 w-auto object-contain"
-                  />
-                </div>
-                <button
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-white hover:text-raizing-cream-100 transition-colors p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center"
-                  aria-label="Close menu"
-                >
-                  <X className="w-6 h-6" />
-                </button>
+        <div className="md:hidden bg-raizing-teal-900/98 backdrop-blur-sm border-t border-raizing-teal-900 shadow-lg">
+          <div className="px-4 sm:px-6 py-5 sm:py-6">
+            <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-teal-900">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <img 
+                  src="/IMG_20251122_195044.jpg" 
+                  alt="Raizing AI Logo" 
+                  className="h-10 sm:h-12 w-auto object-contain"
+                />
               </div>
-              <div className="space-y-2">
-                <button
-                  onClick={() => handleNavigation('/automation')}
-                  className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-white font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-                >
-                  Automation
-                </button>
-                <button
-                  onClick={() => handleNavigation('/training')}
-                  className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-white font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-                >
-                  Training
-                </button>
-                <button
-                  onClick={() => handleNavigation('/consulting')}
-                  className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-white font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-                >
-                  Consulting
-                </button>
-                <button
-                  onClick={() => handleNavigation('/development')}
-                  className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-white font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-                >
-                  Development
-                </button>
-                
-                <button
-                  onClick={() => handleNavigation('/ai-services')}
-                  className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-white font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-                >
-                  AI Services
-                </button>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors p-1"
+                aria-label="Close menu"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="space-y-2">
+              <button
+                onClick={() => handleNavigation('/automation')}
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+              >
+                Automation
+              </button>
+              <button
+                onClick={() => handleNavigation('/training')}
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+              >
+                Training
+              </button>
+              <button
+                onClick={() => handleNavigation('/consulting')}
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+              >
+                Consulting
+              </button>
+              <button
+                onClick={() => handleNavigation('/development')}
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+              >
+                Development
+              </button>
+              
+              <button
+                onClick={() => handleNavigation('/ai-services')}
+                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+              >
+                AI Services
+              </button>
 
-                <div className="pt-2">
-                  <button
-                    onClick={handleAboutClick}
-                    className="flex items-center justify-between w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-white font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-                  >
-                    <span>About</span>
-                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  
-                  {isAboutOpen && (
-                    <div className="pl-4 space-y-2 mt-2">
-                      {aboutSubItems.map((item) => (
-                        <button
-                          key={item.label}
-                          onClick={() => handleNavigation(item.path)}
-                          className="block w-full text-left py-3 px-4 min-h-[44px] rounded-md text-sm text-white hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors font-medium"
-                        >
-                          {item.label}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                
+              <div className="pt-2">
                 <button
-                  onClick={() => scrollToSection('contact')}
-                  className="w-full px-6 py-3.5 mt-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-white rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/30"
+                  onClick={handleAboutClick}
+                  className="flex items-center justify-between w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
                 >
-                  Let's Connect
+                  <span>About</span>
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} />
                 </button>
+                
+                {isAboutOpen && (
+                  <div className="pl-4 space-y-2 mt-2">
+                    {aboutSubItems.map((item) => (
+                      <button
+                        key={item.label}
+                        onClick={() => handleNavigation(item.path)}
+                        className="block w-full text-left py-2.5 px-4 rounded-md text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors font-medium"
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
+              
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="w-full px-6 py-3.5 mt-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/30"
+              >
+                Let's Connect
+              </button>
             </div>
           </div>
-        </>
+        </div>
       )}
     </nav>
   );
