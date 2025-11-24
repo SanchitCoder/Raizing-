@@ -100,7 +100,7 @@ export default function Navbar() {
           }}
         >
           <div 
-            className={`flex items-center gap-2 sm:gap-3 md:gap-4 cursor-pointer flex-shrink-0 min-w-0 flex-1 ${isMobileMenuOpen ? 'hidden md:flex' : ''}`}
+            className={`${isMobileMenuOpen ? 'hidden md:flex' : 'flex'} items-center gap-2 sm:gap-3 md:gap-4 cursor-pointer flex-shrink-0 min-w-0 flex-1`}
             onClick={() => navigate('/')}
           >
             <div className="relative">
@@ -240,11 +240,11 @@ src="/IMG_20251122_195044.jpg"
         <>
           {/* Backdrop */}
           <div 
-            className="md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+            className={`md:hidden fixed left-0 right-0 bottom-0 ${isScrolled ? 'top-[3.5rem]' : 'top-[4rem]'} bg-black/20 backdrop-blur-sm z-40`}
             onClick={() => setIsMobileMenuOpen(false)}
           />
           {/* Mobile Menu */}
-          <div className={`md:hidden fixed inset-0 ${isScrolled ? 'top-[3.5rem]' : 'top-[4rem]'} bg-raizing-teal-900 backdrop-blur-sm shadow-lg z-50 overflow-y-auto`}>
+          <div className={`md:hidden fixed left-0 right-0 bottom-0 ${isScrolled ? 'top-[3.5rem]' : 'top-[4rem]'} bg-raizing-teal-900 backdrop-blur-sm shadow-lg z-50 overflow-y-auto`}>
             <div className="px-4 sm:px-6 py-5 sm:py-6">
               <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-teal-900/50">
                 <div className="flex items-center gap-3 sm:gap-4">
