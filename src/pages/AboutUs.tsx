@@ -110,14 +110,14 @@ export default function AboutUs() {
             className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-4 sm:mb-6 mb-6 sm:mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-xs sm:text-sm sm:text-base font-medium">Back to Home</span>
+            <span className="text-xs sm:text-sm lg:text-base font-medium break-words">Back to Home</span>
           </button>
           
           <div className="text-center">
             <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-4 sm:mb-6">
               <Users className="w-8 h-8 text-raizing-maroon-600" />
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-6xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 lg:mb-6 break-words">
               <span className="text-raizing-teal-900 dark:text-white">About</span>{' '}
               <span className="text-raizing-maroon-600">Raizing AI</span>
             </h1>
@@ -148,7 +148,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 lg:p-10 shadow-lg">
-            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 lg:mb-6 break-words">
               Our Story
             </h2>
             <div className="space-y-4">
@@ -168,15 +168,15 @@ export default function AboutUs() {
               </p>
               <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-6">
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">500+</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-maroon-500 mb-1 break-words">500+</div>
                   <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Projects Completed</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">50+</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-maroon-500 mb-1 break-words">50+</div>
                   <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Team Members</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">15+</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-maroon-500 mb-1 break-words">15+</div>
                   <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Industries Served</div>
                 </div>
               </div>
@@ -197,7 +197,7 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 grid-cols-1 lg:grid-cols-2 grid-cols-4 gap-3 sm:gap-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 xl:gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
@@ -207,10 +207,10 @@ export default function AboutUs() {
                 <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-3 sm:mb-4">
                   {value.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3 break-words">
                   {value.title}
                 </h3>
-                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white leading-relaxed break-words">
                   {value.description}
                 </p>
               </div>

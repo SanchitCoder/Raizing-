@@ -226,8 +226,8 @@ export default function CaseStudies() {
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-3 sm:mb-4">
                     <div className="flex-1">
-                      <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">{study.company}</h3>
-                      <span className={`inline-block px-2 px-3 sm:px-4 py-1 bg-raizing-teal-900 text-raizing-teal-900 dark:text-white text-xs sm:text-sm rounded-full`}>
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2 break-words">{study.company}</h3>
+                      <span className={`inline-block px-2 sm:px-3 lg:px-4 py-1 bg-raizing-teal-900 text-raizing-teal-900 dark:text-white text-xs sm:text-sm rounded-full break-words`}>
                         {study.industry}
                       </span>
                     </div>
@@ -235,12 +235,12 @@ export default function CaseStudies() {
 
                   <div className="space-y-4 mb-4 sm:mb-6">
                     <div>
-                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5">Challenge</h4>
-                      <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-800">{study.challenge}</p>
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5 break-words">Challenge</h4>
+                      <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-800 break-words">{study.challenge}</p>
                     </div>
                     <div>
-                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5">Solution</h4>
-                      <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-800">{study.solution}</p>
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5 break-words">Solution</h4>
+                      <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-800 break-words">{study.solution}</p>
                     </div>
                   </div>
 

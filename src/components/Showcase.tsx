@@ -139,31 +139,31 @@ export default function Showcase() {
                   </div>
                 </div>
 
-                <div className="p-4 p-6 sm:p-8 lg:p-10">
-                  <div className="flex flex-col flex-row gap-3 sm:gap-4 gap-4 sm:gap-6 lg:gap-8">
-                    <div className="flex-1">
-                      <div className="flex flex-col flex-row items-center gap-3 mb-3 sm:mb-4">
-                        <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white group-hover/card:text-raizing-maroon-600 transition-colors duration-300">{study.company}</h3>
-                        <span className="px-2 px-3 sm:px-4 py-1 bg-raizing-teal-900 text-white text-xs sm:text-sm rounded-full w-fit group-hover/card:bg-raizing-maroon-500 group-hover/card:scale-110 transition-all duration-300">
+                <div className="p-4 sm:p-6 lg:p-8 xl:p-10">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 xl:gap-8">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-3 sm:mb-4">
+                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white group-hover/card:text-raizing-maroon-600 transition-colors duration-300 break-words">{study.company}</h3>
+                        <span className="px-2 sm:px-3 lg:px-4 py-1 bg-raizing-teal-900 text-white text-xs sm:text-sm rounded-full w-fit group-hover/card:bg-raizing-maroon-500 group-hover/card:scale-110 transition-all duration-300 break-words">
                           {study.industry}
                         </span>
                       </div>
 
                       <div className="space-y-4">
                         <div>
-                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5 mb-2">Challenge</h4>
-                          <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-800 leading-relaxed">{study.challenge}</p>
+                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5 sm:mb-2 break-words">Challenge</h4>
+                          <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-800 leading-relaxed break-words">{study.challenge}</p>
                         </div>
                         <div>
-                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5 mb-2">Solution</h4>
-                          <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-800 leading-relaxed">{study.solution}</p>
+                          <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5 sm:mb-2 break-words">Solution</h4>
+                          <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-800 leading-relaxed break-words">{study.solution}</p>
                         </div>
                       </div>
                     </div>
 
-                    <div className="flex-shrink-0 w-auto">
-                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-3 sm:mb-4">Key Results</h4>
-                      <div className="grid grid-cols-1 grid-cols-3 grid-cols-1 gap-3 sm:gap-4">
+                    <div className="flex-shrink-0 w-auto sm:w-full lg:w-auto">
+                      <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-3 sm:mb-4 break-words">Key Results</h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3 sm:gap-4">
                         {study.results.map((result, idx) => (
                           <div
                             key={idx}

@@ -17,19 +17,9 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-xs sm:text-sm sm:text-base text-raizing-cream-400 mb-3 sm:mb-4 mb-4 sm:mb-6 leading-relaxed">
+            <p className="text-xs sm:text-sm lg:text-base text-raizing-cream-400 mb-3 sm:mb-4 lg:mb-6 leading-relaxed break-words">
               Empowering businesses with cutting-edge AI automation, consulting, and training solutions.
             </p>
-            <div className="flex gap-3">
-              {['Li', 'Tw', 'Fb', 'Ig'].map((social, idx) => (
-                <button
-                  key={idx}
-                  className="w-10 h-10 bg-raizing-cream-200/10 backdrop-blur-sm rounded-lg hover:bg-raizing-maroon-500 hover:scale-110 transition-all duration-300 flex items-center justify-center text-xs sm:text-sm font-semibold"
-                >
-                  {social}
-                </button>
-              ))}
-            </div>
           </div>
 
           <div>

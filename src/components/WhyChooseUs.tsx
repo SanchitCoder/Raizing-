@@ -70,25 +70,25 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 grid-cols-4 gap-3 sm:gap-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
               className="animate-on-scroll opacity-0 group relative"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="relative h-full bg-white dark:bg-gray-800 rounded-2xl p-8 border border-raizing-teal-900/20 hover:border-raizing-maroon-500/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-xl">
+              <div className="relative h-full bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 lg:p-8 border border-raizing-teal-900/20 hover:border-raizing-maroon-500/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-xl">
                 <div className={`absolute inset-0 bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`}></div>
 
                 <div className="relative z-10">
-                  <div className={`inline-flex p-4 bg-gradient-to-r ${feature.gradient} rounded-xl text-white mb-3 sm:mb-4 mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
+                  <div className={`inline-flex p-3 sm:p-4 bg-gradient-to-r ${feature.gradient} rounded-xl text-white mb-3 sm:mb-4 lg:mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
                     {feature.icon}
                   </div>
 
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3 group-hover:text-raizing-maroon-600 dark:group-hover:text-raizing-maroon-400 transition-colors">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3 group-hover:text-raizing-maroon-600 dark:group-hover:text-raizing-maroon-400 transition-colors break-words">
                     {feature.title}
                   </h3>
-                  <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-gray-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-gray-300 leading-relaxed break-words">
                     {feature.description}
                   </p>
                 </div>
@@ -106,29 +106,29 @@ export default function WhyChooseUs() {
             </p>
             
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 gap-4 sm:gap-6 mb-4 sm:mb-6">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 mb-4 sm:mb-6">
               {[
                 { name: 'ISO Certified', icon: '✓' },
                 { name: 'GDPR Compliant', icon: '✓' },
                 { name: 'SOC 2 Type II', icon: '✓' }
               ].map((badge, idx) => (
-                <div key={idx} className="flex items-center gap-2 px-4 sm:px-6 py-1.5 sm:py-2 bg-raizing-cream-50 dark:bg-gray-700 rounded-lg border border-raizing-teal-900/20 dark:border-gray-600 transition-colors duration-300">
+                <div key={idx} className="flex items-center gap-2 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 bg-raizing-cream-50 dark:bg-gray-700 rounded-lg border border-raizing-teal-900/20 dark:border-gray-600 transition-colors duration-300 break-words">
                   <span className="text-raizing-maroon-600 dark:text-raizing-maroon-400 font-bold">{badge.icon}</span>
-                  <span className="text-xs sm:text-sm text-raizing-teal-900 dark:text-gray-200">{badge.name}</span>
+                  <span className="text-xs sm:text-sm text-raizing-teal-900 dark:text-gray-200 break-words">{badge.name}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 gap-4 sm:gap-6 lg:gap-8 mt-6 mb-4 sm:mb-6">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 xl:gap-8 mt-6 mb-4 sm:mb-6">
               {['Microsoft', 'Google', 'Amazon', 'IBM'].map((company, idx) => (
-                <div key={idx} className="text-raizing-teal-900 dark:text-gray-300 font-semibold text-xs sm:text-sm sm:text-base opacity-70 hover:opacity-100 hover:text-raizing-maroon-600 dark:hover:text-raizing-maroon-400 transition-all cursor-pointer">
+                <div key={idx} className="text-raizing-teal-900 dark:text-gray-300 font-semibold text-xs sm:text-sm lg:text-base opacity-70 hover:opacity-100 hover:text-raizing-maroon-600 dark:hover:text-raizing-maroon-400 transition-all cursor-pointer break-words">
                   {company}
                 </div>
               ))}
             </div>
             <button
               onClick={() => navigate('/features')}
-              className="group inline-flex items-center gap-2 px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105"
+              className="group inline-flex items-center gap-2 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-sm sm:text-base lg:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 break-words"
             >
               Learn More
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
