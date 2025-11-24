@@ -32,7 +32,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden pt-20 sm:pt-24">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 
       <div className="absolute top-20 left-10 w-48 h-48 sm:w-72 sm:h-72 bg-raizing-maroon-500/10 rounded-full blur-3xl animate-float hidden sm:block"></div>
