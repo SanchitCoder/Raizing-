@@ -43,6 +43,9 @@ export default function Navbar() {
   };
 
   const handleNavigation = (path: string) => {
+    setIsMobileMenuOpen(false);
+    setIsAboutOpen(false);
+    
     if (path.startsWith('/')) {
       navigate(path);
     } else {
@@ -56,11 +59,13 @@ export default function Navbar() {
         scrollToSection(path);
       }
     }
-    setIsMobileMenuOpen(false);
-    setIsAboutOpen(false);
   };
 
-  const handleAboutClick = () => {
+  const handleAboutClick = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     setIsAboutOpen(!isAboutOpen);
   };
 
@@ -101,7 +106,7 @@ export default function Navbar() {
           }}
         >
           <div 
-            className="flex items-center gap-2 sm:gap-3 md:gap-4 cursor-pointer flex-shrink-0 min-w-0 flex-1" 
+            className={`${isMobileMenuOpen ? 'hidden md:flex' : 'flex'} items-center gap-2 sm:gap-3 md:gap-4 cursor-pointer flex-shrink-0 min-w-0 flex-1`}
             onClick={() => navigate('/')}
           >
             <div className="relative">
@@ -228,7 +233,7 @@ src="/IMG_20251122_195044.jpg"
           </div>
 
           <button
-            className="md:hidden flex-shrink-0 ml-2 p-2 text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors"
+            className={`md:hidden flex-shrink-0 ml-2 p-2 text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors ${isMobileMenuOpen ? 'hidden' : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -239,8 +244,8 @@ src="/IMG_20251122_195044.jpg"
 
       {isMobileMenuOpen && (
         <div className="md:hidden bg-raizing-teal-900/98 backdrop-blur-sm border-t border-raizing-teal-900 shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
-          <div className="px-4 sm:px-6 py-5 sm:py-6">
-            <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-teal-900 sticky top-0 bg-raizing-teal-900/98 backdrop-blur-sm z-10 -mx-4 sm:-mx-6 px-4 sm:px-6 pt-5 sm:pt-6">
+          <div className="px-4 sm:px-6">
+            <div className="flex items-center justify-between py-3 sm:py-4 mb-4 sm:mb-5 border-b border-raizing-teal-900/50 sticky top-0 bg-raizing-teal-900/98 backdrop-blur-sm z-20 -mx-4 sm:-mx-6 px-4 sm:px-6">
               <div className="flex items-center gap-3 sm:gap-4">
                 <img 
                   src="/IMG_20251122_195044.jpg" 
@@ -249,76 +254,122 @@ src="/IMG_20251122_195044.jpg"
                 />
               </div>
               <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors p-1"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors p-1.5 min-w-[44px] min-h-[44px] flex items-center justify-center relative z-20 cursor-pointer"
                 aria-label="Close menu"
+                type="button"
+                style={{ pointerEvents: 'auto' }}
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
-            <div className="space-y-2">
-              <button
-                onClick={() => handleNavigation('/automation')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-              >
-                Automation
-              </button>
-              <button
-                onClick={() => handleNavigation('/training')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-              >
-                Training
-              </button>
-              <button
-                onClick={() => handleNavigation('/consulting')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-              >
-                Consulting
-              </button>
-              <button
-                onClick={() => handleNavigation('/development')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-              >
-                Development
-              </button>
-              
-              <button
-                onClick={() => handleNavigation('/ai-services')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
-              >
-                AI Services
-              </button>
-
-              <div className="pt-2">
+            <div className="px-4 sm:px-6 pb-5 sm:pb-6">
+              <div className="space-y-2">
                 <button
-                  onClick={handleAboutClick}
-                  className="flex items-center justify-between w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleNavigation('/automation');
+                  }}
+                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  type="button"
                 >
-                  <span>About</span>
-                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} />
+                  Automation
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleNavigation('/training');
+                  }}
+                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  type="button"
+                >
+                  Training
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleNavigation('/consulting');
+                  }}
+                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  type="button"
+                >
+                  Consulting
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleNavigation('/development');
+                  }}
+                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  type="button"
+                >
+                  Development
                 </button>
                 
-                {isAboutOpen && (
-                  <div className="pl-4 space-y-2 mt-2">
-                    {aboutSubItems.map((item) => (
-                      <button
-                        key={item.label}
-                        onClick={() => handleNavigation(item.path)}
-                        className="block w-full text-left py-2.5 px-4 rounded-md text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors font-medium"
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                  </div>
-                )}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleNavigation('/ai-services');
+                  }}
+                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  type="button"
+                >
+                  AI Services
+                </button>
+
+                <div className="pt-2">
+                  <button
+                    onClick={(e) => handleAboutClick(e)}
+                    className="flex items-center justify-between w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                    type="button"
+                  >
+                    <span>About</span>
+                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  {isAboutOpen && (
+                    <div className="pl-4 space-y-2 mt-2">
+                      {aboutSubItems.map((item) => (
+                        <button
+                          key={item.label}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleNavigation(item.path);
+                          }}
+                          className="block w-full text-left py-2.5 px-4 rounded-md text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors font-medium"
+                          type="button"
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setIsMobileMenuOpen(false);
+                    setIsAboutOpen(false);
+                    scrollToSection('contact');
+                  }}
+                  className="w-full px-6 py-3.5 mt-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/30"
+                  type="button"
+                >
+                  Let's Connect
+                </button>
               </div>
-              
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="w-full px-6 py-3.5 mt-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/30"
-              >
-                Let's Connect
-              </button>
             </div>
           </div>
         </div>

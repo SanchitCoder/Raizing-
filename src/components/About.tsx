@@ -43,19 +43,19 @@ export default function About() {
               icon: <Bot className="w-12 h-12" />,
               title: 'AI Workflow Automation',
               description: 'Streamline repetitive tasks and optimize business processes with intelligent automation solutions that save time and reduce costs.',
-              image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop&q=80'
+              video: '/AI_Workflow_Automation_Video_Generation.mp4'
             },
             {
               icon: <TrendingUp className="w-12 h-12" />,
               title: 'AI Consulting',
               description: 'Strategic guidance on AI implementation, tool selection, and integration to maximize ROI and achieve your business objectives.',
-              image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop&q=80'
+              video: '/AI_Consulting_Video_Generation_Request.mp4'
             },
             {
               icon: <Users className="w-12 h-12" />,
               title: 'AI Training & Workshops',
               description: 'Comprehensive training programs that empower your team with the skills and knowledge to leverage AI tools effectively.',
-              image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop&q=80'
+              video: '/AI_Training_Video_Generation.mp4'
             }
           ].map((service, index) => (
             <div
@@ -63,34 +63,15 @@ export default function About() {
               className="animate-on-scroll opacity-0 group relative bg-gradient-to-br from-raizing-cream-100 to-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-raizing-maroon-500/20 hover:-translate-y-3 hover:scale-[1.02] overflow-hidden"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Service Image */}
+              {/* Service Video */}
               <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-gradient-to-br from-raizing-cream-100 to-raizing-cream-50">
-                <img 
-                  src={service.image}
-                  alt={service.title}
+                <video 
+                  src={service.video}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 max-w-full"
-                  loading="eager"
-                  onError={(e) => {
-                    // Fallback to a different image source if the first one fails
-                    const target = e.target as HTMLImageElement;
-                    if (!target.dataset.retried) {
-                      target.dataset.retried = 'true';
-                      // Try alternative image URLs based on service
-                      const altImages: { [key: string]: string } = {
-                        'AI Consulting': 'https://images.unsplash.com/photo-1551434678-e076c223a0d7?w=800&h=500&fit=crop&q=80',
-                        'AI Workflow Automation': 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop&q=80',
-                        'AI Training & Workshops': 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop&q=80'
-                      };
-                      target.src = altImages[service.title] || service.image;
-                    } else {
-                      // If all images fail, hide the image and show a gradient background instead
-                      target.style.display = 'none';
-                      const container = target.parentElement;
-                      if (container) {
-                        container.style.background = `linear-gradient(135deg, #8b2d3f, #6b1f2f)`;
-                      }
-                    }
-                  }}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-raizing-maroon-500/20 via-transparent to-transparent"></div>
                 <div className="absolute top-4 right-4 relative inline-flex p-3 bg-gradient-to-br from-raizing-maroon-500 to-raizing-maroon-600 rounded-xl text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 z-10">

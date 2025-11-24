@@ -119,7 +119,7 @@ export default function Services() {
       icon: <Workflow className="w-8 h-8" />,
       title: 'AI Workflow Automation',
       description: 'Transform manual processes into intelligent, automated workflows that run 24/7.',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop&q=80',
+      video: '/AI_Workflow_Automation_Video_Generation.mp4',
       features: [
         'Custom automation development',
         'Integration with existing systems',
@@ -132,7 +132,7 @@ export default function Services() {
       icon: <Lightbulb className="w-8 h-8" />,
       title: 'AI Consulting',
       description: 'Expert guidance to navigate the AI landscape and implement the right solutions.',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop&q=80',
+      video: '/AI_Consulting_Video_Generation_Request.mp4',
       features: [
         'AI strategy development',
         'Technology stack selection',
@@ -145,7 +145,7 @@ export default function Services() {
       icon: <GraduationCap className="w-8 h-8" />,
       title: 'AI Training & Workshops',
       description: 'Hands-on training programs that empower teams with practical AI skills.',
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop&q=80',
+      video: '/AI_Training_Video_Generation.mp4',
       features: [
         'Customized training programs',
         'Hands-on workshops',
@@ -180,34 +180,15 @@ export default function Services() {
             >
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} group-hover:h-1.5 transition-all duration-300`}></div>
 
-              {/* Service Image */}
+              {/* Service Video */}
               <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-gradient-to-br from-raizing-cream-100 to-raizing-cream-50">
-                <img 
-                  src={service.image}
-                  alt={service.title}
+                <video 
+                  src={service.video}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 max-w-full"
-                  loading="eager"
-                  onError={(e) => {
-                    // Fallback to a different image source if the first one fails
-                    const target = e.target as HTMLImageElement;
-                    if (!target.dataset.retried) {
-                      target.dataset.retried = 'true';
-                      // Try alternative image URLs based on service
-                      const altImages: { [key: string]: string } = {
-                        'AI Consulting': 'https://images.unsplash.com/photo-1551434678-e076c223a0d7?w=800&h=500&fit=crop&q=80',
-                        'AI Workflow Automation': 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop&q=80',
-                        'AI Training & Workshops': 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop&q=80'
-                      };
-                      target.src = altImages[service.title] || service.image;
-                    } else {
-                      // If all images fail, hide the image and show a gradient background instead
-                      target.style.display = 'none';
-                      const container = target.parentElement;
-                      if (container) {
-                        container.style.background = `linear-gradient(135deg, var(--raizing-maroon-500), var(--raizing-maroon-700))`;
-                      }
-                    }
-                  }}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 />
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-25 group-hover:opacity-15 transition-opacity duration-500`}></div>
                 <div className={`absolute top-4 right-4 relative inline-flex p-3 bg-gradient-to-r ${service.color} rounded-xl text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10`}>

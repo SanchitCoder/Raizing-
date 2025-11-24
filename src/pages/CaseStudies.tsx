@@ -44,19 +44,19 @@ const caseStudies = [
   },
   {
     id: 3,
-    company: 'Healthcare Provider',
-    industry: 'Healthcare',
-    challenge: 'Patient scheduling inefficiencies and no-shows',
-    solution: 'AI scheduling system with predictive reminders',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999e8?w=1200&h=600&fit=crop&q=80',
+    company: 'Travel Agency Provider',
+    industry: 'Travel & Tourism',
+    challenge: 'Booking management inefficiencies and high cancellation rates',
+    solution: 'AI-powered booking system with intelligent itinerary management',
+    image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&h=600&fit=crop&q=80',
     results: [
-      { icon: <TrendingUp className="w-5 h-5" />, metric: '60%', label: 'Fewer No-Shows' },
-      { icon: <Clock className="w-5 h-5" />, metric: '40%', label: 'Time Saved' },
-      { icon: <DollarSign className="w-5 h-5" />, metric: '$1.5M', label: 'Revenue Increase' }
+      { icon: <TrendingUp className="w-5 h-5" />, metric: '55%', label: 'Reduced Cancellations' },
+      { icon: <Clock className="w-5 h-5" />, metric: '50%', label: 'Faster Bookings' },
+      { icon: <DollarSign className="w-5 h-5" />, metric: '$2.1M', label: 'Revenue Increase' }
     ],
     color: 'from-raizing-maroon-600 to-raizing-maroon-800',
-    description: 'A large healthcare network faced significant challenges with patient scheduling. High no-show rates and inefficient booking systems were impacting both patient care and revenue. Our AI-powered solution transformed their scheduling operations.',
-    technologies: ['Predictive Analytics', 'Mobile Integration', 'Automated Messaging', 'CRM Integration'],
+    description: 'A leading travel agency network faced significant challenges with booking management and customer service. High cancellation rates and inefficient itinerary planning systems were impacting both customer satisfaction and revenue. Our AI-powered solution transformed their booking operations and enhanced customer experience.',
+    technologies: ['Predictive Analytics', 'Mobile Integration', 'Automated Itinerary Planning', 'CRM Integration'],
     timeline: '5 months',
     teamSize: '6 specialists'
   },
@@ -198,6 +198,7 @@ export default function CaseStudies() {
                         target.dataset.retried = 'true';
                         // Try alternative image URLs based on industry
                         const altImages: { [key: string]: string } = {
+                          'Travel & Tourism': 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1200&h=600&fit=crop&q=80',
                           'Healthcare': 'https://images.unsplash.com/photo-1573164574230-7d8e1c4c71d2?w=1200&h=600&fit=crop&q=80',
                           'Retail': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80',
                           'Finance': 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop&q=80',
