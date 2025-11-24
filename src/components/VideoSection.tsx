@@ -44,11 +44,11 @@ export default function VideoSection() {
           </p>
         </div>
 
-        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-raizing-teal-900 animate-on-scroll opacity-0">
+        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-raizing-teal-900 animate-on-scroll opacity-0 max-w-full">
           <div className="absolute inset-0 bg-gradient-to-br from-raizing-teal-900/10 to-raizing-maroon-500/10 z-10 pointer-events-none"></div>
           <video
             ref={videoRef}
-            className="w-full h-auto"
+            className="w-full h-auto max-w-full"
             loop
             muted
             playsInline

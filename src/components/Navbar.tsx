@@ -75,7 +75,7 @@ export default function Navbar() {
     <nav
       className={`fixed z-40 will-change-transform ${
         isScrolled
-          ? 'top-4 left-4 right-4 bg-raizing-teal-900 backdrop-blur-lg shadow-2xl rounded-3xl border border-raizing-teal-900/50'
+          ? 'top-2 sm:top-4 left-2 sm:left-4 right-2 sm:right-4 bg-raizing-teal-900 backdrop-blur-lg shadow-2xl rounded-2xl sm:rounded-3xl border border-raizing-teal-900/50'
           : 'top-0 left-0 right-0 bg-raizing-teal-900 backdrop-blur-sm'
       }`}
       style={{
@@ -227,7 +227,7 @@ src="/IMG_20251122_195044.jpg"
           </div>
 
           <button
-            className="md:hidden flex-shrink-0 ml-2 p-2 text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors"
+            className="md:hidden flex-shrink-0 ml-2 p-2.5 min-w-[44px] min-h-[44px] text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -249,7 +249,7 @@ src="/IMG_20251122_195044.jpg"
               </div>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors p-1"
+                className="text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center"
                 aria-label="Close menu"
               >
                 <X className="w-6 h-6" />
@@ -258,32 +258,32 @@ src="/IMG_20251122_195044.jpg"
             <div className="space-y-2">
               <button
                 onClick={() => handleNavigation('/automation')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 Automation
               </button>
               <button
                 onClick={() => handleNavigation('/training')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 Training
               </button>
               <button
                 onClick={() => handleNavigation('/consulting')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 Consulting
               </button>
               <button
                 onClick={() => handleNavigation('/development')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 Development
               </button>
               
               <button
                 onClick={() => handleNavigation('/ai-services')}
-                className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-raizing-cream-200 font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
               >
                 AI Services
               </button>
@@ -291,7 +291,7 @@ src="/IMG_20251122_195044.jpg"
               <div className="pt-2">
                 <button
                   onClick={handleAboutClick}
-                  className="flex items-center justify-between w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  className="flex items-center justify-between w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
                 >
                   <span>About</span>
                   <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`} />
@@ -303,7 +303,7 @@ src="/IMG_20251122_195044.jpg"
                       <button
                         key={item.label}
                         onClick={() => handleNavigation(item.path)}
-                        className="block w-full text-left py-2.5 px-4 rounded-md text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors font-medium"
+                        className="block w-full text-left py-3 px-4 min-h-[44px] rounded-md text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors font-medium"
                       >
                         {item.label}
                       </button>

@@ -100,8 +100,8 @@ export default function CompanyLogos() {
   }, []);
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-raizing-cream-50 to-white border-y border-raizing-teal-900/10 overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-raizing-cream-50 to-white border-y border-raizing-teal-900/10 overflow-hidden relative max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 overflow-hidden">
         <div ref={headingRef} className="text-center mb-8 sm:mb-10 md:mb-12">
           <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
             <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Our Partners</span>

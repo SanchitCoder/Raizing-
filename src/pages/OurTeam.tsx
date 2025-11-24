@@ -66,10 +66,10 @@ export default function OurTeam() {
     {
       name: 'Mr. Paras Arora',
       role: 'AI Specialist',
-      bio: 'Transformed 200+ businesses with AI solutions. MBA from Stanford.',
-      expertise: 'AI Consulting, Strategy',
+      bio: 'Digital marketing strategist and AI implementation expert. Developed the revolutionary "4 C\'s Framework" combining AI tools with practical business strategy. Used AI to 10x content output and automate 80% of marketing workflows. Focuses on practical implementation, making AI accessible to non-programmers and business professionals.',
+      expertise: 'AI Implementation, Digital Marketing Strategy, Content Automation, Business Process Optimization',
       image: 'PA',
-      imagePath: `https://i.pravatar.cc/150?img=${3}`
+      imagePath: '/paras.jpg'
     }
   ];
 
@@ -210,7 +210,7 @@ export default function OurTeam() {
                   <img 
                     src={leader.imagePath}
                     alt={leader.name}
-                    className="relative w-full h-full rounded-lg object-cover border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    className="relative w-full h-full rounded-lg object-contain border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300 bg-raizing-cream-50"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = `https://i.pravatar.cc/150?img=${index + 1}`;

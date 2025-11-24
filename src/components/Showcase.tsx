@@ -97,7 +97,7 @@ export default function Showcase() {
                   <img 
                     src={study.image}
                     alt={`${study.company} - ${study.industry}`}
-                    className="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700 max-w-full"
                     loading="eager"
                     onError={(e) => {
                       // Fallback to alternative image sources if the first one fails
