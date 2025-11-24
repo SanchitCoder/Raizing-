@@ -136,14 +136,14 @@ export default function AboutUs() {
               <img 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80" 
                 alt="Raizing AI Team" 
-                className="w-full h-64 sm:h-80 object-cover"
+                className="w-full h-64 sm:h-80 object-cover max-w-full"
               />
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
               <img 
                 src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&q=80" 
                 alt="Modern Office Space" 
-                className="w-full h-64 sm:h-80 object-cover"
+                className="w-full h-64 sm:h-80 object-cover max-w-full"
               />
             </div>
           </div>

@@ -362,4 +362,29 @@
       transform: translateY(-10px);
     }
   }
+
+  /* Responsive Image Utilities */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ensure all containers respect viewport */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Prevent horizontal scroll on all screen sizes */
+  @media (max-width: 640px) {
+    .container,
+    .max-w-7xl,
+    .max-w-6xl,
+    .max-w-5xl,
+    .max-w-4xl,
+    .max-w-3xl,
+    .max-w-2xl {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 }

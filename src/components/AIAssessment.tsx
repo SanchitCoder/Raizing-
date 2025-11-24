@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { useMobileMenu } from '../contexts/MobileMenuContext';
 
 interface UserInfo {
   name: string;
@@ -131,10 +132,25 @@ export default function AIAssessment() {
   };
 
   const currentQuestion = questions[currentStep - 2];
+  const { isMobileMenuOpen } = useMobileMenu();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Hide on mobile when menu is open (but still show if assessment modal is open)
+  const shouldHideBanner = isMobileMenuOpen && isMobile && !isOpen;
 
   return (
     <>
       {/* Floating Banner */}
+      {!shouldHideBanner && (
       <div className="fixed bottom-4 sm:bottom-6 left-2 sm:left-6 right-2 sm:right-6 z-40 bg-gradient-to-r from-raizing-teal-900/95 via-raizing-teal-800/95 to-raizing-teal-900/95 backdrop-blur-lg text-raizing-cream-200 shadow-2xl rounded-xl sm:rounded-2xl border border-raizing-maroon-500/20 transform transition-transform duration-300 max-w-7xl mx-auto">
         <div className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
@@ -160,6 +176,7 @@ export default function AIAssessment() {
           </div>
         </div>
       </div>
+      )}
 
       {/* Assessment Modal */}
       {isOpen && (

@@ -1,7 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useMobileMenu } from '../contexts/MobileMenuContext';
 
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
+  const { isMobileMenuOpen } = useMobileMenu();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // WhatsApp phone number - replace with your actual WhatsApp number
   const whatsappNumber = '1234567890'; // Format: country code + number without + or spaces
@@ -11,6 +23,11 @@ export default function WhatsAppButton() {
     // Open WhatsApp in a new tab/window
     window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
   };
+
+  // Hide on mobile when menu is open
+  if (isMobileMenuOpen && isMobile) {
+    return null;
+  }
 
   return (
     <button

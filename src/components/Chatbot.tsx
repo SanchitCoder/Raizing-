@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Bot } from 'lucide-react';
+import { useMobileMenu } from '../contexts/MobileMenuContext';
 
 interface Message {
   id: string;
@@ -10,6 +11,17 @@ interface Message {
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isMobileMenuOpen } = useMobileMenu();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -86,6 +98,11 @@ export default function Chatbot() {
       sendMessage();
     }
   };
+
+  // Hide on mobile when menu is open
+  if (isMobileMenuOpen && isMobile) {
+    return null;
+  }
 
   return (
     <>
