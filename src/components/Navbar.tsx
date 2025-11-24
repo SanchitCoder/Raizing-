@@ -238,9 +238,9 @@ src="/IMG_20251122_195044.jpg"
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-raizing-teal-900/98 backdrop-blur-sm border-t border-raizing-teal-900 shadow-lg">
+        <div className="md:hidden bg-raizing-teal-900/98 backdrop-blur-sm border-t border-raizing-teal-900 shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
           <div className="px-4 sm:px-6 py-5 sm:py-6">
-            <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-teal-900">
+            <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-teal-900 sticky top-0 bg-raizing-teal-900/98 backdrop-blur-sm z-10 -mx-4 sm:-mx-6 px-4 sm:px-6 pt-5 sm:pt-6">
               <div className="flex items-center gap-3 sm:gap-4">
                 <img 
                   src="/IMG_20251122_195044.jpg" 
