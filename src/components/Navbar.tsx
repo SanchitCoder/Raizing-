@@ -100,7 +100,7 @@ export default function Navbar() {
           }}
         >
           <div 
-            className="flex items-center gap-2 sm:gap-3 md:gap-4 cursor-pointer flex-shrink-0 min-w-0 flex-1" 
+            className={`flex items-center gap-2 sm:gap-3 md:gap-4 cursor-pointer flex-shrink-0 min-w-0 flex-1 ${isMobileMenuOpen ? 'hidden md:flex' : ''}`}
             onClick={() => navigate('/')}
           >
             <div className="relative">
@@ -237,25 +237,32 @@ src="/IMG_20251122_195044.jpg"
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-raizing-teal-900/98 backdrop-blur-sm border-t border-raizing-teal-900 shadow-lg">
-          <div className="px-4 sm:px-6 py-5 sm:py-6">
-            <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-teal-900">
-              <div className="flex items-center gap-3 sm:gap-4">
-                <img 
-  src="/IMG_20251122_195044.jpg" 
-                  alt="Raizing AI Logo" 
-                  className="h-10 sm:h-12 w-auto object-contain"
-                />
+        <>
+          {/* Backdrop */}
+          <div 
+            className="md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          {/* Mobile Menu */}
+          <div className={`md:hidden fixed inset-0 ${isScrolled ? 'top-[3.5rem]' : 'top-[4rem]'} bg-raizing-teal-900 backdrop-blur-sm shadow-lg z-50 overflow-y-auto`}>
+            <div className="px-4 sm:px-6 py-5 sm:py-6">
+              <div className="flex items-center justify-between mb-6 pb-5 border-b border-raizing-teal-900/50">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <img 
+                    src="/IMG_20251122_195044.jpg" 
+                    alt="Raizing AI Logo" 
+                    className="h-10 sm:h-12 w-auto object-contain"
+                  />
+                </div>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center"
+                  aria-label="Close menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
               </div>
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center"
-                aria-label="Close menu"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-            <div className="space-y-2">
+              <div className="space-y-2 relative z-10">
               <button
                 onClick={() => handleNavigation('/automation')}
                 className="block w-full text-left py-3.5 px-4 min-h-[44px] rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
@@ -321,6 +328,7 @@ src="/IMG_20251122_195044.jpg"
             </div>
           </div>
         </div>
+        </>
       )}
     </nav>
   );
