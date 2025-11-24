@@ -30,21 +30,21 @@ export default function VideoSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900">
+    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-          <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
+        <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+          <div className="inline-block px-4 sm:px-6 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
             <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Watch & Learn</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 px-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 px-4 sm:px-6">
             Experience the Future of AI
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto px-4 sm:px-6">
             Discover how AI is transforming businesses and creating new possibilities
           </p>
         </div>
 
-        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-raizing-teal-900 animate-on-scroll opacity-0 max-w-full">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-raizing-teal-900 animate-on-scroll opacity-0 max-w-full">
           <div className="absolute inset-0 bg-gradient-to-br from-raizing-teal-900/10 to-raizing-maroon-500/10 z-10 pointer-events-none"></div>
           <video
             ref={videoRef}

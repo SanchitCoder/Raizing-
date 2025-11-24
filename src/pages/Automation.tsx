@@ -185,27 +185,27 @@ export default function Automation() {
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
+      <section className="relative pt-24 pt-28 pb-12 pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-6 sm:mb-8 group"
+            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-4 sm:mb-6 mb-6 sm:mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-sm sm:text-base font-medium">Back to Home</span>
+            <span className="text-xs sm:text-sm sm:text-base font-medium">Back to Home</span>
           </button>
           
           <div className="text-center">
-            <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-6">
+            <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-4 sm:mb-6">
               <Workflow className="w-8 h-8 text-raizing-maroon-600" />
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-6xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
               <span className="text-raizing-teal-900 dark:text-white">AI Workflow</span>
-              <br className="hidden sm:block" />
+              <br className="block" />
               <span className="text-raizing-maroon-600">Automation</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Transform manual processes into intelligent, automated workflows that run 24/7, reducing costs and increasing efficiency
             </p>
           </div>
@@ -213,10 +213,10 @@ export default function Automation() {
       </section>
 
       {/* Overview Section */}
-      <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
+      <section ref={sectionRef} className="py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 lg:p-10 shadow-lg">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 mb-4 sm:mb-6">
               Transform Your Business Operations
             </h2>
             <div className="space-y-4">
@@ -229,33 +229,33 @@ export default function Automation() {
                 Whether you're looking to automate document processing, customer service, data entry, or complex multi-step workflows, 
                 our solutions are designed to integrate seamlessly with your existing systems while providing measurable ROI from day one.
               </p>
-              <div className="grid sm:grid-cols-2 gap-4 mt-6">
-                <div className="flex items-start gap-3 p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 mt-6">
+                <div className="flex items-start gap-3 sm:gap-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
                   <CheckCircle2 className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-raizing-teal-900 dark:text-white mb-1">Seamless Integration</h3>
-                    <p className="text-sm text-raizing-teal-900 dark:text-white">Works with your existing software and systems without disruption</p>
+                    <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Works with your existing software and systems without disruption</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
+                <div className="flex items-start gap-3 sm:gap-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
                   <CheckCircle2 className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-raizing-teal-900 dark:text-white mb-1">Quick Implementation</h3>
-                    <p className="text-sm text-raizing-teal-900 dark:text-white">Deploy solutions in weeks, not months, with minimal business disruption</p>
+                    <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Deploy solutions in weeks, not months, with minimal business disruption</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
+                <div className="flex items-start gap-3 sm:gap-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
                   <CheckCircle2 className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-raizing-teal-900 dark:text-white mb-1">Scalable Architecture</h3>
-                    <p className="text-sm text-raizing-teal-900 dark:text-white">Grows with your business from startup to enterprise scale</p>
+                    <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Grows with your business from startup to enterprise scale</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-3 p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
+                <div className="flex items-start gap-3 sm:gap-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg">
                   <CheckCircle2 className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-raizing-teal-900 dark:text-white mb-1">24/7 Monitoring</h3>
-                    <p className="text-sm text-raizing-teal-900 dark:text-white">Continuous monitoring and optimization for peak performance</p>
+                    <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Continuous monitoring and optimization for peak performance</p>
                   </div>
                 </div>
               </div>
@@ -265,10 +265,10 @@ export default function Automation() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Automation Capabilities
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -276,20 +276,20 @@ export default function Automation() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-lg text-white mb-4">
+                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-lg text-white mb-3 sm:mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -299,10 +299,10 @@ export default function Automation() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Measurable Results
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -310,20 +310,20 @@ export default function Automation() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 text-center hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-8 rounded-xl border border-raizing-teal-900 text-center hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-4xl sm:text-5xl font-bold text-raizing-maroon-500 mb-2">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-raizing-maroon-500 mb-2">
                   {benefit.metric}
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-raizing-teal-900 dark:text-white mb-2">
+                <div className="text-base sm:text-lg lg:text-xl font-semibold text-raizing-teal-900 dark:text-white mb-2">
                   {benefit.label}
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white">
                   {benefit.description}
                 </p>
               </div>
@@ -333,10 +333,10 @@ export default function Automation() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Real-World Applications
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -344,20 +344,20 @@ export default function Automation() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {useCases.map((useCase, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-lg text-white mb-4">
+                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-lg text-white mb-3 sm:mb-4">
                   {useCase.icon}
                 </div>
-                <h3 className="text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {useCase.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {useCase.description}
                 </p>
               </div>
@@ -367,10 +367,10 @@ export default function Automation() {
       </section>
 
       {/* Process Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Automation Process
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -378,20 +378,20 @@ export default function Automation() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {processSteps.map((step, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-4xl sm:text-5xl font-bold text-raizing-maroon-500 mb-3">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-raizing-maroon-500 mb-3">
                   {step.step}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -401,10 +401,10 @@ export default function Automation() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Technologies We Use
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -412,11 +412,11 @@ export default function Automation() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 gap-4 sm:gap-6">
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg text-center"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-lg text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <Zap className="w-6 h-6 text-raizing-maroon-500 mx-auto mb-3" />
@@ -428,10 +428,10 @@ export default function Automation() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               What Our Clients Say
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -439,7 +439,7 @@ export default function Automation() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 quote: 'The automation solution reduced our processing time by 85% and eliminated errors completely. ROI was achieved in just 3 months.',
@@ -465,24 +465,24 @@ export default function Automation() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-3 sm:mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-raizing-maroon-500 text-raizing-maroon-500" />
                   ))}
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-800 mb-6 leading-relaxed italic">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-800 mb-4 sm:mb-6 leading-relaxed italic">
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
                     <div className="font-semibold text-raizing-teal-900 dark:text-white">{testimonial.author}</div>
-                    <div className="text-sm text-raizing-teal-900 dark:text-white">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -492,10 +492,10 @@ export default function Automation() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white">
@@ -532,13 +532,13 @@ export default function Automation() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -548,17 +548,17 @@ export default function Automation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
             <span className="text-raizing-teal-900 dark:text-white">Ready to Automate</span>
-            <br className="hidden sm:block" />
+            <br className="block" />
             <span className="text-raizing-maroon-600">Your Workflows?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-4 sm:mb-6 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss how AI workflow automation can transform your business operations. Get in touch for a free consultation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col flex-row gap-3 sm:gap-4 justify-center">
             <button
               onClick={() => {
                 navigate('/');
@@ -567,14 +567,14 @@ export default function Automation() {
                   contactSection?.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
               }}
-              className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
+              className="group px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => navigate('/case-studies')}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
+              className="px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
             >
               View Case Studies
             </button>

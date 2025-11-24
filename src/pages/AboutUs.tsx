@@ -102,26 +102,26 @@ export default function AboutUs() {
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
+      <section className="relative pt-24 pt-28 pb-12 pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-6 sm:mb-8 group"
+            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-4 sm:mb-6 mb-6 sm:mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-sm sm:text-base font-medium">Back to Home</span>
+            <span className="text-xs sm:text-sm sm:text-base font-medium">Back to Home</span>
           </button>
           
           <div className="text-center">
-            <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-6">
+            <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-4 sm:mb-6">
               <Users className="w-8 h-8 text-raizing-maroon-600" />
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-6xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
               <span className="text-raizing-teal-900 dark:text-white">About</span>{' '}
               <span className="text-raizing-maroon-600">Raizing AI</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Empowering businesses with cutting-edge AI solutions since 2020
             </p>
           </div>
@@ -129,26 +129,26 @@ export default function AboutUs() {
       </section>
 
       {/* Overview Section */}
-      <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
+      <section ref={sectionRef} className="py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-12">
-            <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 gap-12 mb-12">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
               <img 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80" 
                 alt="Raizing AI Team" 
-                className="w-full h-64 sm:h-80 object-cover max-w-full"
+                className="w-full h-64 h-80 object-cover max-w-full"
               />
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
               <img 
                 src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&q=80" 
                 alt="Modern Office Space" 
-                className="w-full h-64 sm:h-80 object-cover max-w-full"
+                className="w-full h-64 h-80 object-cover max-w-full"
               />
             </div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 lg:p-10 shadow-lg">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 mb-4 sm:mb-6">
               Our Story
             </h2>
             <div className="space-y-4">
@@ -166,18 +166,18 @@ export default function AboutUs() {
                 We believe that AI should enhance human capabilities, not replace them. Our approach focuses on creating 
                 solutions that empower teams, streamline processes, and unlock new possibilities for growth and innovation.
               </p>
-              <div className="grid sm:grid-cols-3 gap-4 mt-6">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-6">
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">500+</div>
-                  <div className="text-sm text-raizing-teal-900 dark:text-white">Projects Completed</div>
+                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">500+</div>
+                  <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Projects Completed</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">50+</div>
-                  <div className="text-sm text-raizing-teal-900 dark:text-white">Team Members</div>
+                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">50+</div>
+                  <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Team Members</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">15+</div>
-                  <div className="text-sm text-raizing-teal-900 dark:text-white">Industries Served</div>
+                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">15+</div>
+                  <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Industries Served</div>
                 </div>
               </div>
             </div>
@@ -186,10 +186,10 @@ export default function AboutUs() {
       </section>
 
       {/* Values Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Core Values
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -197,20 +197,20 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 grid-cols-1 lg:grid-cols-2 grid-cols-4 gap-3 sm:gap-4 gap-4 sm:gap-6 lg:gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
+                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-3 sm:mb-4">
                   {value.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {value.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -220,29 +220,29 @@ export default function AboutUs() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            <div className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 shadow-lg">
+          <div className="grid grid-cols-1 grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 gap-4 sm:gap-6 lg:gap-8">
+            <div className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-8 rounded-xl border border-raizing-teal-900 shadow-lg">
               <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-3 sm:mb-4">
-                <Target className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Target className="w-6 h-6" />
               </div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
                 Our Mission
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg text-raizing-teal-800 leading-relaxed">
+              <p className="text-base sm:text-lg text-raizing-teal-800 leading-relaxed">
                 To democratize AI technology and empower businesses worldwide to achieve their full potential through 
                 intelligent automation, strategic guidance, and transformative solutions.
               </p>
             </div>
-            <div className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 shadow-lg" style={{ animationDelay: '100ms' }}>
+            <div className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-8 rounded-xl border border-raizing-teal-900 shadow-lg" style={{ animationDelay: '100ms' }}>
               <div className="inline-flex p-3 bg-gradient-to-r from-raizing-teal-900 to-raizing-teal-800 rounded-lg text-white mb-3 sm:mb-4">
-                <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
+                <Globe className="w-6 h-6" />
               </div>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
                 Our Vision
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg text-raizing-teal-800 leading-relaxed">
+              <p className="text-base sm:text-lg text-raizing-teal-800 leading-relaxed">
                 To become the world's most trusted AI solutions partner, recognized for innovation, excellence, 
                 and the transformative impact we create for our clients and their communities.
               </p>
@@ -252,10 +252,10 @@ export default function AboutUs() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our Journey
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -267,19 +267,19 @@ export default function AboutUs() {
             {milestones.map((milestone, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 items-start bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900"
+                className="animate-on-scroll opacity-0 flex flex-col flex-row gap-3 sm:gap-4 gap-4 sm:gap-6 items-start bg-gradient-to-br from-raizing-cream-50 to-white p-8 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-full flex items-center justify-center text-white text-lg sm:text-xl font-bold">
+                  <div className="w-20 h-20 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-full flex items-center justify-center text-white text-base sm:text-lg lg:text-xl font-bold">
                     {milestone.year}
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">
+                  <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">
                     {milestone.title}
                   </h3>
-                  <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                  <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                     {milestone.description}
                   </p>
                 </div>
@@ -290,16 +290,16 @@ export default function AboutUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
             <span className="text-raizing-teal-900 dark:text-white">Join Us on Our</span>{' '}
             <span className="text-raizing-maroon-600">Mission</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-4 sm:mb-6 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Whether you're looking to transform your business with AI or join our team, we'd love to hear from you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col flex-row gap-3 sm:gap-4 justify-center">
             <button
               onClick={() => {
                 navigate('/');
@@ -308,14 +308,14 @@ export default function AboutUs() {
                   contactSection?.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
               }}
-              className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
+              className="group px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => navigate('/case-studies')}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
+              className="px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
             >
               View Our Work
             </button>

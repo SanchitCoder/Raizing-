@@ -100,16 +100,16 @@ export default function CompanyLogos() {
   }, []);
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-raizing-cream-50 to-white border-y border-raizing-teal-900/10 overflow-hidden relative max-w-full">
+    <section className="py-8 py-12 py-16 bg-gradient-to-b from-raizing-cream-50 to-white border-y border-raizing-teal-900/10 overflow-hidden relative max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 overflow-hidden">
-        <div ref={headingRef} className="text-center mb-8 sm:mb-10 md:mb-12">
-          <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
+        <div ref={headingRef} className="text-center mb-6 sm:mb-8 mb-10 mb-12">
+          <div className="inline-block px-4 sm:px-6 py-1.5 sm:py-2 mb-3 sm:mb-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
             <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Our Partners</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-2 sm:mb-3">
+          <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3">
             Companies That Work With Us
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white/70 max-w-2xl mx-auto mb-4">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white/70 max-w-2xl mx-auto mb-3 sm:mb-4">
             Trusted brands that have integrated our AI solutions to transform their business operations
           </p>
           <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-raizing-maroon-500 to-transparent mx-auto"></div>
@@ -117,12 +117,12 @@ export default function CompanyLogos() {
         
         <div className="relative">
           {/* Gradient overlays for fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-32 md:w-40 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-32 md:w-40 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-24 w-32 w-40 bg-gradient-to-r from-white via-white/90 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-24 w-32 w-40 bg-gradient-to-l from-white via-white/90 to-transparent z-10 pointer-events-none"></div>
           
           <div 
             ref={scrollRef}
-            className="flex items-center gap-4 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20"
+            className="flex items-center gap-3 sm:gap-4 gap-6 sm:gap-8 gap-12 gap-16 gap-20"
             style={{ willChange: 'transform' }}
           >
             {duplicatedCompanies.map((company, index) => (
@@ -130,8 +130,8 @@ export default function CompanyLogos() {
                 key={`${company.name}-${index}`}
                 className="flex-shrink-0 flex items-center justify-center group"
               >
-                <div className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl border border-raizing-teal-900/10 hover:border-raizing-teal-900/40 transition-all duration-500 hover:shadow-xl hover:scale-110 hover:-translate-y-1 group-hover:bg-gradient-to-br group-hover:from-white group-hover:to-raizing-cream-50">
-                  <div className="text-gray-500 group-hover:text-raizing-teal-900 dark:text-white transition-all duration-300 font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl whitespace-nowrap tracking-tight">
+                <div className="px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 py-5 bg-white dark:bg-gray-800 rounded-xl border border-raizing-teal-900/10 hover:border-raizing-teal-900/40 transition-all duration-500 hover:shadow-xl hover:scale-110 hover:-translate-y-1 group-hover:bg-gradient-to-br group-hover:from-white group-hover:to-raizing-cream-50">
+                  <div className="text-gray-500 group-hover:text-raizing-teal-900 dark:text-white transition-all duration-300 font-bold text-base sm:text-lg lg:text-xl whitespace-nowrap tracking-tight">
                     {company.logo}
                   </div>
                   {company.name !== company.logo && (

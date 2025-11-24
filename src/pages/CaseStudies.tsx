@@ -44,7 +44,7 @@ const caseStudies = [
   },
   {
     id: 3,
-    company: 'Travel Agency Provider',
+    company: 'Travel Solution Provider',
     industry: 'Travel & Tourism',
     challenge: 'Booking management inefficiencies and high cancellation rates',
     solution: 'AI-powered booking system with intelligent itinerary management',
@@ -55,7 +55,7 @@ const caseStudies = [
       { icon: <DollarSign className="w-5 h-5" />, metric: '$2.1M', label: 'Revenue Increase' }
     ],
     color: 'from-raizing-maroon-600 to-raizing-maroon-800',
-    description: 'A leading travel agency network faced significant challenges with booking management and customer service. High cancellation rates and inefficient itinerary planning systems were impacting both customer satisfaction and revenue. Our AI-powered solution transformed their booking operations and enhanced customer experience.',
+    description: 'A leading travel solution network faced significant challenges with booking management and customer service. High cancellation rates and inefficient itinerary planning systems were impacting both customer satisfaction and revenue. Our AI-powered solution transformed their booking operations and enhanced customer experience.',
     technologies: ['Predictive Analytics', 'Mobile Integration', 'Automated Itinerary Planning', 'CRM Integration'],
     timeline: '5 months',
     teamSize: '6 specialists'
@@ -145,27 +145,27 @@ export default function CaseStudies() {
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
+      <section className="relative pt-24 pt-28 pb-12 pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-6 sm:mb-8 group"
+            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-4 sm:mb-6 mb-6 sm:mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-sm sm:text-base font-medium">Back to Home</span>
+            <span className="text-xs sm:text-sm sm:text-base font-medium">Back to Home</span>
           </button>
           
           <div className="text-center">
-            <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
+            <div className="inline-block px-4 sm:px-6 py-1.5 sm:py-2 mb-3 sm:mb-4 mb-4 sm:mb-6 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-full">
               <span className="text-raizing-maroon-600 text-xs sm:text-sm font-semibold">Case Studies</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-6xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
               <span className="text-raizing-teal-900 dark:text-white">Our Success</span>
-              <br className="hidden sm:block" />
+              <br className="block" />
               <span className="text-raizing-maroon-600">Stories</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Real projects, real results. Discover how we've transformed businesses across industries with AI automation.
             </p>
           </div>
@@ -173,19 +173,19 @@ export default function CaseStudies() {
       </section>
 
       {/* Case Studies Grid */}
-      <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
+      <section ref={sectionRef} className="py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {caseStudies.map((study, index) => (
               <div
                 key={study.id}
-                className="animate-on-scroll opacity-0 group relative bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 group relative bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${study.color}`}></div>
 
                 {/* Case Study Image */}
-                <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden bg-raizing-cream-100">
+                <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden bg-raizing-cream-100">
                   <img 
                     src={study.image}
                     alt={`${study.company} - ${study.industry}`}
@@ -223,39 +223,39 @@ export default function CaseStudies() {
                   </div>
                 </div>
 
-                <div className="p-6 sm:p-8">
-                  <div className="flex items-start justify-between mb-4">
+                <div className="p-8">
+                  <div className="flex items-start justify-between mb-3 sm:mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">{study.company}</h3>
-                      <span className={`inline-block px-2 sm:px-3 py-1 bg-raizing-teal-900 text-raizing-teal-900 dark:text-white text-xs sm:text-sm rounded-full`}>
+                      <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">{study.company}</h3>
+                      <span className={`inline-block px-2 px-3 sm:px-4 py-1 bg-raizing-teal-900 text-raizing-teal-900 dark:text-white text-xs sm:text-sm rounded-full`}>
                         {study.industry}
                       </span>
                     </div>
                   </div>
 
-                  <div className="space-y-3 sm:space-y-4 mb-6">
+                  <div className="space-y-4 mb-4 sm:mb-6">
                     <div>
                       <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5">Challenge</h4>
-                      <p className="text-sm sm:text-base text-raizing-teal-800">{study.challenge}</p>
+                      <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-800">{study.challenge}</p>
                     </div>
                     <div>
                       <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-1.5">Solution</h4>
-                      <p className="text-sm sm:text-base text-raizing-teal-800">{study.solution}</p>
+                      <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-800">{study.solution}</p>
                     </div>
                   </div>
 
-                  <div className="mb-6">
+                  <div className="mb-4 sm:mb-6">
                     <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-3">Key Results</h4>
-                    <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                    <div className="grid grid-cols-3 gap-3">
                       {study.results.map((result, idx) => (
                         <div
                           key={idx}
-                          className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-2 sm:p-3 rounded-lg border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 text-center"
+                          className="bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 p-2 p-3 rounded-lg border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 text-center"
                         >
-                          <div className={`inline-flex p-1.5 sm:p-2 bg-gradient-to-r ${study.color} rounded-lg text-raizing-cream-200 mb-1.5 sm:mb-2`}>
+                          <div className={`inline-flex p-1.5 p-2 bg-gradient-to-r ${study.color} rounded-lg text-raizing-cream-200 mb-1.5 mb-2`}>
                             {result.icon}
                           </div>
-                          <div className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white">{result.metric}</div>
+                          <div className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white">{result.metric}</div>
                           <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">{result.label}</div>
                         </div>
                       ))}
@@ -275,11 +275,11 @@ export default function CaseStudies() {
 
                   <div className="mt-4 pt-4 border-t border-raizing-teal-900">
                     <h4 className="text-xs sm:text-sm font-semibold text-raizing-teal-900 dark:text-white uppercase mb-2">Technologies</h4>
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    <div className="flex flex-wrap gap-1.5 gap-2">
                       {study.technologies.map((tech, idx) => (
                         <span
                           key={idx}
-                          className="px-2 sm:px-3 py-1 text-xs bg-raizing-maroon-50 text-raizing-maroon-700 rounded-full border border-raizing-maroon-200"
+                          className="px-2 px-3 sm:px-4 py-1 text-xs bg-raizing-maroon-50 text-raizing-maroon-700 rounded-full border border-raizing-maroon-200"
                         >
                           {tech}
                         </span>
@@ -296,17 +296,17 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
             <span className="text-raizing-teal-900 dark:text-white">Ready to Write Your</span>
-            <br className="hidden sm:block" />
+            <br className="block" />
             <span className="text-raizing-maroon-600">Success Story?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-4 sm:mb-6 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss how we can transform your business with AI automation. Get in touch for a free consultation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col flex-row gap-3 sm:gap-4 justify-center">
             <button
               onClick={() => {
                 navigate('/');
@@ -315,13 +315,13 @@ export default function CaseStudies() {
                   contactSection?.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
               }}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105"
+              className="px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105"
             >
               Let's Connect
             </button>
             <button
               onClick={() => navigate('/')}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
+              className="px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
             >
               Learn More
             </button>

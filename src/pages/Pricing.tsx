@@ -135,26 +135,26 @@ export default function Pricing() {
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
+      <section className="relative pt-24 pt-28 pb-12 pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-6 sm:mb-8 group"
+            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-4 sm:mb-6 mb-6 sm:mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-sm sm:text-base font-medium">Back to Home</span>
+            <span className="text-xs sm:text-sm sm:text-base font-medium">Back to Home</span>
           </button>
           
           <div className="text-center">
-            <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-6">
+            <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-4 sm:mb-6">
               <TrendingUp className="w-8 h-8 text-raizing-maroon-600" />
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-6xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
               <span className="text-raizing-teal-900 dark:text-white">Pricing</span>{' '}
               <span className="text-raizing-maroon-600">Plans</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include our core AI services with flexible options to scale.
             </p>
           </div>
@@ -162,10 +162,10 @@ export default function Pricing() {
       </section>
 
       {/* Overview Section */}
-      <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
+      <section ref={sectionRef} className="py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 lg:p-10 shadow-lg">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 mb-4 sm:mb-6">
               Transparent, Flexible Pricing
             </h2>
             <div className="space-y-4">
@@ -177,18 +177,18 @@ export default function Pricing() {
                 All plans include access to our AI tools, training resources, and expert support. Upgrade or customize your plan 
                 at any time as your needs evolve.
               </p>
-              <div className="grid sm:grid-cols-3 gap-4 mt-6">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-6">
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">No Setup Fees</div>
-                  <div className="text-sm text-raizing-teal-900 dark:text-white">Get started immediately</div>
+                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">No Setup Fees</div>
+                  <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Get started immediately</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">Cancel Anytime</div>
-                  <div className="text-sm text-raizing-teal-900 dark:text-white">Flexible commitments</div>
+                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">Cancel Anytime</div>
+                  <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Flexible commitments</div>
                 </div>
                 <div className="p-4 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg text-center">
-                  <div className="text-2xl font-bold text-raizing-maroon-500 mb-1">30-Day Trial</div>
-                  <div className="text-sm text-raizing-teal-900 dark:text-white">Risk-free start</div>
+                  <div className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-maroon-500 mb-1">30-Day Trial</div>
+                  <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Risk-free start</div>
                 </div>
               </div>
             </div>
@@ -197,10 +197,10 @@ export default function Pricing() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Choose Your Plan
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -208,39 +208,39 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className={`animate-on-scroll opacity-0 relative bg-gradient-to-br from-raizing-cream-50 to-white rounded-xl sm:rounded-2xl border-2 p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
+                className={`animate-on-scroll opacity-0 relative bg-gradient-to-br from-raizing-cream-50 to-white rounded-2xl border-2 p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
                   plan.popular 
-                    ? 'border-raizing-maroon-500 shadow-xl lg:scale-105' 
+                    ? 'border-raizing-maroon-500 shadow-xl scale-105' 
                     : 'border-raizing-teal-900 hover:border-raizing-maroon-500/50'
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {plan.popular && (
-                  <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 px-3 sm:px-4 py-1 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-white text-xs sm:text-sm font-bold rounded-full">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 sm:px-6 py-1 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-white text-xs sm:text-sm font-bold rounded-full">
                     Most Popular
                   </div>
                 )}
                 
-                <div className="text-center mb-6">
+                <div className="text-center mb-4 sm:mb-6">
                   <h3 className="text-2xl sm:text-3xl font-bold text-raizing-teal-900 dark:text-white mb-2">{plan.name}</h3>
                   <div className="mb-2">
-                    <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-raizing-maroon-500">{plan.price}</span>
+                    <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-raizing-maroon-500">{plan.price}</span>
                     {plan.period !== 'pricing' && (
-                      <span className="text-sm sm:text-base text-raizing-teal-900 dark:text-white ml-2">/{plan.period}</span>
+                      <span className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white ml-2">/{plan.period}</span>
                     )}
                   </div>
                   <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white px-2">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-6 sm:mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-5 h-5 text-raizing-maroon-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base text-raizing-teal-800">{feature}</span>
+                      <span className="text-xs sm:text-sm sm:text-base text-raizing-teal-800">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -253,7 +253,7 @@ export default function Pricing() {
                       contactSection?.scrollIntoView({ behavior: 'smooth' });
                     }, 100);
                   }}
-                  className={`w-full py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 ${
+                  className={`w-full py-2 sm:py-3 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-white hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 shadow-lg shadow-raizing-maroon-500/50 hover:scale-105'
                       : 'bg-gradient-to-r from-raizing-teal-900 to-raizing-teal-800 text-white hover:from-raizing-teal-800 hover:to-raizing-teal-900'
@@ -268,10 +268,10 @@ export default function Pricing() {
       </section>
 
       {/* Add-ons Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Additional Services
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -279,23 +279,23 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 grid-cols-1 lg:grid-cols-2 grid-cols-4 gap-3 sm:gap-4 gap-4 sm:gap-6 lg:gap-8">
             {addOns.map((addOn, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-5 sm:p-6 lg:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
+                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-3 sm:mb-4">
                   {addOn.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">
+                <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">
                   {addOn.name}
                 </h3>
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-raizing-maroon-500 mb-2">
+                <div className="text-2xl sm:text-3xl font-bold text-raizing-maroon-500 mb-2">
                   {addOn.price}
                 </div>
-                <p className="text-xs sm:text-sm lg:text-base text-raizing-teal-900 dark:text-white">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white">
                   {addOn.description}
                 </p>
               </div>
@@ -305,10 +305,10 @@ export default function Pricing() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white">
@@ -345,13 +345,13 @@ export default function Pricing() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -361,16 +361,16 @@ export default function Pricing() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
             <span className="text-raizing-teal-900 dark:text-white">Need a Custom</span>{' '}
             <span className="text-raizing-maroon-600">Solution?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-4 sm:mb-6 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Contact us for enterprise pricing, custom plans, or to discuss your specific requirements. We'll create a solution tailored to your needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col flex-row gap-3 sm:gap-4 justify-center">
             <button
               onClick={() => {
                 navigate('/');
@@ -379,14 +379,14 @@ export default function Pricing() {
                   contactSection?.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
               }}
-              className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
+              className="group px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
             >
               Contact Sales
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => navigate('/case-studies')}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
+              className="px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
             >
               View Case Studies
             </button>

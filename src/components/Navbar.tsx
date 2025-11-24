@@ -38,14 +38,16 @@ export default function Navbar() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
-    setIsMobileMenuOpen(false);
     setIsAboutOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   const handleNavigation = (path: string) => {
-    setIsMobileMenuOpen(false);
+    // Close menus first
     setIsAboutOpen(false);
+    setIsMobileMenuOpen(false);
     
+    // Navigate immediately - React Router handles this properly
     if (path.startsWith('/')) {
       navigate(path);
     } else {
@@ -81,7 +83,7 @@ export default function Navbar() {
     <nav
       className={`fixed z-40 will-change-transform ${
         isScrolled
-          ? 'top-4 left-4 right-4 bg-raizing-teal-900 backdrop-blur-lg shadow-2xl rounded-3xl border border-raizing-teal-900/50'
+          ? 'top-2 sm:top-4 left-2 sm:left-4 right-2 sm:right-4 bg-raizing-teal-900 backdrop-blur-lg shadow-2xl rounded-2xl sm:rounded-3xl border border-raizing-teal-900/50'
           : 'top-0 left-0 right-0 bg-raizing-teal-900 backdrop-blur-sm'
       }`}
       style={{
@@ -200,12 +202,12 @@ src="/IMG_20251122_195044.jpg"
               </button>
               
               {isAboutOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-raizing-teal-900 rounded-lg shadow-xl border border-raizing-teal-900 py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-48 bg-raizing-teal-900 rounded-lg shadow-xl border border-raizing-teal-900 py-1.5 sm:py-2 z-50">
                   {aboutSubItems.map((item) => (
                     <button
                       key={item.label}
                       onClick={() => handleNavigation(item.path)}
-                      className="block w-full text-left px-4 py-2 text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800 transition-colors font-medium"
+                      className="block w-full text-left px-4 sm:px-6 py-1.5 sm:py-2 text-xs sm:text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800 transition-colors font-medium"
                     >
                       {item.label}
                     </button>
@@ -233,9 +235,10 @@ src="/IMG_20251122_195044.jpg"
           </div>
 
           <button
-            className={`md:hidden flex-shrink-0 ml-2 p-2 text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors ${isMobileMenuOpen ? 'hidden' : ''}`}
+            className={`md:hidden flex-shrink-0 ml-2 p-2 text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center ${isMobileMenuOpen ? 'hidden' : ''}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
+            type="button"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -245,7 +248,7 @@ src="/IMG_20251122_195044.jpg"
       {isMobileMenuOpen && (
         <div className="md:hidden bg-raizing-teal-900/98 backdrop-blur-sm border-t border-raizing-teal-900 shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
           <div className="px-4 sm:px-6">
-            <div className="flex items-center justify-between py-3 sm:py-4 mb-4 sm:mb-5 border-b border-raizing-teal-900/50 sticky top-0 bg-raizing-teal-900/98 backdrop-blur-sm z-20 -mx-4 sm:-mx-6 px-4 sm:px-6">
+            <div className="flex items-center justify-between py-2 sm:py-3 sm:py-4 mb-3 sm:mb-4 sm:mb-5 border-b border-raizing-teal-900/50 sticky top-0 bg-raizing-teal-900/98 backdrop-blur-sm z-20 -mx-4 sm:-mx-6 px-4 sm:px-6">
               <div className="flex items-center gap-3 sm:gap-4">
                 <img 
                   src="/IMG_20251122_195044.jpg" 
@@ -254,82 +257,56 @@ src="/IMG_20251122_195044.jpg"
                 />
               </div>
               <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setIsMobileMenuOpen(false);
-                }}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-raizing-cream-200 hover:text-raizing-cream-100 transition-colors p-1.5 min-w-[44px] min-h-[44px] flex items-center justify-center relative z-20 cursor-pointer"
                 aria-label="Close menu"
                 type="button"
-                style={{ pointerEvents: 'auto' }}
               >
                 <X className="w-6 h-6" />
               </button>
             </div>
-            <div className="px-4 sm:px-6 pb-5 sm:pb-6">
-              <div className="space-y-2">
+            <div className="px-4 sm:px-6 pb-5 sm:pb-6 relative z-10">
+              <div className="space-y-2 relative z-10">
                 <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    handleNavigation('/automation');
-                  }}
-                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  onClick={() => handleNavigation('/automation')}
+                  className="block w-full text-left py-2 sm:py-3 px-4 sm:px-6 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors min-h-[44px]"
                   type="button"
                 >
                   Automation
                 </button>
                 <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    handleNavigation('/training');
-                  }}
-                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  onClick={() => handleNavigation('/training')}
+                  className="block w-full text-left py-2 sm:py-3 px-4 sm:px-6 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors min-h-[44px]"
                   type="button"
                 >
                   Training
                 </button>
                 <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    handleNavigation('/consulting');
-                  }}
-                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  onClick={() => handleNavigation('/consulting')}
+                  className="block w-full text-left py-2 sm:py-3 px-4 sm:px-6 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors min-h-[44px]"
                   type="button"
                 >
                   Consulting
                 </button>
                 <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    handleNavigation('/development');
-                  }}
-                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  onClick={() => handleNavigation('/development')}
+                  className="block w-full text-left py-2 sm:py-3 px-4 sm:px-6 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors min-h-[44px]"
                   type="button"
                 >
                   Development
                 </button>
-                
                 <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    handleNavigation('/ai-services');
-                  }}
-                  className="block w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                  onClick={() => handleNavigation('/ai-services')}
+                  className="block w-full text-left py-2 sm:py-3 px-4 sm:px-6 rounded-md text-raizing-cream-200 font-bold hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors min-h-[44px]"
                   type="button"
                 >
                   AI Services
                 </button>
 
-                <div className="pt-2">
+                <div className="pt-2 relative z-40">
                   <button
-                    onClick={(e) => handleAboutClick(e)}
-                    className="flex items-center justify-between w-full text-left py-3 px-4 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors"
+                    onClick={() => setIsAboutOpen(!isAboutOpen)}
+                    className="flex items-center justify-between w-full text-left py-2 sm:py-3 px-4 sm:px-6 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors min-h-[44px] relative z-40"
                     type="button"
                   >
                     <span>About</span>
@@ -337,16 +314,12 @@ src="/IMG_20251122_195044.jpg"
                   </button>
                   
                   {isAboutOpen && (
-                    <div className="pl-4 space-y-2 mt-2">
+                    <div className="pl-4 space-y-2 mt-2 relative z-50">
                       {aboutSubItems.map((item) => (
                         <button
                           key={item.label}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            handleNavigation(item.path);
-                          }}
-                          className="block w-full text-left py-2.5 px-4 rounded-md text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors font-medium"
+                          onClick={() => handleNavigation(item.path)}
+                          className="block w-full text-left py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-md text-xs sm:text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 active:bg-raizing-teal-800/70 transition-colors font-medium min-h-[44px] flex items-center relative z-50 cursor-pointer"
                           type="button"
                         >
                           {item.label}
@@ -357,14 +330,12 @@ src="/IMG_20251122_195044.jpg"
                 </div>
                 
                 <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
+                  onClick={() => {
                     setIsMobileMenuOpen(false);
                     setIsAboutOpen(false);
                     scrollToSection('contact');
                   }}
-                  className="w-full px-6 py-3.5 mt-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/30"
+                  className="w-full px-4 sm:px-6 py-2 sm:py-3.5 mt-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/30 min-h-[44px]"
                   type="button"
                 >
                   Let's Connect

@@ -28,13 +28,6 @@
     -webkit-tap-highlight-color: transparent;
   }
   
-  /* Improve touch interactions on mobile */
-  @media (hover: none) and (pointer: coarse) {
-    button, a {
-      min-height: 44px;
-      min-width: 44px;
-    }
-  }
 }
 
 @layer utilities {
@@ -363,7 +356,7 @@
     }
   }
 
-  /* Responsive Image Utilities */
+  /* Image Utilities */
   img {
     max-width: 100%;
     height: auto;
@@ -374,7 +367,15 @@
     box-sizing: border-box;
   }
 
-  /* Prevent horizontal scroll on all screen sizes */
+  /* Improve touch interactions on mobile */
+  @media (hover: none) and (pointer: coarse) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Responsive container padding */
   @media (max-width: 640px) {
     .container,
     .max-w-7xl,

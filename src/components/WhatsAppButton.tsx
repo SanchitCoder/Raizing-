@@ -15,6 +15,11 @@ export default function WhatsAppButton() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Hide on mobile when menu is open
+  if (isMobileMenuOpen && isMobile) {
+    return null;
+  }
+
   // WhatsApp phone number - replace with your actual WhatsApp number
   const whatsappNumber = '1234567890'; // Format: country code + number without + or spaces
   const whatsappMessage = encodeURIComponent('Hello! I would like to know more about Raizing AI services.');
@@ -23,11 +28,6 @@ export default function WhatsAppButton() {
     // Open WhatsApp in a new tab/window
     window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
   };
-
-  // Hide on mobile when menu is open
-  if (isMobileMenuOpen && isMobile) {
-    return null;
-  }
 
   return (
     <button

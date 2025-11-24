@@ -96,26 +96,26 @@ export default function AIServices() {
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative pt-24 sm:pt-28 pb-12 sm:pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
+      <section className="relative pt-24 pt-28 pb-12 pb-16 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-6 sm:mb-8 group"
+            className="flex items-center gap-2 text-raizing-maroon-600 hover:text-raizing-maroon-700 transition-colors mb-4 sm:mb-6 mb-6 sm:mb-8 group"
           >
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="text-sm sm:text-base font-medium">Back to Home</span>
+            <span className="text-xs sm:text-sm sm:text-base font-medium">Back to Home</span>
           </button>
           
           <div className="text-center">
-            <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-6">
+            <div className="inline-flex items-center justify-center p-4 bg-raizing-maroon-50 border border-raizing-maroon-200 rounded-xl mb-4 sm:mb-6">
               <Sparkles className="w-8 h-8 text-raizing-maroon-600" />
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-6xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
               <span className="text-raizing-teal-900 dark:text-white">AI</span>{' '}
               <span className="text-raizing-maroon-600">Services</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
               Comprehensive AI solutions to transform your business and drive innovation
             </p>
           </div>
@@ -123,14 +123,14 @@ export default function AIServices() {
       </section>
 
       {/* Overview Section */}
-      <section ref={sectionRef} className="py-12 sm:py-16 md:py-24">
+      <section ref={sectionRef} className="py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
-            <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8 mb-12">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
               <img 
                 src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&q=80" 
                 alt="AI Solutions and Technology" 
-                className="w-full h-64 sm:h-80 object-cover"
+                className="w-full h-64 h-80 object-cover"
                 loading="eager"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -147,11 +147,11 @@ export default function AIServices() {
                 }}
               />
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 overflow-hidden shadow-lg">
               <img 
                 src="https://images.unsplash.com/photo-1551434678-e076c223a0d7?w=800&h=600&fit=crop&q=80" 
                 alt="Business Innovation with AI" 
-                className="w-full h-64 sm:h-80 object-cover"
+                className="w-full h-64 h-80 object-cover"
                 loading="eager"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -169,8 +169,8 @@ export default function AIServices() {
               />
             </div>
           </div>
-          <div className="bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 md:p-10 shadow-lg">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-4 sm:mb-6">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl border border-raizing-teal-900 p-6 sm:p-8 lg:p-10 shadow-lg">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4 mb-4 sm:mb-6">
               Your Complete AI Solutions Partner
             </h2>
             <div className="space-y-4">
@@ -184,34 +184,34 @@ export default function AIServices() {
                 maximizing ROI and accelerating your path to AI success.
               </p>
               <div className="mt-6 p-6 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300 rounded-lg border border-raizing-teal-900">
-                <h3 className="text-lg font-bold text-raizing-teal-900 dark:text-white mb-4">Our Comprehensive Service Portfolio</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
+                <h3 className="text-base sm:text-lg font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">Our Comprehensive Service Portfolio</h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
                   <div className="flex items-start gap-3">
                     <Workflow className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-raizing-teal-900 dark:text-white mb-1">Automation Services</h4>
-                      <p className="text-sm text-raizing-teal-900 dark:text-white">Streamline operations with intelligent workflow automation</p>
+                      <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Streamline operations with intelligent workflow automation</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Lightbulb className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-raizing-teal-900 dark:text-white mb-1">Consulting Services</h4>
-                      <p className="text-sm text-raizing-teal-900 dark:text-white">Strategic guidance for your AI transformation journey</p>
+                      <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Strategic guidance for your AI transformation journey</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <GraduationCap className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-raizing-teal-900 dark:text-white mb-1">Training Programs</h4>
-                      <p className="text-sm text-raizing-teal-900 dark:text-white">Empower your team with practical AI skills and knowledge</p>
+                      <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Empower your team with practical AI skills and knowledge</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Terminal className="w-6 h-6 text-raizing-maroon-500 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-raizing-teal-900 dark:text-white mb-1">Development Services</h4>
-                      <p className="text-sm text-raizing-teal-900 dark:text-white">Build custom AI solutions tailored to your needs</p>
+                      <p className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">Build custom AI solutions tailored to your needs</p>
                     </div>
                   </div>
                 </div>
@@ -222,10 +222,10 @@ export default function AIServices() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Our AI Services
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -233,7 +233,7 @@ export default function AIServices() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <Link
                 key={index}
@@ -241,20 +241,20 @@ export default function AIServices() {
                 className="animate-on-scroll opacity-0 group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative bg-gradient-to-br from-raizing-cream-100 to-white rounded-xl sm:rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
+                <div className="relative bg-gradient-to-br from-raizing-cream-100 to-white rounded-2xl border border-raizing-teal-900 overflow-hidden hover:border-raizing-maroon-500/50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-3">
                   <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color}`}></div>
 
-                  <div className="p-6 sm:p-8">
-                    <div className={`inline-flex p-4 bg-gradient-to-r ${service.color} rounded-xl text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="p-8">
+                    <div className={`inline-flex p-4 bg-gradient-to-r ${service.color} rounded-xl text-white mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       {service.icon}
                     </div>
 
-                    <h3 className="text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3 group-hover:text-raizing-maroon-600 transition-colors">
+                    <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3 group-hover:text-raizing-maroon-600 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-raizing-teal-900 dark:text-white mb-6 leading-relaxed">{service.description}</p>
+                    <p className="text-raizing-teal-900 dark:text-white mb-4 sm:mb-6 leading-relaxed">{service.description}</p>
 
-                    <div className="flex items-center gap-2 text-raizing-maroon-600 font-semibold group-hover:gap-4 transition-all">
+                    <div className="flex items-center gap-2 text-raizing-maroon-600 font-semibold group-hover:gap-3 sm:gap-4 transition-all">
                       Learn More
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -269,10 +269,10 @@ export default function AIServices() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Why Choose Raizing AI
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -280,17 +280,17 @@ export default function AIServices() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -300,10 +300,10 @@ export default function AIServices() {
       </section>
 
       {/* Service Comparison Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Which Service is Right for You?
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -311,7 +311,7 @@ export default function AIServices() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 service: 'Automation',
@@ -340,16 +340,16 @@ export default function AIServices() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className={`inline-flex p-3 bg-gradient-to-r ${item.color} rounded-lg text-white mb-4`}>
+                <div className={`inline-flex p-3 bg-gradient-to-r ${item.color} rounded-lg text-white mb-3 sm:mb-4`}>
                   {item.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">
+                <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-2">
                   {item.service}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white">
                   Best for: {item.bestFor}
                 </p>
               </div>
@@ -359,10 +359,10 @@ export default function AIServices() {
       </section>
 
       {/* Key Differentiators Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               What Sets Us Apart
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -370,7 +370,7 @@ export default function AIServices() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 title: 'Integrated Approach',
@@ -395,16 +395,16 @@ export default function AIServices() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-4">
+                <div className="inline-flex p-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-700 rounded-lg text-white mb-3 sm:mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-lg sm:text-xl sm:text-2xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -414,10 +414,10 @@ export default function AIServices() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Client Testimonials
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white max-w-3xl mx-auto">
@@ -425,7 +425,7 @@ export default function AIServices() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 quote: 'Raizing AI has been instrumental in our AI transformation. Their comprehensive services helped us automate processes, train our team, and develop custom solutions.',
@@ -451,24 +451,24 @@ export default function AIServices() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-6 sm:p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
+                className="animate-on-scroll opacity-0 bg-gradient-to-br from-raizing-cream-50 to-white p-8 rounded-xl border border-raizing-teal-900 hover:border-raizing-maroon-500/50 transition-all duration-300 hover:shadow-xl"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-3 sm:mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-raizing-maroon-500 text-raizing-maroon-500" />
                   ))}
                 </div>
-                <p className="text-sm sm:text-base text-raizing-teal-800 mb-6 leading-relaxed italic">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-800 mb-4 sm:mb-6 leading-relaxed italic">
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-raizing-maroon-400 to-raizing-maroon-600 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.author.charAt(0)}
                   </div>
                   <div>
                     <div className="font-semibold text-raizing-teal-900 dark:text-white">{testimonial.author}</div>
-                    <div className="text-sm text-raizing-teal-900 dark:text-white">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-xs sm:text-sm text-raizing-teal-900 dark:text-white">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -478,10 +478,10 @@ export default function AIServices() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-raizing-cream-50 to-raizing-teal-900/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll opacity-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
+          <div className="text-center mb-6 mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0">
+            <h2 className="text-3xl sm:text-4xl font-bold text-raizing-teal-900 dark:text-white mb-3 sm:mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white">
@@ -518,13 +518,13 @@ export default function AIServices() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-5 sm:p-6 rounded-xl border border-raizing-teal-900"
+                className="animate-on-scroll opacity-0 bg-white dark:bg-gray-800 p-6 rounded-xl border border-raizing-teal-900"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-raizing-teal-900 dark:text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
+                <p className="text-xs sm:text-sm sm:text-base text-raizing-teal-900 dark:text-white leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
@@ -534,17 +534,17 @@ export default function AIServices() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
+      <section className="py-12 sm:py-16 lg:py-24 bg-raizing-cream-50 dark:bg-gray-900 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4 mb-4 sm:mb-6">
             <span className="text-raizing-teal-900 dark:text-white">Ready to Transform Your Business</span>
-            <br className="hidden sm:block" />
+            <br className="block" />
             <span className="text-raizing-maroon-600">with AI?</span>
           </h2>
-          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-raizing-teal-900 dark:text-white mb-4 sm:mb-6 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Let's discuss how our comprehensive AI services can help you achieve your business goals. Get in touch for a free consultation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col flex-row gap-3 sm:gap-4 justify-center">
             <button
               onClick={() => {
                 navigate('/');
@@ -553,14 +553,14 @@ export default function AIServices() {
                   contactSection?.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
               }}
-              className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
+              className="group px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-105 flex items-center justify-center gap-2"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => navigate('/case-studies')}
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
+              className="px-4 sm:px-6 px-6 sm:px-8 py-2 sm:py-3 py-3 sm:py-4 bg-raizing-cream-200/10 backdrop-blur-sm text-raizing-cream-200 rounded-lg font-semibold text-base sm:text-lg border border-raizing-cream-200/20 hover:bg-raizing-cream-200/20 transition-all duration-300"
             >
               View Case Studies
             </button>

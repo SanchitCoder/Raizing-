@@ -152,11 +152,11 @@ export default function AIAssessment() {
       {/* Floating Banner */}
       {!shouldHideBanner && (
       <div className="fixed bottom-4 sm:bottom-6 left-2 sm:left-6 right-2 sm:right-6 z-40 bg-gradient-to-r from-raizing-teal-900/95 via-raizing-teal-800/95 to-raizing-teal-900/95 backdrop-blur-lg text-raizing-cream-200 shadow-2xl rounded-xl sm:rounded-2xl border border-raizing-maroon-500/20 transform transition-transform duration-300 max-w-7xl mx-auto">
-        <div className="px-3 sm:px-4 md:px-6 py-2 sm:py-2.5">
+        <div className="px-3 sm:px-4 sm:px-4 sm:px-6 md:px-6 py-1.5 sm:py-2 sm:py-2.5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
             <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
               <div className="min-w-0 flex-1">
-                <h3 className="text-xs sm:text-sm md:text-base font-bold truncate text-raizing-cream-200 leading-tight">
+                <h3 className="text-xs sm:text-sm md:text-sm sm:text-base font-bold truncate text-raizing-cream-200 leading-tight">
                   Discover Your Business's AI Readiness Today
                 </h3>
                 <p className="hidden sm:block text-[10px] sm:text-xs text-raizing-cream-300/90 leading-tight truncate">
@@ -167,7 +167,7 @@ export default function AIAssessment() {
             
             <button
               onClick={handleStartAssessment}
-              className="w-full sm:w-auto px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-md sm:rounded-lg font-semibold text-xs sm:text-sm hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center justify-center gap-1.5 sm:gap-2 flex-shrink-0"
+              className="w-full sm:w-auto px-3 sm:px-4 sm:px-4 sm:px-6 md:px-5 py-1.5 sm:py-2 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-md sm:rounded-lg font-semibold text-xs sm:text-sm hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 flex items-center justify-center gap-1.5 sm:gap-2 flex-shrink-0"
             >
               <span className="hidden sm:inline">Start The Assessment</span>
               <span className="sm:hidden">Start Assessment</span>
@@ -189,7 +189,7 @@ export default function AIAssessment() {
                   <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-raizing-cream-200" />
                 </div>
                 <div className="min-w-0">
-                  <h2 className="text-base sm:text-lg font-bold text-raizing-cream-200 truncate">AI Readiness Assessment</h2>
+                  <h2 className="text-xs sm:text-sm sm:text-base sm:text-lg font-bold text-raizing-cream-200 truncate">AI Readiness Assessment</h2>
                   <p className="text-[10px] sm:text-xs text-raizing-cream-300 truncate">
                     {currentStep === 1 && 'Step 1 of 6: Your Information'}
                     {currentStep >= 2 && currentStep <= 6 && `Step ${currentStep} of 6: Question ${currentStep - 1}`}
@@ -220,8 +220,8 @@ export default function AIAssessment() {
               {currentStep === 1 && (
                 <form onSubmit={handleUserInfoSubmit} className="space-y-3 sm:space-y-4">
                   <div>
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-raizing-teal-900 mb-1.5 sm:mb-2">Let's Get Started</h3>
-                    <p className="text-xs sm:text-sm text-raizing-teal-800 mb-4 sm:mb-5">
+                    <h3 className="text-base sm:text-lg sm:text-lg sm:text-xl md:text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-1.5 sm:mb-2">Let's Get Started</h3>
+                    <p className="text-xs sm:text-sm text-raizing-teal-800 mb-3 sm:mb-4 sm:mb-5">
                       Please provide your information to begin the assessment.
                     </p>
                   </div>
@@ -236,7 +236,7 @@ export default function AIAssessment() {
                       required
                       value={userInfo.name}
                       onChange={handleUserInfoChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm"
+                      className="w-full px-3 sm:px-4 sm:px-4 sm:px-6 py-1.5 sm:py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-xs sm:text-sm"
                       placeholder="John Doe"
                     />
                   </div>
@@ -251,7 +251,7 @@ export default function AIAssessment() {
                       required
                       value={userInfo.email}
                       onChange={handleUserInfoChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm"
+                      className="w-full px-3 sm:px-4 sm:px-4 sm:px-6 py-1.5 sm:py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-xs sm:text-sm"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -266,7 +266,7 @@ export default function AIAssessment() {
                       required
                       value={userInfo.phone}
                       onChange={handleUserInfoChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm"
+                      className="w-full px-3 sm:px-4 sm:px-4 sm:px-6 py-1.5 sm:py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-xs sm:text-sm"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -280,7 +280,7 @@ export default function AIAssessment() {
                       name="company"
                       value={userInfo.company}
                       onChange={handleUserInfoChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm"
+                      className="w-full px-3 sm:px-4 sm:px-4 sm:px-6 py-1.5 sm:py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-xs sm:text-sm"
                       placeholder="Your Company"
                     />
                   </div>
@@ -293,7 +293,7 @@ export default function AIAssessment() {
                       name="companySize"
                       value={userInfo.companySize}
                       onChange={handleUserInfoChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm bg-white dark:bg-gray-800"
+                      className="w-full px-3 sm:px-4 sm:px-4 sm:px-6 py-1.5 sm:py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-xs sm:text-sm bg-white dark:bg-gray-800"
                     >
                       <option value="">Select company size</option>
                       <option value="1-10">1-10 employees</option>
@@ -314,14 +314,14 @@ export default function AIAssessment() {
                       name="role"
                       value={userInfo.role}
                       onChange={handleUserInfoChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-sm"
+                      className="w-full px-3 sm:px-4 sm:px-4 sm:px-6 py-1.5 sm:py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-xs sm:text-sm"
                       placeholder="CEO, Manager, etc."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-md sm:rounded-lg font-semibold text-sm hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 mt-4"
+                    className="w-full px-4 sm:px-6 sm:px-5 md:px-6 py-1.5 sm:py-2.5 sm:py-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-md sm:rounded-lg font-semibold text-xs sm:text-sm hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 mt-4"
                   >
                     Start Assessment
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -333,7 +333,7 @@ export default function AIAssessment() {
               {currentStep >= 2 && currentStep <= 6 && currentQuestion && (
                 <div className="space-y-4 sm:space-y-5">
                   <div>
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-raizing-teal-900 mb-3 sm:mb-4 leading-tight">
+                    <h3 className="text-base sm:text-lg sm:text-lg sm:text-xl md:text-xl sm:text-2xl font-bold text-raizing-teal-900 mb-3 sm:mb-4 leading-tight">
                       {currentQuestion.question}
                     </h3>
                   </div>
@@ -343,14 +343,14 @@ export default function AIAssessment() {
                       <button
                         key={idx}
                         onClick={() => handleAnswerSelect(option)}
-                        className={`w-full text-left px-3 sm:px-4 md:px-5 py-2.5 sm:py-3 rounded-md sm:rounded-lg border-2 transition-all duration-300 ${
+                        className={`w-full text-left px-3 sm:px-4 sm:px-4 sm:px-6 md:px-5 py-1.5 sm:py-2.5 sm:py-3 rounded-md sm:rounded-lg border-2 transition-all duration-300 ${
                           selectedAnswer === option
                             ? 'border-raizing-maroon-500 bg-raizing-maroon-50 text-raizing-maroon-900 shadow-sm'
                             : 'border-gray-200 hover:border-raizing-maroon-300 hover:bg-gray-50 text-gray-700'
                         }`}
                       >
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-xs sm:text-sm md:text-base font-medium leading-relaxed">{option}</span>
+                          <span className="text-xs sm:text-sm md:text-sm sm:text-base font-medium leading-relaxed">{option}</span>
                           {selectedAnswer === option && (
                             <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-raizing-maroon-600 flex-shrink-0" />
                           )}
@@ -362,7 +362,7 @@ export default function AIAssessment() {
                   <button
                     onClick={handleNextQuestion}
                     disabled={!selectedAnswer}
-                    className="w-full px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-md sm:rounded-lg font-semibold text-sm hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-4"
+                    className="w-full px-4 sm:px-6 sm:px-5 md:px-6 py-1.5 sm:py-2.5 sm:py-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-md sm:rounded-lg font-semibold text-xs sm:text-sm hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-4"
                   >
                     {currentStep === 6 ? 'Complete Assessment' : 'Next Question'}
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -372,17 +372,17 @@ export default function AIAssessment() {
 
               {/* Step 7: Thank You */}
               {currentStep === 7 && (
-                <div className="text-center py-6 sm:py-8 md:py-10">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-5">
+                <div className="text-center py-4 sm:py-6 sm:py-8 md:py-10">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 sm:mb-5">
                     <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-raizing-cream-200" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
+                  <h3 className="text-base sm:text-lg lg:text-xl sm:text-xl sm:text-2xl md:text-3xl font-bold text-raizing-teal-900 mb-3 sm:mb-4">
                     Thank You for Taking the Assessment!
                   </h3>
-                  <p className="text-sm sm:text-base text-raizing-teal-800 mb-4 sm:mb-5 max-w-md mx-auto leading-relaxed">
+                  <p className="text-xs sm:text-sm sm:text-sm sm:text-base text-raizing-teal-800 mb-3 sm:mb-4 sm:mb-5 max-w-md mx-auto leading-relaxed">
                     We've received your responses and will analyze your AI readiness score. Our team will contact you shortly with personalized insights and recommendations.
                   </p>
-                  <div className="bg-raizing-cream-50 border border-raizing-maroon-200 rounded-md sm:rounded-lg p-3 sm:p-4 md:p-5 mb-4 sm:mb-5">
+                  <div className="bg-raizing-cream-50 border border-raizing-maroon-200 rounded-md sm:rounded-lg p-3 sm:p-4 md:p-5 mb-3 sm:mb-4 sm:mb-5">
                     <p className="text-xs sm:text-sm font-semibold text-raizing-teal-900 mb-2">
                       What's Next?
                     </p>
@@ -394,7 +394,7 @@ export default function AIAssessment() {
                   </div>
                   <button
                     onClick={handleClose}
-                    className="px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-md sm:rounded-lg font-semibold text-sm hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                    className="px-4 sm:px-6 sm:px-5 md:px-6 py-1.5 sm:py-2.5 sm:py-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-md sm:rounded-lg font-semibold text-xs sm:text-sm hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     Close
                   </button>
