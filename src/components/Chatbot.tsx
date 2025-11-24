@@ -108,14 +108,26 @@ export default function Chatbot() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 min-w-[56px] min-h-[56px] sm:min-w-[64px] sm:min-h-[64px] bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-full shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[10000] w-14 h-14 sm:w-16 sm:h-16 min-w-[56px] min-h-[56px] sm:min-w-[64px] sm:min-h-[64px] bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-full shadow-lg shadow-raizing-maroon-500/50 hover:shadow-raizing-maroon-500/70 hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        style={{ 
+          position: 'fixed',
+          bottom: '1rem',
+          right: '1rem',
+          zIndex: 10000
+        }}
         aria-label="Open chat"
       >
         {isOpen ? <X className="w-6 h-6 sm:w-7 sm:h-7" /> : <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />}
       </button>
 
       <div
-        className={`fixed bottom-20 right-4 left-4 sm:bottom-24 sm:right-6 sm:left-auto z-50 w-auto sm:w-96 h-[calc(100vh-7rem)] sm:h-[600px] max-h-[600px] bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-2xl border border-raizing-teal-900 flex flex-col overflow-hidden transition-all duration-300 max-w-[calc(100vw-2rem)] sm:max-w-none ${
+        style={{ 
+          position: 'fixed',
+          bottom: '1rem',
+          right: '1rem',
+          zIndex: 10000
+        }}
+        className={`fixed bottom-4 right-4 left-4 sm:bottom-6 sm:right-6 sm:left-auto z-[10000] w-auto sm:w-96 h-[calc(100vh-7rem)] sm:h-[600px] max-h-[600px] bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl shadow-2xl border border-raizing-teal-900 flex flex-col overflow-hidden transition-all duration-300 max-w-[calc(100vw-2rem)] sm:max-w-none ${
           isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
         }`}
       >

@@ -151,7 +151,10 @@ export default function AIAssessment() {
     <>
       {/* Floating Banner */}
       {!shouldHideBanner && (
-      <div className="fixed bottom-4 sm:bottom-6 left-2 sm:left-6 right-2 sm:right-6 z-40 bg-gradient-to-r from-raizing-teal-900/95 via-raizing-teal-800/95 to-raizing-teal-900/95 backdrop-blur-lg text-raizing-cream-200 shadow-2xl rounded-xl sm:rounded-2xl border border-raizing-maroon-500/20 transform transition-transform duration-300 max-w-7xl mx-auto">
+      <div 
+        className="fixed bottom-4 sm:bottom-6 left-2 sm:left-6 right-2 sm:right-6 z-[10000] bg-gradient-to-r from-raizing-teal-900/95 via-raizing-teal-800/95 to-raizing-teal-900/95 backdrop-blur-lg text-raizing-cream-200 shadow-2xl rounded-xl sm:rounded-2xl border border-raizing-maroon-500/20 transform transition-transform duration-300 max-w-7xl mx-auto"
+        style={{ position: 'fixed' }}
+      >
         <div className="px-3 sm:px-4 sm:px-4 sm:px-6 md:px-6 py-1.5 sm:py-2 sm:py-2.5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
             <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
@@ -180,7 +183,7 @@ export default function AIAssessment() {
 
       {/* Assessment Modal */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-sm">
+        <div className="fixed inset-0 z-[10001] flex items-center justify-center p-3 sm:p-4 bg-black/50 backdrop-blur-sm">
           <div className="bg-white dark:bg-gray-800 rounded-lg sm:rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden flex flex-col">
             {/* Header */}
             <div className="bg-gradient-to-r from-raizing-teal-900 via-raizing-teal-800 to-raizing-teal-900 p-3 sm:p-4 md:p-5 text-raizing-cream-200 flex items-center justify-between flex-shrink-0">

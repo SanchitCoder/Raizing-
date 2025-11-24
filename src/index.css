@@ -295,11 +295,21 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 
   body {
     overflow-x: hidden;
     max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ensure no gaps at top */
+  #root {
+    margin: 0;
+    padding: 0;
   }
 
   /* Custom scrollbar */
@@ -326,6 +336,10 @@
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    /* Use will-change to optimize animations without affecting fixed children */
+    will-change: opacity, filter;
+    /* Ensure fixed children are positioned relative to viewport, not this container */
+    transform: none;
   }
 
   .page-transition-fadeIn {
@@ -339,12 +353,10 @@
   @keyframes pageFadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px) scale(0.98);
       filter: blur(4px);
     }
     to {
       opacity: 1;
-      transform: translateY(0) scale(1);
       filter: blur(0);
     }
   }
@@ -352,12 +364,10 @@
   @keyframes pageFadeOut {
     from {
       opacity: 1;
-      transform: translateY(0) scale(1);
       filter: blur(0);
     }
     to {
       opacity: 0;
-      transform: translateY(-20px) scale(0.98);
       filter: blur(4px);
     }
   }
@@ -370,11 +380,9 @@
   @keyframes pageContentFadeIn {
     from {
       opacity: 0;
-      transform: translateY(30px);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
     }
   }
 

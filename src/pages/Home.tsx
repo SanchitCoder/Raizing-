@@ -8,9 +8,6 @@ import WhyChooseUs from '../components/WhyChooseUs';
 import Showcase from '../components/Showcase';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import Chatbot from '../components/Chatbot';
-import WhatsAppButton from '../components/WhatsAppButton';
-import AIAssessment from '../components/AIAssessment';
 
 export default function Home() {
   return (
@@ -33,9 +30,6 @@ export default function Home() {
       </section>
       <Contact />
       <Footer />
-      <Chatbot />
-      <WhatsAppButton />
-      <AIAssessment />
     </div>
   );
 }

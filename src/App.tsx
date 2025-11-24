@@ -15,12 +15,22 @@ import TryAI from './pages/TryAI';
 import Pricing from './pages/Pricing';
 import AboutUs from './pages/AboutUs';
 import OurTeam from './pages/OurTeam';
+import Chatbot from './components/Chatbot';
+import WhatsAppButton from './components/WhatsAppButton';
+import AIAssessment from './components/AIAssessment';
 
 function App() {
   const location = useLocation();
   const [displayLocation, setDisplayLocation] = useState(location);
   const [transitionStage, setTransitionStage] = useState<'fadeIn' | 'fadeOut'>('fadeIn');
   const [showOverlay, setShowOverlay] = useState(false);
+
+  // Scroll to top on initial mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
 
   useEffect(() => {
     if (location !== displayLocation) {
@@ -30,7 +40,21 @@ function App() {
     }
   }, [location, displayLocation]);
 
-  // Scroll to top when location changes
+  // Scroll to top when location changes and on initial load
+  useEffect(() => {
+    // Always scroll to top on mount and when location changes
+    // Use requestAnimationFrame to ensure it happens after render
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+      });
+      // Also set scrollTop directly as fallback
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    });
+  }, [location]);
+
   useEffect(() => {
     if (transitionStage === 'fadeOut') {
       // Scroll to top instantly during fade out for cleaner transition
@@ -82,6 +106,11 @@ function App() {
           </Routes>
         </div>
       </div>
+      
+      {/* Fixed floating components - outside page transition for proper viewport positioning */}
+      <Chatbot />
+      <WhatsAppButton />
+      <AIAssessment />
     </>
   );
 }
