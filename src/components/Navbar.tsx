@@ -21,19 +21,27 @@ export default function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (isAboutOpen && !target.closest('.about-dropdown')) {
+      // Only close if clicking outside both desktop and mobile About dropdowns
+      // Don't close if mobile menu is open (mobile menu handles its own closing)
+      // Don't close if clicking on any button
+      if (isAboutOpen && 
+          !isMobileMenuOpen &&
+          !target.closest('.about-dropdown') && 
+          !target.closest('[data-about-mobile]') &&
+          !target.closest('button') &&
+          target.tagName !== 'BUTTON') {
         setIsAboutOpen(false);
       }
     };
 
-    if (isAboutOpen) {
+    if (isAboutOpen && !isMobileMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isAboutOpen]);
+  }, [isAboutOpen, isMobileMenuOpen]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -48,19 +56,22 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
     
     // Navigate immediately - React Router handles this properly
-    if (path.startsWith('/')) {
-      navigate(path);
-    } else {
-      // If it's a section ID, scroll to it on home page
-      if (window.location.pathname !== '/') {
-        navigate('/');
-        setTimeout(() => {
-          scrollToSection(path);
-        }, 100);
+    // Use setTimeout to ensure state updates complete
+    setTimeout(() => {
+      if (path.startsWith('/')) {
+        navigate(path);
       } else {
-        scrollToSection(path);
+        // If it's a section ID, scroll to it on home page
+        if (window.location.pathname !== '/') {
+          navigate('/');
+          setTimeout(() => {
+            scrollToSection(path);
+          }, 100);
+        } else {
+          scrollToSection(path);
+        }
       }
-    }
+    }, 10);
   };
 
   const handleAboutClick = (e?: React.MouseEvent) => {
@@ -265,8 +276,8 @@ src="/IMG_20251122_195044.jpg"
                 <X className="w-6 h-6" />
               </button>
             </div>
-            <div className="px-4 sm:px-6 pb-5 sm:pb-6 relative z-10">
-              <div className="space-y-2 relative z-10">
+            <div className="px-4 sm:px-6 pb-5 sm:pb-6 relative z-10" onClick={(e) => e.stopPropagation()}>
+              <div className="space-y-2 relative z-10" onClick={(e) => e.stopPropagation()}>
                 <button
                   onClick={() => handleNavigation('/automation')}
                   className="block w-full text-left py-2 sm:py-3 px-4 sm:px-6 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors min-h-[44px]"
@@ -303,9 +314,12 @@ src="/IMG_20251122_195044.jpg"
                   AI Services
                 </button>
 
-                <div className="pt-2 relative z-40">
+                <div className="pt-2 relative z-40" data-about-mobile onClick={(e) => e.stopPropagation()}>
                   <button
-                    onClick={() => setIsAboutOpen(!isAboutOpen)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsAboutOpen(!isAboutOpen);
+                    }}
                     className="flex items-center justify-between w-full text-left py-2 sm:py-3 px-4 sm:px-6 rounded-md text-raizing-cream-200 font-medium hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 transition-colors min-h-[44px] relative z-40"
                     type="button"
                   >
@@ -314,11 +328,20 @@ src="/IMG_20251122_195044.jpg"
                   </button>
                   
                   {isAboutOpen && (
-                    <div className="pl-4 space-y-2 mt-2 relative z-50">
+                    <div className="pl-4 space-y-2 mt-2 relative z-50" onClick={(e) => e.stopPropagation()}>
                       {aboutSubItems.map((item) => (
                         <button
                           key={item.label}
-                          onClick={() => handleNavigation(item.path)}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            // Close About dropdown first
+                            setIsAboutOpen(false);
+                            // Then navigate
+                            setTimeout(() => {
+                              handleNavigation(item.path);
+                            }, 50);
+                          }}
                           className="block w-full text-left py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-md text-xs sm:text-sm text-raizing-cream-200 hover:text-raizing-cream-100 hover:bg-raizing-teal-800/50 active:bg-raizing-teal-800/70 transition-colors font-medium min-h-[44px] flex items-center relative z-50 cursor-pointer"
                           type="button"
                         >
@@ -330,10 +353,16 @@ src="/IMG_20251122_195044.jpg"
                 </div>
                 
                 <button
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    // Close menus first
                     setIsAboutOpen(false);
-                    scrollToSection('contact');
+                    setIsMobileMenuOpen(false);
+                    // Then scroll to contact
+                    setTimeout(() => {
+                      scrollToSection('contact');
+                    }, 50);
                   }}
                   className="w-full px-4 sm:px-6 py-2 sm:py-3.5 mt-3 bg-gradient-to-r from-raizing-maroon-500 to-raizing-maroon-600 text-raizing-cream-200 rounded-lg font-semibold hover:from-raizing-maroon-600 hover:to-raizing-maroon-700 transition-all duration-300 shadow-lg shadow-raizing-maroon-500/30 min-h-[44px]"
                   type="button"
