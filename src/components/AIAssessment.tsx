@@ -270,7 +270,7 @@ export default function AIAssessment() {
                       value={userInfo.phone}
                       onChange={handleUserInfoChange}
                       className="w-full px-3 sm:px-4 sm:px-4 sm:px-6 py-1.5 sm:py-2 sm:py-2.5 rounded-md sm:rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all text-xs sm:text-sm"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+971 55 488 0910"
                     />
                   </div>
 

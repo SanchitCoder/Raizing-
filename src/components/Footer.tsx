@@ -57,15 +57,15 @@ export default function Footer() {
             <ul className="space-y-3 sm:space-y-3.5 md:space-y-4">
               <li className="flex items-start gap-2 sm:gap-3 text-raizing-cream-400 text-xs sm:text-sm md:text-base">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-raizing-maroon-400 flex-shrink-0 mt-0.5" />
-                <span className="break-words">+1 (555) 123-4567</span>
+                <span className="break-words">+971 55 488 0910</span>
               </li>
               <li className="flex items-start gap-2 sm:gap-3 text-raizing-cream-400 text-xs sm:text-sm md:text-base">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-raizing-maroon-400 flex-shrink-0 mt-0.5" />
-                <span className="break-words">contact@raizingai.com</span>
+                <span className="break-words">support@raizing.ai</span>
               </li>
               <li className="flex items-start gap-2 sm:gap-3 text-raizing-cream-400 text-xs sm:text-sm md:text-base">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-raizing-maroon-400 flex-shrink-0 mt-0.5" />
-                <span className="break-words">123 AI Boulevard<br />Tech City, TC 12345</span>
+                <span className="break-words">HDS Tower Cluster F Office no. 3601, Jumeirah Lake Towers<br />Dubai, UAE</span>
               </li>
             </ul>
           </div>

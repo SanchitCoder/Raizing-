@@ -90,7 +90,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="text-xs sm:text-sm text-raizing-cream-300 mb-1">Phone</div>
-                      <div className="text-base sm:text-lg font-semibold break-all">+1 (555) 123-4567</div>
+                      <div className="text-base sm:text-lg font-semibold break-all">+971 55 488 0910</div>
                     </div>
                   </div>
 
@@ -100,7 +100,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="text-xs sm:text-sm text-raizing-cream-300 mb-1">Email</div>
-                      <div className="text-base sm:text-lg font-semibold break-all">contact@raizingai.com</div>
+                      <div className="text-base sm:text-lg font-semibold break-all">support@raizing.ai</div>
                     </div>
                   </div>
 
@@ -110,7 +110,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="text-xs sm:text-sm text-raizing-cream-300 mb-1">Office</div>
-                      <div className="text-base sm:text-lg font-semibold">123 AI Boulevard, Tech City, TC 12345</div>
+                      <div className="text-base sm:text-lg font-semibold">HDS Tower Cluster F Office no. 3601, Jumeirah Lake Towers, Dubai, UAE</div>
                     </div>
                   </div>
                 </div>

@@ -323,7 +323,7 @@ export default function Services() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm rounded-lg border border-raizing-teal-900 focus:border-raizing-maroon-500 focus:ring-2 focus:ring-raizing-maroon-500/20 outline-none transition-all"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+971 55 488 0910"
                   />
                 </div>
               </div>

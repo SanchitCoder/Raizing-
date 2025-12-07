@@ -20,7 +20,7 @@ export default function WhatsAppButton() {
   }, []);
 
   // WhatsApp phone number - replace with your actual WhatsApp number
-  const whatsappNumber = '1234567890'; // Format: country code + number without + or spaces
+  const whatsappNumber = '971554880910'; // Format: country code + number without + or spaces
   const whatsappMessage = encodeURIComponent('Hello! I would like to know more about Raizing AI services.');
 
   const handleClick = () => {
